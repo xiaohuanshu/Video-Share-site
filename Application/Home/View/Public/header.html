@@ -44,7 +44,7 @@
                 </div>
                 <div class="list-group list-group-alt">
 <volist name="messagelist" id="mdata">
-                  <a href="/forum/home.php?mod=space&do=pm&subop=view&plid={$mdata.plid}" class="media list-group-item">
+                  <a href="__ROOT__/home/user/messagecenter/action/3/inf/{$mdata.msgfromid}" class="media list-group-item">
                     <span class="pull-left thumb-sm text-center">
                       <i class="fa fa-envelope-o fa-2x text-success"></i>
                     </span>
@@ -65,8 +65,8 @@
 </volist>
                 </div>
                 <div class="panel-footer text-sm">
-                  <a href="/forum/home.php?mod=space&do=pm&subop=setting" class="pull-right"><i class="fa fa-cog"></i></a>
-                  <a href="/forum/home.php?mod=space&do=pm">进入短消息中心</a>
+                  <!--<a href="/forum/home.php?mod=space&do=pm&subop=setting" class="pull-right"><i class="fa fa-cog"></i></a>-->
+                  <a href="__ROOT__/home/user/messagecenter">进入短消息中心</a>
                 </div>
               </section>
             </section>
@@ -87,7 +87,7 @@
                 <a href="__ROOT__/home/user/profile/uid/{$uid}">主页</a>
               </li>
               <li>
-                <a href="/forum/home.php?mod=space&do=pm">
+                <a href="__ROOT__/home/user/messagecenter/action/1">
                   <if condition="($messagemember neq 0)"><span class="badge bg-danger pull-right">{$messagemember}</span></if>
                   消息
                 </a>

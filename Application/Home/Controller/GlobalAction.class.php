@@ -21,6 +21,7 @@ class GlobalAction extends Controller
             $uc             = new \Ucenter\Client\Client();
             $messagenewlist = $uc->uc_pm_list($uid, 1, 4, 'newbox', 'newpm', 10);
             $this->assign('messagemember', $messagenewlist['count']);
+			//dump($messagenewlist);
             $this->assign('messagelist', $messagenewlist['data']);
             $myfalist  = M('videofavorite');
             $myfacount = $myfalist->where('userid=%d', $uid)->count();

@@ -3,6 +3,10 @@ namespace Home\Controller;
 use Think\Controller;
 class UserController extends GlobalAction
 {
+    public function _initialize()
+    {
+        parent::_initialize();
+    }
     public function login()
     {       
         $uc = new \Ucenter\Client\Client();
@@ -25,11 +29,11 @@ class UserController extends GlobalAction
 		//exit();
         $this->success('注销成功' . $uc->uc_user_synlogout(), '/share/home', 5);
     }
-    public function messagecenter()
+    public function messagecenter($action=0,$inf='')
     {       
         $uc = new \Ucenter\Client\Client();
 		list($uid, $username) = getuserinfo();
-        $uc->uc_pm_location($uid);
+        header('Location:'.$uc->uc_pm_location($uid,$action,$inf));
     }
 	public function register(){
 		$this->show();

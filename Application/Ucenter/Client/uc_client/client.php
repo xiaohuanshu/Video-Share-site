@@ -380,12 +380,23 @@ function uc_user_getcredit($appid, $uid, $credit) {
 	return uc_api_post('user', 'getcredit', array('appid'=>$appid, 'uid'=>$uid, 'credit'=>$credit));
 }
 
-function uc_pm_location($uid, $newpm = 0) {
-	$apiurl = uc_api_url('pm_client', 'ls', "uid=$uid", ($newpm ? '&folder=newbox' : ''));
-	@header("Expires: 0");
-	@header("Cache-Control: private, post-check=0, pre-check=0, max-age=0", FALSE);
-	@header("Pragma: no-cache");
-	@header("location: $apiurl");
+function uc_pm_location($uid, $action = 0, $inf = '') {
+	$other='';
+	if ($action==1){//打开未读邮件列表
+		$other="&folder=newbox";
+	}
+	if ($action==2){//发送给
+		$other="&a=send&msgto=".$inf;
+	}
+	if ($action==3){//打开信息
+		$other="&a=view&touid=".$inf;
+	}
+	$apiurl = uc_api_url('pm_client', 'ls', "uid=$uid", $other);
+	//@header("Expires: 0");
+	//@header("Cache-Control: private, post-check=0, pre-check=0, max-age=0", FALSE);
+	//@header("Pragma: no-cache");
+	//@header("location: $apiurl");
+	return $apiurl;
 }
 
 function uc_pm_checknew($uid, $more = 0) {
