@@ -1,0 +1,45 @@
+<include file="Public:head" />
+<include file="Public:header" headerstyle="navbar-header aside bg-info nav-xs"/>
+<include file="Public:bodyframe-head" bodyframestyle="bg-black dk aside hidden-print nav-xs"/>
+<section id="content">
+          <section class="vbox">
+            <section class="scrollable wrapper-lg">
+<script language="javascript" type="text/javascript"> 
+function dyniframesize(down) { 
+var pTar = null; 
+if (document.getElementById){ 
+pTar = document.getElementById(down); 
+} 
+else{ 
+eval('pTar = ' + down + ';'); 
+} 
+if (pTar && !window.opera){ 
+//begin resizing iframe 
+pTar.style.display="block" 
+if (pTar.contentDocument && pTar.contentDocument.body.offsetHeight){ 
+//ns6 syntax 
+pTar.height = pTar.contentDocument.body.offsetHeight +20; 
+//pTar.width = pTar.contentDocument.body.scrollWidth+20; 
+} 
+else if (pTar.Document && pTar.Document.body.scrollHeight){ 
+//ie5+ syntax 
+pTar.height = pTar.Document.body.scrollHeight; 
+//pTar.width = pTar.Document.body.scrollWidth; 
+} 
+} 
+} 
+</script> 
+                  <div class="alert alert-warning alert-block">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <h4><i class="fa fa-bell-alt"></i>注意!</h4>
+                    <p>只允许上传视频格式文件、限制大小为2GB，上传后需要等待人工审核后才会显示</p>
+                    <p>如果上传的视频编码为H.264/ACC（一般为mp4格式），用户将可以在线观看视频</p>
+                    <p>支持上传的视频格式：flv mkv avi rm rmvb mpeg mpg mov wmv mp4 webm</p>
+                  </div>
+<iframe id="ifm" src="__ROOT__/home/upload/uploadview/movieid/{$movieid}" width="100%" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" onload="javascript:dyniframesize('ifm');"></iframe>
+            </section>
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+<include file="Public:bodyframe-foot" />
+<include file="Public:footer" />

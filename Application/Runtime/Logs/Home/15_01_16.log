@@ -1,0 +1,1094 @@
+[ 2015-01-16T16:13:55+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+
+[ 2015-01-16T16:14:12+08:00 ] 172.16.14.1 /share/home/movie/show?id=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000302s ]
+
+[ 2015-01-16T16:14:22+08:00 ] 172.16.14.1 /share/home/movie/addcomment/id/34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+
+[ 2015-01-16T16:14:22+08:00 ] 172.16.14.1 /share/home/movie/show?id=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+
+[ 2015-01-16T16:14:29+08:00 ] 172.16.14.1 /share/home/movie/show/id/34/playid/9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000324s ]
+
+[ 2015-01-16T16:14:44+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=1 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_announce` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_announce` ORDER BY time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_notice` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `think_notice` ORDER BY time desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=0 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_localvideo` [ RunTime:0.0012s ]
+SQL: SELECT `userid`,COUNT(  `think_localvideo`.`id` ) as c FROM `think_localvideo` GROUP BY `think_localvideo`.`userid` ORDER BY COUNT(`think_localvideo`.`id`) desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000236s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0043s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=36 ) LIMIT 1   [ RunTime:0.0048s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=36 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_wishlist` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=47 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=38 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=39 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=40 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=41 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=42 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=43 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=44 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038071s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038115s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000184s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000177s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000102s ]
+
+[ 2015-01-16T16:14:44+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000070s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000054s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.0022s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=1 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `think_announce` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_announce` ORDER BY time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_notice` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `think_notice` ORDER BY time desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=0 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_localvideo` [ RunTime:0.0006s ]
+SQL: SELECT `userid`,COUNT(  `think_localvideo`.`id` ) as c FROM `think_localvideo` GROUP BY `think_localvideo`.`userid` ORDER BY COUNT(`think_localvideo`.`id`) desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=36 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=36 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_wishlist` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=47 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=38 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=39 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=40 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=41 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=42 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=43 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=44 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023066s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023119s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000240s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000084s ]
+
+[ 2015-01-16T16:14:48+08:00 ] 172.16.14.1 /share/home/movie/wish
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000052s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=0 )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+SQL: SHOW COLUMNS FROM `think_wishlist` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=35 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=35 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=37 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=37 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=38 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=38 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=39 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=39 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=40 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=40 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=41 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=41 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=42 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=42 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=43 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=43 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=44 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=44 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=45 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=45 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=47 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=47 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024484s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024526s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000087s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000259s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000091s ]
+
+[ 2015-01-16T16:14:48+08:00 ] 172.16.14.1 /share/home/movie/wish
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000058s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=0 )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000680s ]
+SQL: SHOW COLUMNS FROM `think_wishlist` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=35 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=35 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=37 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=37 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=38 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=38 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=39 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=39 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=40 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=40 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=41 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=41 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=42 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=42 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=43 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=43 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=44 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=44 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=45 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=45 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=47 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=47 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021519s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021558s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000233s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000134s ]
+
+[ 2015-01-16T16:14:51+08:00 ] 172.16.14.1 /share/home/movie/addtitle/wish/yes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+
+[ 2015-01-16T16:14:56+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000060s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videolist` WHERE ( uploadstatus=1 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006963s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007024s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000054s ]
+
+[ 2015-01-16T16:14:56+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0014s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007524s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007594s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000165s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000054s ]
+
+[ 2015-01-16T16:15:00+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000108s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=1 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_announce` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_announce` ORDER BY time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_notice` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `think_notice` ORDER BY time desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=0 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_localvideo` [ RunTime:0.0006s ]
+SQL: SELECT `userid`,COUNT(  `think_localvideo`.`id` ) as c FROM `think_localvideo` GROUP BY `think_localvideo`.`userid` ORDER BY COUNT(`think_localvideo`.`id`) desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000252s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=36 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=36 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_wishlist` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=47 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=38 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=39 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=40 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=41 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=42 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=43 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=44 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021624s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021657s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000069s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000164s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000082s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000143s ]
+
+[ 2015-01-16T16:15:00+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000060s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=1 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_announce` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `think_announce` ORDER BY time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_notice` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `think_notice` ORDER BY time desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=0 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_localvideo` [ RunTime:0.0010s ]
+SQL: SELECT `userid`,COUNT(  `think_localvideo`.`id` ) as c FROM `think_localvideo` GROUP BY `think_localvideo`.`userid` ORDER BY COUNT(`think_localvideo`.`id`) desc LIMIT 5   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=36 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=36 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_wishlist` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=47 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=38 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=39 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=40 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=41 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=42 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=43 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=44 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026760s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026801s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000145s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2015-01-16T16:15:12+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+
+[ 2015-01-16T16:15:41+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+
+[ 2015-01-16T16:15:42+08:00 ] 172.16.14.1 /share/home/movie/mlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000061s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videolist` WHERE `uploadstatus` = 1 AND `verify` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE `uploadstatus` = 1 AND `verify` = 1 ORDER BY updatetime desc LIMIT 0,12   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: type /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 95 行.
+NOTIC: [8] Undefined index: userid /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012651s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000048s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000090s ]
+
+[ 2015-01-16T16:15:42+08:00 ] 172.16.14.1 /share/home/movie/mlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000054s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videolist` WHERE `uploadstatus` = 1 AND `verify` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE `uploadstatus` = 1 AND `verify` = 1 ORDER BY updatetime desc LIMIT 0,12   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: type /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 95 行.
+NOTIC: [8] Undefined index: userid /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022052s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022082s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000100s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000192s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000053s ]
+
+[ 2015-01-16T16:15:45+08:00 ] 172.16.14.1 /share/home/movie/wish
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000114s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=0 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+SQL: SHOW COLUMNS FROM `think_wishlist` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=35 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=35 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=37 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=37 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=38 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=38 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=39 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=39 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=40 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=40 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=41 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=41 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=42 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=42 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=43 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=43 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=44 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=44 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=45 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=45 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=47 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=47 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015436s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015483s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000184s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000114s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000167s ]
+
+[ 2015-01-16T16:15:45+08:00 ] 172.16.14.1 /share/home/movie/wish
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=0 )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000144s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000224s ]
+SQL: SHOW COLUMNS FROM `think_wishlist` [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=35 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=35 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=37 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=37 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=38 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=38 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=39 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=39 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=40 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=40 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=41 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=41 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=42 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=42 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=43 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=43 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=44 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=44 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=45 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=45 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=47 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( userid=1 and movieid=47 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018901s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018930s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000149s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000054s ]
+
+[ 2015-01-16T16:15:48+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000121s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=1 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_announce` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_announce` ORDER BY time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_notice` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `think_notice` ORDER BY time desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=0 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_localvideo` [ RunTime:0.0012s ]
+SQL: SELECT `userid`,COUNT(  `think_localvideo`.`id` ) as c FROM `think_localvideo` GROUP BY `think_localvideo`.`userid` ORDER BY COUNT(`think_localvideo`.`id`) desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=36 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=36 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_wishlist` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=47 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=38 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=39 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=40 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=41 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=42 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=43 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=44 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017996s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018026s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000148s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2015-01-16T16:15:48+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=1 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_announce` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_announce` ORDER BY time desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_notice` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_notice` ORDER BY time desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=0 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_localvideo` [ RunTime:0.0004s ]
+SQL: SELECT `userid`,COUNT(  `think_localvideo`.`id` ) as c FROM `think_localvideo` GROUP BY `think_localvideo`.`userid` ORDER BY COUNT(`think_localvideo`.`id`) desc LIMIT 5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=36 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=36 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_wishlist` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=47 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=38 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=39 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=40 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=41 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=42 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=43 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=44 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021908s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021939s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000234s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000097s ]
+
+[ 2015-01-16T16:15:52+08:00 ] 172.16.14.1 /share/home/movie/mlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000081s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videolist` WHERE `uploadstatus` = 1 AND `verify` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE `uploadstatus` = 1 AND `verify` = 1 ORDER BY updatetime desc LIMIT 0,12   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: type /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 95 行.
+NOTIC: [8] Undefined index: userid /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014810s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014838s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000068s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000078s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000127s ]
+
+[ 2015-01-16T16:15:52+08:00 ] 172.16.14.1 /share/home/movie/mlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000126s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videolist` WHERE `uploadstatus` = 1 AND `verify` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE `uploadstatus` = 1 AND `verify` = 1 ORDER BY updatetime desc LIMIT 0,12   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: type /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 95 行.
+NOTIC: [8] Undefined index: userid /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018878s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018937s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000159s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000214s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000278s ]
+
+[ 2015-01-16T16:15:53+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000060s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=1 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_announce` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_announce` ORDER BY time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_notice` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_notice` ORDER BY time desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=0 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_localvideo` [ RunTime:0.0005s ]
+SQL: SELECT `userid`,COUNT(  `think_localvideo`.`id` ) as c FROM `think_localvideo` GROUP BY `think_localvideo`.`userid` ORDER BY COUNT(`think_localvideo`.`id`) desc LIMIT 5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=36 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=36 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_wishlist` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=47 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=38 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=39 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=40 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=41 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=42 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=43 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=44 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018731s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018760s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000152s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000054s ]
+
+[ 2015-01-16T16:15:54+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000105s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=1 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_announce` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `think_announce` ORDER BY time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_notice` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `think_notice` ORDER BY time desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=0 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_localvideo` [ RunTime:0.0010s ]
+SQL: SELECT `userid`,COUNT(  `think_localvideo`.`id` ) as c FROM `think_localvideo` GROUP BY `think_localvideo`.`userid` ORDER BY COUNT(`think_localvideo`.`id`) desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=36 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=36 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_wishlist` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=47 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=38 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=39 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=40 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=41 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=42 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=43 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=44 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031596s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031651s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000146s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000053s ]
+
+[ 2015-01-16T16:16:07+08:00 ] 172.16.14.1 /share/home/movie/mlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000107s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videolist` WHERE ( uploadstatus=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videolist` WHERE `uploadstatus` = 1 AND `verify` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE `uploadstatus` = 1 AND `verify` = 1 ORDER BY updatetime desc LIMIT 0,12   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: type /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 95 行.
+NOTIC: [8] Undefined index: userid /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016058s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016086s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000124s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000058s ]
+
+[ 2015-01-16T16:16:07+08:00 ] 172.16.14.1 /share/home/movie/mlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000088s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videolist` WHERE `uploadstatus` = 1 AND `verify` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_videolist` WHERE `uploadstatus` = 1 AND `verify` = 1 ORDER BY updatetime desc LIMIT 0,12   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: type /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 95 行.
+NOTIC: [8] Undefined index: userid /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017145s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017175s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000100s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000192s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000052s ]
+
+[ 2015-01-16T16:16:15+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000180s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000075s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=1 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_announce` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_announce` ORDER BY time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_notice` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_notice` ORDER BY time desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=0 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_localvideo` [ RunTime:0.0004s ]
+SQL: SELECT `userid`,COUNT(  `think_localvideo`.`id` ) as c FROM `think_localvideo` GROUP BY `think_localvideo`.`userid` ORDER BY COUNT(`think_localvideo`.`id`) desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=36 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=36 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_wishlist` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=47 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=38 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=39 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=40 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=41 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=42 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=43 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=44 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020781s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020811s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000163s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000148s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000194s ]
+
+[ 2015-01-16T16:16:15+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000109s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_videofavorite` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_videolist` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=1 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_announce` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `think_announce` ORDER BY time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_notice` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `think_notice` ORDER BY time desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_videolist` WHERE ( uploadstatus=0 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `think_localvideo` [ RunTime:0.0015s ]
+SQL: SELECT `userid`,COUNT(  `think_localvideo`.`id` ) as c FROM `think_localvideo` GROUP BY `think_localvideo`.`userid` ORDER BY COUNT(`think_localvideo`.`id`) desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=34 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=36 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_videofavorite` WHERE ( userid=1 and movieid=36 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_wishlist` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=47 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=38 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=39 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=40 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=41 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=42 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=43 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=44 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022993s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023036s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000053s ]
+
+[ 2015-01-16T16:16:22+08:00 ] 172.16.14.1 /share/home/user/profile/uid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000086s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.think_movielist' doesn't exist
+
+[ 2015-01-16T16:16:24+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000120s ]
+
+[ 2015-01-16T17:00:57+08:00 ] 192.168.1.102 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+
+[ 2015-01-16T17:00:58+08:00 ] 192.168.1.102 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000162s ]
+
+[ 2015-01-16T17:01:12+08:00 ] 192.168.1.102 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+
+[ 2015-01-16T17:01:35+08:00 ] 192.168.1.102 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+
+[ 2015-01-16T17:01:35+08:00 ] 192.168.1.102 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000062s ]
+
+[ 2015-01-16T17:01:56+08:00 ] 192.168.1.102 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+
+[ 2015-01-16T17:01:58+08:00 ] 192.168.1.102 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+
+[ 2015-01-16T17:02:07+08:00 ] 192.168.1.102 /share/home/user/login?username=xiaohuanshu&password=buzhidao&__hash__=3a3880c87bddc4b379a07f3aabc931e8_1459e7d2a33d6447a22b2c8aec08844d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000107s ]
+
+[ 2015-01-16T17:02:11+08:00 ] 192.168.1.102 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+
+[ 2015-01-16T17:02:17+08:00 ] 192.168.1.102 /share/home/movie/show?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000167s ]
+
+[ 2015-01-16T17:02:20+08:00 ] 192.168.1.102 /share/home/movie/upload/movieid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+
+[ 2015-01-16T17:03:18+08:00 ] 192.168.1.102 /share/home/movie/upload/movieid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+
+[ 2015-01-16T17:03:18+08:00 ] 192.168.1.102 /share/home/upload/uploadview/movieid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000066s ]
+

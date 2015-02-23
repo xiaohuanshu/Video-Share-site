@@ -1,0 +1,72 @@
+<include file="Public:head" />
+<include file="Public:header" headerstyle="navbar-header aside bg-info nav-xs"/>
+<include file="Public:bodyframe-head" bodyframestyle="bg-black dk aside hidden-print nav-xs"/>
+<section id="content">
+          <section class="vbox">
+            <section class="w-f-md" id="bjax-target">
+              <section class="hbox stretch">
+                <section>
+                  <section class="vbox">
+                    <section class="scrollable padder-lg">
+                      <h2 class="font-thin m-b">请愿</h2>
+<div class="row m-t-lg m-b-lg">
+                    <div class="col-sm-6">
+                      <div class="bg-primary wrapper-md r">
+                        <a href="__ROOT__/home/movie/addtitle/wish/yes">
+                          <span class="h4 m-b-xs block"><i class=" icon-present i-lg"></i>发布请愿信息</span>
+                          <span class="text-muted">没有找到想要的影视资源？快发布请愿看看别人有没有吧？</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="bg-black wrapper-md r">
+                        <a href="__ROOT__/home/movie/addtitle">
+                          <span class="h4 m-b-xs block"><i class="icon-share i-lg"></i>分享影视资源</span>
+                          <span class="text-muted">如果你有本平台没有的影视资源，快来发布分享吧</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                      <div class="row row-sm">
+<volist name="wishlist" id="mvlist" key='k' >
+                        <div class="col-xs-6 col-sm-2">
+                          <div class="item">
+                              <a href="__ROOT__/home/movie/show/id/{$mvlist.id}" class="h3 text-ellipsis">{$mvlist.name}</a>
+                              <a href="#" class="text-ellipsis text-xs text-muted">请愿人数:{$mvlist.id|getwishcount}</a>
+                            <div class="pos-rlt">
+                              <a href="__ROOT__/home/movie/show/id/{$mvlist.id}"><img src="{$mvlist.image|default='__PUBLIC__/images/nopicture.jpg'}.thumb.jpg" alt="" class="r r-2x img-full"></a>
+                            </div>
+                            <div class="btn-group btn-group-justified">
+<if condition="iswish($mvlist['id'],$uid) == '0'">
+		                <a href="#" class="btn btn-primary" data-toggle="class:" onclick="iwish({$mvlist.id});">
+                                  <span class="text">请愿</span>
+                                  <span class="text-active">请愿✔</span>
+                                </a>
+<else />
+		                <a href="#" class="btn btn-primary active" data-toggle="class:" onclick="iwish({$mvlist.id});">
+                                  <span class="text">请愿</span>
+                                  <span class="text-active">请愿✔</span>
+                                </a>
+</if>
+		              <a href="__ROOT__/home/movie/edit/movieid/{$mvlist.id}" class="btn btn-info">编辑</a>
+		              <a href="__ROOT__/home/movie/upload/movieid/{$mvlist.id}" class="btn btn-success">上传</a>
+		            </div>
+                          </div>
+                        </div>
+</volist>
+                      </div>
+                    </section>                 
+                  </section>
+                </section>
+              </section>
+            </section>
+            
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+            <!-- / side content -->
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+<include file="Public:bodyframe-foot" />
+<include file="Public:footer" />

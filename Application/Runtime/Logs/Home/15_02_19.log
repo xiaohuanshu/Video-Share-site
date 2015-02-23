@@ -1,0 +1,22 @@
+[ 2015-02-19T20:59:58+08:00 ] 192.168.122.1 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001020s ]
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/hgfs/share/ThinkPHP/Library/Think/Hook.class.php 第 46 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019790s ]
+NOTIC: [8] Undefined index: name /mnt/hgfs/share/Application/Home/Controller/GlobalAction.class.php 第 13 行.
+ERR: SQLSTATE[42000] [1049] Unknown database 'share'
+
+[ 2015-02-19T21:00:13+08:00 ] 192.168.122.1 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/hgfs/share/ThinkPHP/Library/Think/Hook.class.php 第 46 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000403s ]
+NOTIC: [8] Undefined index: name /mnt/hgfs/share/Application/Home/Controller/GlobalAction.class.php 第 13 行.
+ERR: SQLSTATE[42000] [1049] Unknown database 'share'
+

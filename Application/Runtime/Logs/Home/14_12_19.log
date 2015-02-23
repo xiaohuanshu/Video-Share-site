@@ -1,0 +1,421 @@
+[ 2014-12-19T21:34:52+08:00 ] 172.16.14.1 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000401s ]
+INFO: [ app_init ] --END-- [ RunTime:0.021052s ]
+
+[ 2014-12-19T21:34:53+08:00 ] 172.16.14.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+
+[ 2014-12-19T21:35:08+08:00 ] 172.16.14.1 /share/home/movie/show?id=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000127s ]
+
+[ 2014-12-19T21:35:13+08:00 ] 172.16.14.1 /share/home/movie/show/id/34/playid/9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000135s ]
+
+[ 2014-12-19T22:31:39+08:00 ] 172.16.14.1 /share/home/movie/wish
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000671s ]
+
+[ 2014-12-19T22:34:49+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+
+[ 2014-12-19T22:34:57+08:00 ] 172.16.14.1 /share/home/user/login?username=xiaohuanshu&password=buzhidao&__hash__=b067758760d58538ec0a21dab442fd8f_76b54703c514c3df6165216e03ce6dc4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+
+[ 2014-12-19T22:34:57+08:00 ] 172.16.14.1 /share/home/api/index?time=1418999697&code=863acvGkxRb6qBrLHiFGZQHh8sDcCUqNGlmspNtRJ%2BgwZtIWLlh0LN5jHmH%2F0%2F3N5KH7F6q9A6SfcivfjM%2Fb5Ux6IyuiDiNyNvFju6Xf3lKqEBs3hw5fT1w9%2BJ0UtQFc7ycpqF7%2BxAD0XxSJyZBGT%2BdW%2BtG16QnY%2FM4bTlgu7Ut7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000181s ]
+
+[ 2014-12-19T22:34:59+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+
+[ 2014-12-19T22:35:15+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000107s ]
+
+[ 2014-12-19T22:35:58+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+
+[ 2014-12-19T22:37:24+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+
+[ 2014-12-19T22:37:34+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000089s ]
+
+[ 2014-12-19T22:38:12+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000065s ]
+
+[ 2014-12-19T22:43:02+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000070s ]
+
+[ 2014-12-19T22:47:33+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+
+[ 2014-12-19T22:47:37+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000067s ]
+
+[ 2014-12-19T22:47:45+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000070s ]
+
+[ 2014-12-19T22:48:10+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000096s ]
+
+[ 2014-12-19T22:48:14+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+
+[ 2014-12-19T22:48:18+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+
+[ 2014-12-19T22:48:19+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000060s ]
+
+[ 2014-12-19T22:48:33+08:00 ] 172.16.14.1 /share/home/user/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000208s ]
+
+[ 2014-12-19T22:48:33+08:00 ] 172.16.14.1 /share/home/api/index?time=1419000513&code=94816mMpZ1sF9T0dCZqh%2BlOROfg9t0nC2CyBzCpJHcirMLFc0rKNVv%2BIhzipBbk4dem2SxiQTQqkNa30Pw
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+
+[ 2014-12-19T22:48:34+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000127s ]
+
+[ 2014-12-19T22:48:35+08:00 ] 172.16.14.1 /share/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000115s ]
+
+[ 2014-12-19T22:49:08+08:00 ] 172.16.14.1 /share/home/user/login?username=xiaohuanshu&password=buzhidao&__hash__=b1f7d85ca0d360cc3cf99284104716d8_a7a971756309ba0c1313fecb8ff7a5e7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000070s ]
+
+[ 2014-12-19T22:49:08+08:00 ] 172.16.14.1 /share/home/api/index?time=1419000548&code=aba41QRXrC3tBqkDMZ6AkcqBZ9wxuBYiPHS5YRFGU6%2BG0v%2FQliY%2FdEk2gw6U%2BNAp2C5f6wYVnb8q29bCbsEWfPXqTRjjXRQ88Rj%2BMu8kZMKZ90p7HnSwA%2BJ7cjsLEEtghwkjPLrDhYqlEUCjN6o%2FcZh4jbi%2FprTI24Nh2KVJI3n1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+
+[ 2014-12-19T22:49:09+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000062s ]
+
+[ 2014-12-19T22:49:13+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000066s ]
+
+[ 2014-12-19T22:49:31+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+
+[ 2014-12-19T22:49:37+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+
+[ 2014-12-19T22:49:38+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000062s ]
+
+[ 2014-12-19T22:49:41+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+
+[ 2014-12-19T22:49:44+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000066s ]
+
+[ 2014-12-19T22:51:12+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000068s ]
+
+[ 2014-12-19T22:51:14+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000130s ]
+
+[ 2014-12-19T22:51:16+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+
+[ 2014-12-19T22:51:19+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+
+[ 2014-12-19T22:51:21+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000061s ]
+
+[ 2014-12-19T22:51:22+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+
+[ 2014-12-19T22:51:23+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+
+[ 2014-12-19T22:51:26+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000140s ]
+
+[ 2014-12-19T22:51:28+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+
+[ 2014-12-19T22:51:48+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000098s ]
+
+[ 2014-12-19T22:51:50+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+
+[ 2014-12-19T22:51:52+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+
+[ 2014-12-19T22:52:05+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+
+[ 2014-12-19T22:53:10+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000099s ]
+
+[ 2014-12-19T22:53:13+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+
+[ 2014-12-19T22:53:14+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+
+[ 2014-12-19T22:53:15+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+
+[ 2014-12-19T22:54:47+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000213s ]
+
+[ 2014-12-19T22:54:51+08:00 ] 172.16.14.1 /share/home/movie/addtitle/wish
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000109s ]
+
+[ 2014-12-19T22:54:56+08:00 ] 172.16.14.1 /share/home/movie/addtitle/wish/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+
+[ 2014-12-19T22:55:08+08:00 ] 172.16.14.1 /share/home/movie/addtitle/wish/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+
+[ 2014-12-19T22:55:11+08:00 ] 172.16.14.1 /share/home/movie/addtitle/wish/yes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000115s ]
+
+[ 2014-12-19T22:56:52+08:00 ] 172.16.14.1 /share/home/movie/addtitle/wish/yes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000133s ]
+
+[ 2014-12-19T22:56:56+08:00 ] 172.16.14.1 /share/home/movie/addtitle/wish/yes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000067s ]
+
+[ 2014-12-19T22:57:01+08:00 ] 172.16.14.1 /share/home/movie/addtitle/wish/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+
+[ 2014-12-19T22:57:20+08:00 ] 172.16.14.1 /share/home/movie/addtitle/wish/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+
+[ 2014-12-19T22:57:53+08:00 ] 172.16.14.1 /share/home/movie/addtitle/wish/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+
+[ 2014-12-19T22:57:57+08:00 ] 172.16.14.1 /share/home/movie/addtitle/wish/yes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000112s ]
+
+[ 2014-12-19T22:58:12+08:00 ] 172.16.14.1 /share/home/movie/addtitle/wish/yes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000072s ]
+
+[ 2014-12-19T22:58:16+08:00 ] 172.16.14.1 /share/home/movie/addtitle/wish/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000183s ]
+
+[ 2014-12-19T23:18:09+08:00 ] 172.16.14.1 /share/home/movie/addtitle/wish/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+
+[ 2014-12-19T23:18:12+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000067s ]
+
+[ 2014-12-19T23:18:32+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+
+[ 2014-12-19T23:18:36+08:00 ] 172.16.14.1 /share/home/movie/addtitle/wish/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+
+[ 2014-12-19T23:18:40+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+
+[ 2014-12-19T23:18:40+08:00 ] 172.16.14.1 /share/home/movie/wishsuccess/movieid/38
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000057s ]
+
+[ 2014-12-19T23:25:30+08:00 ] 172.16.14.1 /share/home/movie/wishsuccess/movieid/38
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+
+[ 2014-12-19T23:25:32+08:00 ] 172.16.14.1 /share/home/movie/wishsuccess/movieid/38
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+
+[ 2014-12-19T23:25:48+08:00 ] 172.16.14.1 /share/home/movie/wishsuccess/movieid/38
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000135s ]
+
+[ 2014-12-19T23:26:54+08:00 ] 172.16.14.1 /share/home/movie/wishsuccess/movieid/38
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000131s ]
+
+[ 2014-12-19T23:27:42+08:00 ] 172.16.14.1 /share/home/movie/wishsuccess/movieid/38
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000131s ]
+
+[ 2014-12-19T23:28:18+08:00 ] 172.16.14.1 /share/home/movie/wishsuccess/movieid/38
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+
+[ 2014-12-19T23:29:08+08:00 ] 172.16.14.1 /share/home/movie/wishsuccess/movieid/38
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000068s ]
+
+[ 2014-12-19T23:29:50+08:00 ] 172.16.14.1 /share/home/movie/wishsuccess/movieid/38
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+
+[ 2014-12-19T23:30:32+08:00 ] 172.16.14.1 /share/home/movie/wishsuccess/movieid/38
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000119s ]
+
+[ 2014-12-19T23:35:41+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000114s ]
+
+[ 2014-12-19T23:39:47+08:00 ] 172.16.14.1 /share/home/movie/addtitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000109s ]
+
+[ 2014-12-19T23:39:51+08:00 ] 172.16.14.1 /share/home/movie/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000187s ]
+ERR: 参数错误或者未定义:movieid
+
+[ 2014-12-19T23:40:00+08:00 ] 172.16.14.1 /share/home/movie/edit/movieid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000111s ]
+

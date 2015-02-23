@@ -1,0 +1,138 @@
+<include file="Public:head" />
+<include file="Public:header" headerstyle="navbar-header aside bg-info nav-xs"/>
+<include file="Public:bodyframe-head" bodyframestyle="bg-black dk aside hidden-print nav-xs"/>
+<section id="content">
+          <section class="vbox">
+            <section class="scrollable">
+              <section class="hbox stretch">
+                <aside class="aside-lg bg-light lter b-r">
+                  <section class="vbox">
+                    <section class="scrollable">
+                      <div class="wrapper">
+                        <div class="text-center m-b m-t">
+                          <a href="#" class="thumb-lg">
+                            <img src="/ucenter/avatar.php?uid={$userinfo.userid}&type=virtual&size=middle" class="img-circle">
+                          </a>
+                          <div>
+                            <div class="h3 m-t-xs m-b-xs">{$userinfo.username}</div>
+                            <small class="text-muted"><i class="fa fa-map-marker"></i> {$userinfo.college}  {$userinfo.major} {$userinfo.realname}</small>
+                          </div>                
+                        </div>
+                        <div class="panel wrapper">
+                          <div class="row text-center">
+                            <div class="col-xs-6">
+                              <a href="__ROOT__/home/movie/mlist?userid={$userinfo.userid}">
+                                <span class="m-b-xs h4 block">{$uploadcount}</span>
+                                <small class="text-muted">上传数量</small>
+                              </a>
+                            </div>
+                            <div class="col-xs-6">
+                              <a href="#">
+                                <span class="m-b-xs h4 block">{$wishcount}</span>
+                                <small class="text-muted">请愿数量</small>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="btn-group btn-group-justified m-b">
+                          <a class="btn btn-success btn-rounded" href="/forum/home.php?mod=spacecp&ac=pm&op=showmsg&touid={$userinfo.userid}">
+                            <span class="text">
+                              <i class="fa fa-eye"></i> 聊天
+                            </span>
+                          </a>
+                          
+                        <a class="btn btn-dark btn-rounded">
+                            <i class="fa fa-comment-o"></i> 举报
+                          </a></div>
+                        <div>
+                          <small class="text-uc text-xs text-muted">介绍</small>
+                          <p>{$userinfo.intro|default="未填写"}</p>
+                          <small class="text-uc text-xs text-muted">关联</small>
+                          <p>QQ：<eq name="userinfo.qq" value='0'>未填写<else />{$userinfo.qq}</eq></p>
+<p>上次登录：{$userinfo.lastlogintime}</p>
+<p>注册时间：{$userinfo.registertime}</p>
+                          <div class="line"></div>
+<div class="doc-buttons">
+		                <a href="__ROOT__/home/movie/mlist?userid={$userinfo.userid}" class="btn btn-s-md btn-default">对方视频列表</a>
+<a href="/forum/home.php?mod=space&uid={$userinfo.userid}&do=thread&view=me&from=space" class="btn btn-s-md btn-default">对方论坛帖子</a>                
+		              </div>
+                        </div>
+                      </div>
+                    </section>
+                  </section>
+                </aside>
+                <aside class="bg-white">
+                  <section class="vbox">
+                    <header class="header bg-light lt">
+                      <ul class="nav nav-tabs nav-white">
+                        <li class="active" style=""><a href="#upload" data-toggle="tab">上传视频</a></li>
+<li class="" style=""><a href="#wish" data-toggle="tab">请愿视频</a></li>
+                      </ul>
+                    </header>
+                    
+<section class="scrollable">
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="upload">
+                          <ul class="list-group no-radius m-b-none m-t-n-xxs list-group-lg no-border">
+<volist name="uploadlist" id="uplist" empty="还没有上传过视频..." >
+                            <li class="list-group-item">
+                              <a href="#" class="thumb-sm pull-left m-r-sm">
+                                <img src="{$uplist.image}.thumb.jpg" {//class="img-circle"}>
+                              </a>
+                              <a href="#" class="clear">
+                                <small class="pull-right">{$uplist.updatetime}</small>
+                                <strong class="block">{$userinfo.username}</strong>
+                                <small>{$uplist.name}</small>
+                              </a>
+                            </li>
+</volist>
+                          </ul>
+                        </div>
+<div class="tab-pane" id="wish">
+                          <ul class="list-group no-radius m-b-none m-t-n-xxs list-group-lg no-border">
+<volist name="wishlist" id="wslist"  empty="还没有情愿过视频..." >
+                            <li class="list-group-item">
+                              <a href="#" class="thumb-sm pull-left m-r-sm">
+                                <img src="{$wslist.image}.thumb.jpg" {//class="img-circle"}>
+                              </a>
+                              <a href="#" class="clear">
+                                <small class="pull-right">{$wslist.updatetime}</small>
+                                <strong class="block">{$userinfo.username}</strong>
+                                <small>{$wslist.name}</small>
+                              </a>
+                            </li>
+</volist>
+                          </ul>
+                        </div>
+                        
+                        
+                      </div>
+                    </section>
+                  </section>
+                </aside>
+                <aside class="col-lg-3 b-l">
+                  <section class="vbox">
+                    <section class="scrollable padder-v">
+                      <div class="panel">
+                        <h4 class="font-thin padder">最新评论</h4>
+                        <ul class="list-group">
+<volist name="commentlist" id="cmlist"  empty="还没有评论过视频..." >
+                          <li class="list-group-item">
+                              <p><a href="__ROOT__/home/movie/show/id/{$cmlist.id}" class="text-info">{$cmlist.movieid|getmovienamebyid}</a>:{$cmlist.content}</p>
+                              <small class="block text-muted"><i class="fa fa-clock-o"></i>{$cmlist.time}</small>
+                          </li>
+</volist>
+                          
+                        </ul>
+                      </div>
+                      
+                    </section>
+                  </section>              
+                </aside>
+              </section>
+            </section>
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+<include file="Public:bodyframe-foot" />
+<include file="Public:footer" />

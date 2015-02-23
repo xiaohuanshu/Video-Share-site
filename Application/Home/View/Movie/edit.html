@@ -1,0 +1,65 @@
+<include file="Public:head" />
+<include file="Public:header" headerstyle="navbar-header aside bg-info nav-xs"/>
+<include file="Public:bodyframe-head" bodyframestyle="bg-black dk aside hidden-print nav-xs"/>
+<section id="content">
+          <section class="vbox">
+            <section class="scrollable padder">
+              <div class="m-b-md">
+                <h3 class="m-b-none">影视资源编辑-{$movieinfo.name}</h3>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <section class="panel panel-default">
+                    <div class="alert alert-warning alert-block">
+                      <button type="button" class="close" data-dismiss="alert">×</button>
+                      <h4><i class="fa fa-bell-alt"></i>注意!</h4>
+                      <p>海报只允许上传图片格式文件(jpg,gif,png,jpeg)，要求长比宽大的海报</p>
+                      <p>视频类型可多选，不选则为“其他”类</p>
+                      <p>如果视频为连续剧，不需要填写时间，时间格式(小时:分钟)</p>
+                    </div>
+                    <div class="panel-body">
+                      <form role="form" class="form-horizontal" method="post" action="__ROOT__/home/upload/poster/movieid/{$movieinfo.id}" enctype="multipart/form-data">
+<div class="form-group">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">海报</label>
+                      <div class="col-sm-10">
+                        <input name="uimage" type="file" class="filestyle" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline v-middle input-s" title="hello">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">类型</label>
+                      <div class="col-sm-10">
+                        	<div class="btn-group" data-toggle="buttons">
+<volist name=":C('videotype')" id="ctype" k="ck">
+		                  <label class="btn btn-sm btn-default">
+		                    <input type="checkbox" name="options[]" value="{$ctype}" id={$ck}> {$ctype}
+		                  </label>
+</volist>
+		                </div>        
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">时间</label>
+                      <div class="col-sm-2">
+                        <input name="time" class="form-control" placeholder="00：00">
+                      </div>
+                    </div>
+                      <div class="line line-dashed b-b line-lg pull-in"></div>
+                      <div class="form-group">
+                      <div class="col-sm-4 col-sm-offset-2">
+                        <button type="submit" class="btn btn-primary">下一步</button>
+                      </div>
+                    </div>
+                      </div>
+                      </form>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </section>
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+<include file="Public:bodyframe-foot" />
+<script src="__PUBLIC__/js/file-input/bootstrap-filestyle.min.js"></script>
+<include file="Public:footer" />

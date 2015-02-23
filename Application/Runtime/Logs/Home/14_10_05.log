@@ -1,0 +1,86 @@
+[ 2014-10-05T20:10:52+08:00 ] 172.16.14.1 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000152s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000181s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.011052s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `think_movielist` [ RunTime:0.000582s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=4 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.000473s ]
+SQL: SHOW COLUMNS FROM `think_announce` [ RunTime:0.000516s ]
+SQL: SELECT * FROM `think_announce` ORDER BY time desc LIMIT 1   [ RunTime:0.000068s ]
+SQL: SHOW COLUMNS FROM `think_notice` [ RunTime:0.000338s ]
+SQL: SELECT * FROM `think_notice` ORDER BY time desc LIMIT 3   [ RunTime:0.000044s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=1 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.000283s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY wishnumber desc LIMIT 5   [ RunTime:0.000046s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+NOTIC: [8] Undefined variable: a /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_mvmylist` [ RunTime:0.000784s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `think_mvmylist`
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.000443s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=1 ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `think_mvlikelist` [ RunTime:0.000399s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.000044s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=2 ) LIMIT 1   [ RunTime:0.000069s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=2 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=2 ) LIMIT 1   [ RunTime:0.000039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=3 ) LIMIT 1   [ RunTime:0.000078s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=3 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=3 ) LIMIT 1   [ RunTime:0.000048s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=4 ) LIMIT 1   [ RunTime:0.000064s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=4 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=4 ) LIMIT 1   [ RunTime:0.000042s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=5 ) LIMIT 1   [ RunTime:0.000064s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=5 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=5 ) LIMIT 1   [ RunTime:0.000037s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=6 ) LIMIT 1   [ RunTime:0.000064s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=6 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=6 ) LIMIT 1   [ RunTime:0.000037s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=7 ) LIMIT 1   [ RunTime:0.000062s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=7 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=7 ) LIMIT 1   [ RunTime:0.000037s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=8 ) LIMIT 1   [ RunTime:0.000062s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=8 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=8 ) LIMIT 1   [ RunTime:0.000047s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=9 ) LIMIT 1   [ RunTime:0.000072s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=9 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=9 ) LIMIT 1   [ RunTime:0.000062s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=10 ) LIMIT 1   [ RunTime:0.000151s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=10 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=10 ) LIMIT 1   [ RunTime:0.000043s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=11 ) LIMIT 1   [ RunTime:0.000071s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=11 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=11 ) LIMIT 1   [ RunTime:0.000041s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=12 ) LIMIT 1   [ RunTime:0.000082s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=12 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=12 ) LIMIT 1   [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.124180s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.124210s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000176s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000206s ]
+

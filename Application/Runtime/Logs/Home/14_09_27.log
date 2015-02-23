@@ -1,0 +1,1200 @@
+[ 2014-09-27T19:15:36+08:00 ] 192.168.1.232 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.021664s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.014841s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014942s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.597056s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.069297s ]
+SQL: SHOW COLUMNS FROM `think_movielist` [ RunTime:0.025070s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=4 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.108515s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=1 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.002140s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY wishnumber desc LIMIT 5   [ RunTime:0.000401s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+NOTIC: [8] Undefined variable: a /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_mvmylist` [ RunTime:0.011741s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `think_mvmylist`
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.000201s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=1 ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `think_mvlikelist` [ RunTime:0.020041s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.000765s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=2 ) LIMIT 1   [ RunTime:0.000111s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=2 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=2 ) LIMIT 1   [ RunTime:0.000163s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=3 ) LIMIT 1   [ RunTime:0.000097s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=3 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=3 ) LIMIT 1   [ RunTime:0.000210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=4 ) LIMIT 1   [ RunTime:0.000094s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=4 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=4 ) LIMIT 1   [ RunTime:0.000134s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=5 ) LIMIT 1   [ RunTime:0.000090s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=5 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=5 ) LIMIT 1   [ RunTime:0.000137s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=6 ) LIMIT 1   [ RunTime:0.000092s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=6 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=6 ) LIMIT 1   [ RunTime:0.000128s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=7 ) LIMIT 1   [ RunTime:0.000097s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=7 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=7 ) LIMIT 1   [ RunTime:0.000183s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=8 ) LIMIT 1   [ RunTime:0.000077s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=8 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=8 ) LIMIT 1   [ RunTime:0.000111s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=9 ) LIMIT 1   [ RunTime:0.000066s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=9 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=9 ) LIMIT 1   [ RunTime:0.000134s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=10 ) LIMIT 1   [ RunTime:0.000580s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=10 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=10 ) LIMIT 1   [ RunTime:0.000278s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=11 ) LIMIT 1   [ RunTime:0.000121s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=11 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=11 ) LIMIT 1   [ RunTime:0.000188s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=12 ) LIMIT 1   [ RunTime:0.000102s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid=1 and movieid=12 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=12 ) LIMIT 1   [ RunTime:0.000150s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.192805s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.192865s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.009808s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009881s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001385s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001462s ]
+
+[ 2014-09-27T20:31:36+08:00 ] 192.168.1.232 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000093s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.060085s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.000399s ]
+SQL: SHOW COLUMNS FROM `think_movielist` [ RunTime:0.001338s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=4 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.000535s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=1 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.000353s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY wishnumber desc LIMIT 5   [ RunTime:0.000080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000202s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000284s ]
+NOTIC: [8] Undefined variable: a /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 5 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SHOW COLUMNS FROM `think_mvmylist` [ RunTime:0.000817s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `think_mvmylist`
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=1 ) LIMIT 1   [ RunTime:0.000486s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=1 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=1 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SHOW COLUMNS FROM `think_mvlikelist` [ RunTime:0.000603s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=1 ) LIMIT 1   [ RunTime:0.000179s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=1 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=1 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=2 ) LIMIT 1   [ RunTime:0.000083s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=2 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=2 ) LIMIT 1   [ RunTime:0.000072s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=2 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=3 ) LIMIT 1   [ RunTime:0.000053s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=3 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=3 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=3 ) LIMIT 1   [ RunTime:0.000053s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=3 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=3 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=4 ) LIMIT 1   [ RunTime:0.000074s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=4 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=4 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=4 ) LIMIT 1   [ RunTime:0.000061s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=4 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=4 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=5 ) LIMIT 1   [ RunTime:0.000349s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=5 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=5 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=5 ) LIMIT 1   [ RunTime:0.000066s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=5 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=5 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=6 ) LIMIT 1   [ RunTime:0.000071s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=6 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=6 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=6 ) LIMIT 1   [ RunTime:0.000075s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=6 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=6 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=7 ) LIMIT 1   [ RunTime:0.000068s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=7 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=7 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=7 ) LIMIT 1   [ RunTime:0.000051s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=7 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=7 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=8 ) LIMIT 1   [ RunTime:0.000074s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=8 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=8 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=8 ) LIMIT 1   [ RunTime:0.000054s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=8 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=8 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=9 ) LIMIT 1   [ RunTime:0.000073s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=9 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=9 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=9 ) LIMIT 1   [ RunTime:0.000076s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=9 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=9 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=10 ) LIMIT 1   [ RunTime:0.000074s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=10 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=10 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=10 ) LIMIT 1   [ RunTime:0.000078s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=10 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=10 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=11 ) LIMIT 1   [ RunTime:0.000074s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=11 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=11 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=11 ) LIMIT 1   [ RunTime:0.000077s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=11 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=11 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=12 ) LIMIT 1   [ RunTime:0.000062s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=12 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=12 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=12 ) LIMIT 1   [ RunTime:0.000076s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=12 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=12 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033128s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033187s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000174s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000219s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000181s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000232s ]
+
+[ 2014-09-27T20:31:44+08:00 ] 192.168.1.232 /share/home/movie/show?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000108s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `think_movielist` [ RunTime:0.002075s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( id=1 )  [ RunTime:0.001486s ]
+SQL: SHOW COLUMNS FROM `think_locallist` [ RunTime:0.031993s ]
+SQL: SELECT * FROM `think_locallist` WHERE ( movieid=1 and istrue=1 )  [ RunTime:0.009102s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_locallist` WHERE ( movieid=1 ) LIMIT 1   [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `think_wishlist` [ RunTime:0.059649s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_wishlist` WHERE ( movieid=1 ) LIMIT 1   [ RunTime:0.000379s ]
+SQL: SHOW COLUMNS FROM `think_mvlikelist` [ RunTime:0.000602s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( movieid=1 ) LIMIT 1   [ RunTime:0.000309s ]
+SQL: SHOW COLUMNS FROM `think_mvfalist` [ RunTime:0.036422s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( movieid=1 ) LIMIT 1   [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `think_mvcommentlist` [ RunTime:0.016302s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvcommentlist` WHERE ( movieid=1 ) LIMIT 1   [ RunTime:0.000246s ]
+SQL: SELECT * FROM `think_mvcommentlist` WHERE ( movieid=1 )  [ RunTime:0.000167s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+NOTIC: [8] Undefined variable: a /var/www/html/share/Application/Runtime/Cache/Home/75742e3aca5aee47f4cee4aabfa45f43.php 第 5 行.
+NOTIC: [8] Undefined index: userid /var/www/html/share/Application/Runtime/Cache/Home/75742e3aca5aee47f4cee4aabfa45f43.php 第 321 行.
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.001086s ]
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.000584s ]
+NOTIC: [8] Undefined index: userid /var/www/html/share/Application/Runtime/Cache/Home/75742e3aca5aee47f4cee4aabfa45f43.php 第 333 行.
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.000047s ]
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.000043s ]
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.000043s ]
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.000042s ]
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.000040s ]
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.000039s ]
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.000040s ]
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.000039s ]
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.000039s ]
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=4 )  [ RunTime:0.000215s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036854s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036897s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000106s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000099s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000157s ]
+
+[ 2014-09-27T20:31:55+08:00 ] 192.168.1.232 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000094s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.040004s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.000082s ]
+SQL: SHOW COLUMNS FROM `think_movielist` [ RunTime:0.000935s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=4 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.000515s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=1 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.000104s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY wishnumber desc LIMIT 5   [ RunTime:0.000045s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+NOTIC: [8] Undefined variable: a /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 5 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SHOW COLUMNS FROM `think_mvmylist` [ RunTime:0.000490s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `think_mvmylist`
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=1 ) LIMIT 1   [ RunTime:0.000064s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=1 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=1 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SHOW COLUMNS FROM `think_mvlikelist` [ RunTime:0.000576s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=1 ) LIMIT 1   [ RunTime:0.000052s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=1 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=1 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=2 ) LIMIT 1   [ RunTime:0.000047s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=2 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=2 ) LIMIT 1   [ RunTime:0.000045s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=2 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=3 ) LIMIT 1   [ RunTime:0.000046s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=3 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=3 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=3 ) LIMIT 1   [ RunTime:0.000050s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=3 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=3 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=4 ) LIMIT 1   [ RunTime:0.000045s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=4 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=4 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=4 ) LIMIT 1   [ RunTime:0.000045s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=4 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=4 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=5 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=5 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=5 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=5 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=5 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=5 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=6 ) LIMIT 1   [ RunTime:0.000043s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=6 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=6 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=6 ) LIMIT 1   [ RunTime:0.000043s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=6 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=6 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=7 ) LIMIT 1   [ RunTime:0.000043s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=7 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=7 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=7 ) LIMIT 1   [ RunTime:0.000043s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=7 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=7 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=8 ) LIMIT 1   [ RunTime:0.000043s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=8 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=8 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=8 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=8 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=8 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=9 ) LIMIT 1   [ RunTime:0.000068s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=9 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=9 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=9 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=9 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=9 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=10 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=10 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=10 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=10 ) LIMIT 1   [ RunTime:0.000045s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=10 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=10 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=11 ) LIMIT 1   [ RunTime:0.000043s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=11 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=11 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=11 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=11 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=11 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=12 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=12 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=12 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=12 ) LIMIT 1   [ RunTime:0.000076s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=12 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=12 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019056s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000049s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2014-09-27T20:32:04+08:00 ] 192.168.1.232 /share/home/movie/mlist?name=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000181s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000104s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `think_movielist` [ RunTime:0.001234s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_movielist` WHERE ( statue=4 ) LIMIT 1   [ RunTime:0.001445s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=4 ) ORDER BY updatetime desc LIMIT 0,12   [ RunTime:0.011474s ]
+NOTIC: [8] Undefined index: type /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 111 行.
+NOTIC: [8] Undefined index: userid /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 112 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+NOTIC: [8] Undefined variable: a /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 5 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+SQL: SHOW COLUMNS FROM `think_mvmylist` [ RunTime:0.000715s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `think_mvmylist`
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=1 ) LIMIT 1   [ RunTime:0.000103s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=1 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=1 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+SQL: SHOW COLUMNS FROM `think_mvlikelist` [ RunTime:0.000600s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=1 ) LIMIT 1   [ RunTime:0.000075s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=1 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=1 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=2 ) LIMIT 1   [ RunTime:0.000058s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=2 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=2 ) LIMIT 1   [ RunTime:0.000055s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=2 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=3 ) LIMIT 1   [ RunTime:0.000056s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=3 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=3 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=3 ) LIMIT 1   [ RunTime:0.000055s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=3 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=3 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=4 ) LIMIT 1   [ RunTime:0.000067s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=4 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=4 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=4 ) LIMIT 1   [ RunTime:0.000058s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=4 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=4 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=5 ) LIMIT 1   [ RunTime:0.000054s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=5 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=5 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=5 ) LIMIT 1   [ RunTime:0.000060s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=5 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=5 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=6 ) LIMIT 1   [ RunTime:0.000057s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=6 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=6 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=6 ) LIMIT 1   [ RunTime:0.000053s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=6 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=6 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=7 ) LIMIT 1   [ RunTime:0.000054s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=7 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=7 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=7 ) LIMIT 1   [ RunTime:0.000059s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=7 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=7 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=8 ) LIMIT 1   [ RunTime:0.000062s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=8 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=8 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=8 ) LIMIT 1   [ RunTime:0.000059s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=8 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=8 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=9 ) LIMIT 1   [ RunTime:0.000062s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=9 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=9 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=9 ) LIMIT 1   [ RunTime:0.000057s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=9 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=9 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=10 ) LIMIT 1   [ RunTime:0.000057s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=10 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=10 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=10 ) LIMIT 1   [ RunTime:0.000059s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=10 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=10 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=11 ) LIMIT 1   [ RunTime:0.000057s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=11 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=11 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=11 ) LIMIT 1   [ RunTime:0.000061s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=11 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=11 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=12 ) LIMIT 1   [ RunTime:0.000054s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=12 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=12 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=12 ) LIMIT 1   [ RunTime:0.000054s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=12 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=12 ) LIMIT 1  
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033698s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033734s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000102s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000162s ]
+
+[ 2014-09-27T20:32:06+08:00 ] 192.168.1.232 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000095s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.001543s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.000177s ]
+SQL: SHOW COLUMNS FROM `think_movielist` [ RunTime:0.001605s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=4 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.000303s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=1 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.000139s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY wishnumber desc LIMIT 5   [ RunTime:0.000078s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+NOTIC: [8] Undefined variable: a /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 5 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SHOW COLUMNS FROM `think_mvmylist` [ RunTime:0.000593s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `think_mvmylist`
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=1 ) LIMIT 1   [ RunTime:0.000066s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=1 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=1 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SHOW COLUMNS FROM `think_mvlikelist` [ RunTime:0.000354s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=1 ) LIMIT 1   [ RunTime:0.000050s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=1 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=1 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=2 ) LIMIT 1   [ RunTime:0.000047s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=2 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=2 ) LIMIT 1   [ RunTime:0.000047s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=2 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=3 ) LIMIT 1   [ RunTime:0.000045s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=3 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=3 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=3 ) LIMIT 1   [ RunTime:0.000045s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=3 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=3 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=4 ) LIMIT 1   [ RunTime:0.000045s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=4 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=4 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=4 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=4 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=4 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=5 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=5 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=5 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=5 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=5 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=5 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=6 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=6 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=6 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=6 ) LIMIT 1   [ RunTime:0.000043s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=6 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=6 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=7 ) LIMIT 1   [ RunTime:0.000043s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=7 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=7 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=7 ) LIMIT 1   [ RunTime:0.000043s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=7 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=7 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=8 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=8 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=8 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=8 ) LIMIT 1   [ RunTime:0.000043s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=8 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=8 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=9 ) LIMIT 1   [ RunTime:0.000060s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=9 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=9 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=9 ) LIMIT 1   [ RunTime:0.000071s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=9 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=9 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=10 ) LIMIT 1   [ RunTime:0.000048s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=10 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=10 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=10 ) LIMIT 1   [ RunTime:0.000049s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=10 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=10 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=11 ) LIMIT 1   [ RunTime:0.000070s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=11 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=11 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=11 ) LIMIT 1   [ RunTime:0.000051s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=11 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=11 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=12 ) LIMIT 1   [ RunTime:0.000047s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=12 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=12 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=12 ) LIMIT 1   [ RunTime:0.000047s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=12 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=12 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019080s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019153s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000053s ]
+
+[ 2014-09-27T20:32:11+08:00 ] 192.168.1.232 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.000697s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.000069s ]
+SQL: SHOW COLUMNS FROM `think_movielist` [ RunTime:0.000560s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=4 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.000514s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=1 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.000115s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY wishnumber desc LIMIT 5   [ RunTime:0.000052s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000457s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000506s ]
+NOTIC: [8] Undefined variable: a /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 5 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SHOW COLUMNS FROM `think_mvmylist` [ RunTime:0.000475s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `think_mvmylist`
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=1 ) LIMIT 1   [ RunTime:0.000064s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=1 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=1 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SHOW COLUMNS FROM `think_mvlikelist` [ RunTime:0.000327s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=1 ) LIMIT 1   [ RunTime:0.000050s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=1 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=1 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=2 ) LIMIT 1   [ RunTime:0.000047s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=2 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=2 ) LIMIT 1   [ RunTime:0.000047s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=2 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=3 ) LIMIT 1   [ RunTime:0.000046s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=3 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=3 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=3 ) LIMIT 1   [ RunTime:0.000046s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=3 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=3 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=4 ) LIMIT 1   [ RunTime:0.000045s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=4 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=4 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=4 ) LIMIT 1   [ RunTime:0.000045s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=4 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=4 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=5 ) LIMIT 1   [ RunTime:0.000104s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=5 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=5 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=5 ) LIMIT 1   [ RunTime:0.000045s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=5 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=5 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=6 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=6 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=6 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=6 ) LIMIT 1   [ RunTime:0.000071s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=6 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=6 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=7 ) LIMIT 1   [ RunTime:0.000047s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=7 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=7 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=7 ) LIMIT 1   [ RunTime:0.000047s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=7 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=7 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=8 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=8 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=8 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=8 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=8 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=8 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=9 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=9 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=9 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=9 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=9 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=9 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=10 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=10 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=10 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=10 ) LIMIT 1   [ RunTime:0.000046s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=10 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=10 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=11 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=11 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=11 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=11 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=11 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=11 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=12 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=12 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=12 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=12 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=12 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=12 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020228s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020298s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000104s ]
+
+[ 2014-09-27T20:32:12+08:00 ] 192.168.1.232 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000049s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.000942s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.000082s ]
+SQL: SHOW COLUMNS FROM `think_movielist` [ RunTime:0.000628s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=4 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.000210s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=1 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.000075s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY wishnumber desc LIMIT 5   [ RunTime:0.000043s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+NOTIC: [8] Undefined variable: a /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 5 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SHOW COLUMNS FROM `think_mvmylist` [ RunTime:0.000667s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `think_mvmylist`
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=1 ) LIMIT 1   [ RunTime:0.000089s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=1 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=1 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SHOW COLUMNS FROM `think_mvlikelist` [ RunTime:0.000603s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=1 ) LIMIT 1   [ RunTime:0.000084s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=1 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=1 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=2 ) LIMIT 1   [ RunTime:0.000082s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=2 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=2 ) LIMIT 1   [ RunTime:0.000075s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=2 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=3 ) LIMIT 1   [ RunTime:0.000124s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=3 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=3 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=3 ) LIMIT 1   [ RunTime:0.000091s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=3 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=3 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=4 ) LIMIT 1   [ RunTime:0.000071s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=4 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=4 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=4 ) LIMIT 1   [ RunTime:0.000071s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=4 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=4 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=5 ) LIMIT 1   [ RunTime:0.000070s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=5 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=5 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=5 ) LIMIT 1   [ RunTime:0.000073s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=5 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=5 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=6 ) LIMIT 1   [ RunTime:0.000072s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=6 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=6 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=6 ) LIMIT 1   [ RunTime:0.000070s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=6 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=6 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=7 ) LIMIT 1   [ RunTime:0.000066s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=7 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=7 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=7 ) LIMIT 1   [ RunTime:0.000093s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=7 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=7 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=8 ) LIMIT 1   [ RunTime:0.000069s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=8 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=8 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=8 ) LIMIT 1   [ RunTime:0.000075s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=8 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=8 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=9 ) LIMIT 1   [ RunTime:0.000074s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=9 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=9 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=9 ) LIMIT 1   [ RunTime:0.000075s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=9 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=9 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=10 ) LIMIT 1   [ RunTime:0.000055s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=10 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=10 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=10 ) LIMIT 1   [ RunTime:0.000053s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=10 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=10 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=11 ) LIMIT 1   [ RunTime:0.000050s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=11 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=11 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=11 ) LIMIT 1   [ RunTime:0.000049s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=11 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=11 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=12 ) LIMIT 1   [ RunTime:0.000055s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=12 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=12 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=12 ) LIMIT 1   [ RunTime:0.000076s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=12 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=12 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026944s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026986s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000072s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000112s ]
+
+[ 2014-09-27T20:32:12+08:00 ] 192.168.1.232 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000120s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.001478s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.000097s ]
+SQL: SHOW COLUMNS FROM `think_movielist` [ RunTime:0.000981s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=4 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.000158s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=1 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.000129s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY wishnumber desc LIMIT 5   [ RunTime:0.000060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+NOTIC: [8] Undefined variable: a /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 5 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SHOW COLUMNS FROM `think_mvmylist` [ RunTime:0.000604s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `think_mvmylist`
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=1 ) LIMIT 1   [ RunTime:0.000094s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=1 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=1 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SHOW COLUMNS FROM `think_mvlikelist` [ RunTime:0.000657s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=1 ) LIMIT 1   [ RunTime:0.000091s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=1 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=1 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=2 ) LIMIT 1   [ RunTime:0.000074s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=2 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=2 ) LIMIT 1   [ RunTime:0.000080s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=2 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=3 ) LIMIT 1   [ RunTime:0.000068s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=3 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=3 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=3 ) LIMIT 1   [ RunTime:0.000071s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=3 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=3 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=4 ) LIMIT 1   [ RunTime:0.000066s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=4 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=4 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=4 ) LIMIT 1   [ RunTime:0.000074s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=4 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=4 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=5 ) LIMIT 1   [ RunTime:0.000071s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=5 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=5 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=5 ) LIMIT 1   [ RunTime:0.000068s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=5 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=5 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=6 ) LIMIT 1   [ RunTime:0.000067s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=6 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=6 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=6 ) LIMIT 1   [ RunTime:0.000065s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=6 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=6 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=7 ) LIMIT 1   [ RunTime:0.000069s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=7 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=7 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=7 ) LIMIT 1   [ RunTime:0.000063s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=7 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=7 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=8 ) LIMIT 1   [ RunTime:0.000071s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=8 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=8 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=8 ) LIMIT 1   [ RunTime:0.000079s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=8 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=8 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=9 ) LIMIT 1   [ RunTime:0.000054s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=9 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=9 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=9 ) LIMIT 1   [ RunTime:0.000045s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=9 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=9 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=10 ) LIMIT 1   [ RunTime:0.000045s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=10 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=10 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=10 ) LIMIT 1   [ RunTime:0.000047s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=10 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=10 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=11 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=11 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=11 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=11 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=11 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=11 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=12 ) LIMIT 1   [ RunTime:0.000043s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=12 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=12 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=12 ) LIMIT 1   [ RunTime:0.000044s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=12 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=12 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026243s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026289s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000070s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2014-09-27T20:33:01+08:00 ] 192.168.1.232 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000102s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.001322s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.000097s ]
+SQL: SHOW COLUMNS FROM `think_movielist` [ RunTime:0.001049s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=4 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.000238s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=1 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.000215s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY wishnumber desc LIMIT 5   [ RunTime:0.000066s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000220s ]
+NOTIC: [8] Undefined variable: a /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 5 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SHOW COLUMNS FROM `think_mvmylist` [ RunTime:0.000644s ]
+ERR: 1146:Table 'share.think_mvmylist' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `think_mvmylist`
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=1 ) LIMIT 1   [ RunTime:0.000153s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=1 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=1 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SHOW COLUMNS FROM `think_mvlikelist` [ RunTime:0.000630s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=1 ) LIMIT 1   [ RunTime:0.000100s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=1 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=1 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=2 ) LIMIT 1   [ RunTime:0.000070s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=2 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=2 ) LIMIT 1   [ RunTime:0.000068s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=2 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=3 ) LIMIT 1   [ RunTime:0.000068s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=3 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=3 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=3 ) LIMIT 1   [ RunTime:0.000068s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=3 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=3 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=4 ) LIMIT 1   [ RunTime:0.000069s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=4 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=4 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=4 ) LIMIT 1   [ RunTime:0.000068s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=4 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=4 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=5 ) LIMIT 1   [ RunTime:0.000074s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=5 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=5 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=5 ) LIMIT 1   [ RunTime:0.000066s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=5 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=5 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=6 ) LIMIT 1   [ RunTime:0.000077s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=6 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=6 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=6 ) LIMIT 1   [ RunTime:0.000068s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=6 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=6 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=7 ) LIMIT 1   [ RunTime:0.000066s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=7 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=7 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=7 ) LIMIT 1   [ RunTime:0.000065s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=7 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=7 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=8 ) LIMIT 1   [ RunTime:0.000064s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=8 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=8 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=8 ) LIMIT 1   [ RunTime:0.000063s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=8 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=8 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=9 ) LIMIT 1   [ RunTime:0.000080s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=9 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=9 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=9 ) LIMIT 1   [ RunTime:0.000062s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=9 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=9 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=10 ) LIMIT 1   [ RunTime:0.000073s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=10 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=10 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=10 ) LIMIT 1   [ RunTime:0.000065s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=10 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=10 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=11 ) LIMIT 1   [ RunTime:0.000074s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=11 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=11 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=11 ) LIMIT 1   [ RunTime:0.000081s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=11 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=11 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 352 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=12 ) LIMIT 1   [ RunTime:0.000083s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=12 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvmylist` WHERE ( userid= and movieid=12 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 366 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=12 ) LIMIT 1   [ RunTime:0.000074s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and movieid=12 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid= and movieid=12 ) LIMIT 1  
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 411 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028597s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028652s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000218s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000284s ]
+

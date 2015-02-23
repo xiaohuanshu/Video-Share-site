@@ -1,0 +1,76 @@
+<include file="Public:head" />
+<include file="Public:header" headerstyle="navbar-header aside bg-info nav-xs"/>
+<include file="Public:bodyframe-head" bodyframestyle="bg-black dk aside hidden-print nav-xs"/>
+<section id="content">
+          <section class="vbox">
+            <section class="w-f-md" id="bjax-target">
+              <section class="hbox stretch">
+                <section>
+                  <section class="vbox">
+                    <section class="scrollable padder-lg">
+                      <h2 class="font-thin m-b">我的收藏</h2>
+<div class="row row-sm">
+<volist name="movielist" id="mvlist" key='k' >
+                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="item">
+                        <div class="pos-rlt">
+<if condition="isMy($mvlist['id'],$uid) == '1'">
+                          <div class="top">
+                            <span class="pull-right m-t-n-xs m-r-sm text-white">
+                              <i class="fa fa-bookmark i-lg"></i>
+                            </span>
+                          </div>
+</if>
+<notempty name="mvlist.time">
+                          <div class="bottom">
+                            <span class="badge bg-info m-l-sm m-b-sm">{$mvlist.time}</span>
+                          </div>
+</notempty>
+                          <div class="item-overlay opacity r r-2x bg-black">
+                            
+                            <div class="center text-center m-t-n">
+                              <a href="__ROOT__/home/movie/show?id={$mvlist.movieid}"><i class="icon-control-play i-2x"></i></a>
+                            </div>
+                          </div>
+                          <a href="#"><img src="{$mvlist.image|default='__PUBLIC__/images/nopicture.jpg'}.thumb.jpg" alt="" class="r r-2x img-full"></a>
+                        </div>
+                        <div class="padder-v">
+                          <a href="__ROOT__/home/movie/show?id={$mvlist.id}" class="text-ellipsis">{$mvlist.name}</a>
+<volist name=":explode(',',$mvlist['type'])" id="mtype" key='k'>
+<a href="__ROOT__/home/movie/mlist?type={$mtype}" class="text-xs text-muted">{$mtype} </a>
+</volist>
+                        </div>
+                      </div>
+                    </div>
+<if condition="($k)%2==0 and $k!=12">
+                    <div class="clearfix visible-xs"></div>
+</if>
+</volist>
+                  </div>
+                    </div>
+                  </div>
+                      {//<ul class="pagination pagination">}
+                      {//  <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>}
+                      {//  <li class="active"><a href="#">1</a></li>}
+                      {//  <li><a href="#">2</a></li>}
+                      {// <li><a href="#">3</a></li>}
+                      {//  <li><a href="#">4</a></li>}
+                      {//  <li><a href="#">5</a></li>}
+                      {//  <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>}
+                      {//</ul>}
+{$page}
+                    </section>                    
+                  </section>
+                </section>
+              </section>
+            </section>
+            
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+            <!-- / side content -->
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+<include file="Public:bodyframe-foot" />
+<include file="Public:footer" />

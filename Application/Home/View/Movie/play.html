@@ -1,0 +1,245 @@
+<include file="Public:head" />
+<include file="Public:header" headerstyle="navbar-header aside bg-info nav-xs"/>
+<include file="Public:bodyframe-head" bodyframestyle="bg-black dk aside hidden-print nav-xs"/>
+<section id="content">
+          <section class="vbox">
+            <section class="scrollable wrapper-lg">
+              <div class="row">
+                <div class="col-sm-9">
+                  <div class="blog-post">                   
+                    <div class="post-item">
+                      <div class="post-media">
+                        <img src="{$movieinfo.image}" class="img-full">
+                      </div>
+                      <div class="caption wrapper-lg">
+                        <h2 class="post-title"><a href="#">{$movieinfo.name}</a></h2>
+                        <div class="post-sum">
+{$movieinfo.intro}
+                        </div>
+                        <div class="line line-lg"></div>
+                        <div class="text-muted">
+                          <i class="fa fa-user icon-muted"></i> by <a href="#" class="m-r-sm">{$movieinfo.updateuser|getusernamebyid}</a>
+                          <i class="fa fa-clock-o icon-muted"></i> {$movieinfo.updatetime}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post-item">
+                      <div class="caption wrapper-lg">
+{$movieinfo.content}
+                        <h2 class="post-title">&nbsp;</h2><div class="post-sum">
+                        </div>
+                        <div class="line line-lg"></div>
+                        <div class="text-muted">
+                          <i class="fa fa-user icon-muted"></i> by <a href="#" class="m-r-sm">{$movieinfo.updateuser|getusernamebyid}</a>
+                          <i class="fa fa-clock-o icon-muted"></i> {$movieinfo.updatetime}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6" style="width:100%">
+                  <section class="panel panel-default">
+                    <header class="panel-heading">
+                      
+                      下载列表
+                    </header>
+                    <table class="table table-striped m-b-none">
+                      <thead>
+                        <tr>
+                          <th style="width:70%;"> 标题</th>
+                          <th style="width:20%;">上传者</th>                    
+                          <th style="width:10%;">操作</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+<volist name="locallist" id="lolist" empty="$listempty">
+                        <tr>                    
+                          <td>
+                            {$lolist.title}
+                          </td>
+                          <td>{$lolist.userid|getusernamebyid}</td>
+                          <td class="text-right">
+                            <div class="btn-group" style="float:left">
+                              
+  <a href="#"><i class="fa fa-play-circle"></i></a>
+                            </div>
+<div class="btn-group" style="float:right">
+                              
+  <a href="#"><i class="fa fa-download"></i></a>
+                            </div>
+                          </td>
+                        </tr>
+</volist>                        
+                        
+                        
+                      </tbody>
+                    </table>
+                  </section>
+                </div>
+                  <h4 class="m-t-lg m-b">{$mvcommentcount} 条评论</h4>
+                  <section class="comment-list block">
+<volist name="commentlist" id="cmlist" empty="">
+                    <article id="comment-id-1" class="comment-item">
+                      <a class="pull-left thumb-sm">
+                        <img src="/ucenter/avatar.php?uid={$cmlist.userid}&type=virtual&size=middle" class="img-circle">
+                      </a>
+                      <section class="comment-body m-b">
+                        <header>
+                          <a href="__ROOT__/home/user/profile/uid/{$cmlist.userid}"><strong>{$cmlist.userid|getusernamebyid}</strong></a>
+                          <label class="label bg-info m-l-xs">Editor</label> {//<label class="label bg-dark m-l-xs"></label> }
+                          <span class="text-muted text-xs block m-t-xs">
+                            {$cmlist.time}
+                          </span>
+                        </header>
+                        <div class="m-t-sm">{$cmlist.content}</div>
+                      </section>
+                    </article>
+</volist>
+                  </section>
+                  <h4 class="m-t-lg m-b">留下你的评论</h4>
+                  <form action="/share/home/movie/addcomment/id/{$movieinfo.id}" method="post">
+                    <div class="form-group">
+                      <textarea name="content" class="form-control" rows="5" placeholder="写下你的评论..."></textarea>
+                    </div>
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-success">发布评论</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-sm-3">
+                  <h5 class="font-bold">视频统计</h5>
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <a href="#">
+                        <span class="badge pull-right">{$listcount}</span>视频数量</a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="#">
+                        <span class="badge pull-right">{$wishcount}</span>
+                        许愿人数
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="#">
+                        <span class="badge pull-right">{$mvfacount}</span>
+                        收藏人数
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="#">
+                        <span class="badge pull-right">{$mvlikecount}</span>
+                        喜爱人数
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="#">
+                        <span class="badge pull-right">{$movieinfo.downloadcount}</span>
+                        下载人数
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="#">
+                        <span class="badge pull-right">{$movieinfo.playcount}</span>
+                        播放人数
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="doc-buttons">
+		                <a href="#" class="btn btn-s-md btn-default">我要上传</a>                
+		                <a href="#" class="btn btn-s-md btn-primary">收藏</a>
+		                <a href="#" class="btn btn-s-md btn-success">编辑内容</a>
+		                <a href="#" class="btn btn-s-md btn-info">请愿</a>
+		                
+		                <a href="#" class="btn btn-s-md btn-danger">举报</a>
+		                
+		                
+		              </div>
+                  <div class="tags m-b-lg l-h-2x">
+                    <a href="#" class="label bg-primary">动作</a> <a href="#" class="label bg-primary">科幻</a>
+                  </div>
+                  <h5 class="font-bold">视频动态</h5>
+                  <div class="timeline">
+                    <article class="timeline-item active">
+                        <div class="timeline-caption">
+                          <div class="panel bg-primary lt no-borders">
+                            <div class="panel-body">
+                               
+                              
+                              
+                              
+                              <div class="m-t-sm timeline-action">
+                                <span class="h3 pull-left m-r-sm">发布时间线</span>
+                                
+                                
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </article>
+                    <article class="timeline-item">
+                        <div class="timeline-caption">
+                          <div class="panel panel-default">
+                            <div class="panel-body">
+                              <span class="arrow left"></span>
+                              <span class="timeline-icon"><i class="fa fa-gift time-icon bg-primary"></i></span>
+                              <span class="timeline-date">1995-1-1 4：4：4</span>
+                              <div class="text-sm">请愿发布</div>
+                              <h5>请愿者:xxxxxxx</h5>
+                            </div>       
+                          </div>
+                        </div>
+                    </article>
+                    <article class="timeline-item alt">
+                        <div class="timeline-caption">                
+                          <div class="panel panel-default">
+                            <div class="panel-body">
+                              <span class="arrow right"></span>
+                              <span class="timeline-icon"><i class="fa fa-file-text time-icon bg-success"></i></span>
+                              <span class="timeline-date">1995-1-1 4：4：4</span>
+                              <div class="text-sm">内容编辑</div>
+                              <h5>编辑者：xxxxx</h5>
+                              <p>编辑内容:详细信息</p>
+                            </div>
+                          </div>
+                        </div>
+                    </article>          
+                    <article class="timeline-item">
+                        <div class="timeline-caption">                
+                          <div class="panel panel-default">
+                            <div class="panel-body">
+                              <span class="arrow left"></span>
+                              <span class="timeline-icon"><i class="fa fa-cloud-upload time-icon bg-dark"></i></span>
+                              <span class="timeline-date">1995-1-1 4：4：4</span>
+                              <div class="text-sm">上传视频</div>
+                              <h5>hello</h5>
+                              <p>上传者：XXXXXX</p>
+                            </div>
+                          </div>
+                        </div>
+                    </article>
+                    <article class="timeline-item alt">
+                        <div class="timeline-caption">                
+                          <div class="panel panel-default">
+                            <div class="panel-body">
+                              <span class="arrow right"></span>
+                              <span class="timeline-icon"><i class="fa fa-eye time-icon bg-info"></i></span>
+                              <span class="timeline-date">1995-1-1 4：4：4</span>
+                              <div class="text-sm">审核通过</div>
+                              <h5>                                
+                                视频标题：笑嘻嘻笑嘻嘻笑嘻嘻笑嘻嘻xxxx
+                              </h5>
+                              <p>审核者:Admin</p>
+                            </div>
+                          </div>
+                        </div>
+                    </article>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+<include file="Public:bodyframe-foot" />
+<include file="Public:footer" />

@@ -1,0 +1,118 @@
+<include file="Public:head" />
+<include file="Public:header" headerstyle="navbar-header aside bg-info nav-xs"/>
+<include file="Public:bodyframe-head" bodyframestyle="bg-black dk aside hidden-print nav-xs"/>
+<section id="content">
+          <section class="vbox">
+            <section class="w-f-md" id="bjax-target">
+              <section class="hbox stretch">
+                <!-- side content -->
+                <aside class="aside bg-light dk" id="sidebar">
+                  <section class="vbox animated fadeInUp">
+                    <section class="scrollable hover">
+                      <div class="list-group no-radius no-border no-bg m-t-n-xxs m-b-none auto">
+<empty name="type"><a href="__ROOT__/home/movie/mlist/name?name={$searchname}&userid={$searchid}" class="list-group-item active">
+                          全部
+                        </a>
+<else />
+                        <a href="__ROOT__/home/movie/mlist?name={$searchname}&userid={$searchid}" class="list-group-item">
+                          全部
+                        </a>
+</empty>
+<volist name=":C('videotype')" id="ctype">
+<if condition="$type != $ctype">
+	                    <a href="__ROOT__/home/movie/mlist/type/{$ctype}?name={$searchname}&userid={$searchid}" class="list-group-item">
+                          {$ctype}<if condition="$ctype != '公开课'">片</if>
+                        </a>
+<else />
+                        <a href="__ROOT__/home/movie/mlist/type/{$ctype}?name={$searchname}&userid={$searchid}" class="list-group-item active">
+                          {$ctype}<if condition="$ctype != '公开课'">片</if>
+                        </a>
+</if>
+</volist>
+<if condition="$type != '其他'"><a href="__ROOT__/home/movie/mlist/type/其他?name={$searchname}&userid={$searchid}" class="list-group-item">
+                          其他
+                        </a>
+<else />
+                        <a href="__ROOT__/home/movie/mlist/type/其他?name={$searchname}&userid={$searchid}" class="list-group-item active">
+                          其他
+                        </a>
+</if>
+                      </div>
+                    </section>
+                  </section>
+                </aside>
+                <!-- / side content -->
+                <section>
+                  <section class="vbox">
+                    <section class="scrollable padder-lg">
+                      <h2 class="font-thin m-b">{$type|default='全部'}</h2>
+<div class="row row-sm">
+<volist name="movielist" id="mvlist" key='k'>
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="item">
+                        <div class="pos-rlt">
+<if condition="isMy($mvlist['id'],$uid) == '1'">
+                      <div class="top">
+                            <span class="pull-right m-t-n-xs m-r-sm text-white">
+                              <i class="fa fa-bookmark i-lg"></i>
+                            </span>
+                          </div>
+</if>
+<notempty name="$mvlist['time']">
+	                  <div class="bottom">
+                            <span class="badge bg-info m-l-sm m-b-sm">{$mvlist.time}</span>
+                          </div>
+</notempty>
+                          <div class="item-overlay opacity r r-2x bg-black">
+                            
+                            <div class="center text-center m-t-n">
+                              <a href="__ROOT__/home/movie/show?id={$mvlist.id}"><i class="icon-control-play i-2x"></i></a>
+                            </div>
+                            <div class="bottom padder m-b-sm">
+<if condition="ismy($mvlist['id'],$uid) == '0'">
+	                          <a href="#" onclick="ifa({$mvlist.id});" class="pull-right" data-toggle="class">
+<else />
+                              <a href="#" onclick="ifa({$mvlist.id});" class="pull-right active" data-toggle="class">
+</if>
+                                <i class="fa fa-star-o text"></i>
+                                <i class="fa fa-star text-active text-danger"></i>
+                              </a>
+
+
+
+
+                            </div>
+                          </div>
+                          <a href="#"><img src="{$mvlist.image|default='__ROOT__/Public/images/nopicture.jpg'}.thumb.jpg" alt="" class="r r-2x img-full"></a>
+                        </div>
+                        <div class="padder-v">
+                          <a href="__ROOT__/home/movie/show?id={$mvlist.id}" class="text-ellipsis">{$mvlist.name}</a>
+<volist name=":explode(',',$mvlist['type'])" id="mtype">
+                          <a href="__ROOT__/home/movie/mlist?type={$mtype}" class="text-xs text-muted">{$mtype} </a>
+</volist>
+                        </div>
+                      </div>
+                    </div>
+<if condition="($k)%2==0 and $k!=12">
+	                <div class="clearfix visible-xs"></div>
+</if>
+</volist>
+                  </div>
+                    </div>
+                  </div>
+{$page}
+                    </section>                    
+                  </section>
+                </section>
+              </section>
+            </section>
+            
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+            <!-- / side content -->
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+<include file="Public:bodyframe-foot" />
+<include file="Public:footer" />

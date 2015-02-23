@@ -1,0 +1,315 @@
+[ 2014-12-04T13:58:24+08:00 ] 172.16.14.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.007470s ]
+INFO: [ app_init ] --END-- [ RunTime:0.039266s ]
+
+[ 2014-12-04T13:58:30+08:00 ] 172.16.14.1 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.012811s ]
+INFO: [ app_init ] --END-- [ RunTime:0.056992s ]
+
+[ 2014-12-04T13:58:50+08:00 ] 172.16.14.1 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.007547s ]
+INFO: [ app_init ] --END-- [ RunTime:0.098947s ]
+
+[ 2014-12-04T14:04:48+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.015612s ]
+INFO: [ app_init ] --END-- [ RunTime:0.027112s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.021448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.021905s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.014628s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.000143s ]
+SQL: SHOW COLUMNS FROM `think_movielist` [ RunTime:0.000706s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=4 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.000050s ]
+SQL: SHOW COLUMNS FROM `think_announce` [ RunTime:0.000438s ]
+SQL: SELECT * FROM `think_announce` ORDER BY time desc LIMIT 1   [ RunTime:0.000052s ]
+SQL: SHOW COLUMNS FROM `think_notice` [ RunTime:0.000540s ]
+SQL: SELECT * FROM `think_notice` ORDER BY time desc LIMIT 3   [ RunTime:0.000056s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=1 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.000044s ]
+SQL: SHOW COLUMNS FROM `think_locallist` [ RunTime:0.000474s ]
+SQL: SELECT `userid`,COUNT(  `think_locallist`.`id` ) as c FROM `think_locallist` GROUP BY `think_locallist`.`userid` ORDER BY COUNT(`think_locallist`.`id`) desc LIMIT 5   [ RunTime:0.000045s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.025466s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.025544s ]
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 406 行.
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.000099s ]
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 406 行.
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=4 )  [ RunTime:0.000044s ]
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 406 行.
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=2 )  [ RunTime:0.000042s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.254558s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.255129s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000958s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001051s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000457s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000520s ]
+
+[ 2014-12-04T14:04:48+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000047s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.000743s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.000073s ]
+SQL: SHOW COLUMNS FROM `think_movielist` [ RunTime:0.000422s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=4 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.000045s ]
+SQL: SHOW COLUMNS FROM `think_announce` [ RunTime:0.000325s ]
+SQL: SELECT * FROM `think_announce` ORDER BY time desc LIMIT 1   [ RunTime:0.000041s ]
+SQL: SHOW COLUMNS FROM `think_notice` [ RunTime:0.000312s ]
+SQL: SELECT * FROM `think_notice` ORDER BY time desc LIMIT 3   [ RunTime:0.000041s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=1 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.000041s ]
+SQL: SHOW COLUMNS FROM `think_locallist` [ RunTime:0.000447s ]
+SQL: SELECT `userid`,COUNT(  `think_locallist`.`id` ) as c FROM `think_locallist` GROUP BY `think_locallist`.`userid` ORDER BY COUNT(`think_locallist`.`id`) desc LIMIT 5   [ RunTime:0.000047s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 406 行.
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.000259s ]
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 406 行.
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=4 )  [ RunTime:0.000102s ]
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 406 行.
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=2 )  [ RunTime:0.000053s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020489s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020515s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000182s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000080s ]
+
+[ 2014-12-04T14:05:58+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000208s ]
+INFO: [ app_init ] --END-- [ RunTime:0.016442s ]
+
+[ 2014-12-04T14:06:26+08:00 ] 172.16.14.1 /share/home/user/profile/uid/19
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000214s ]
+
+[ 2014-12-04T14:06:37+08:00 ] 172.16.14.1 /share/home/user/profile/uid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000072s ]
+
+[ 2014-12-04T14:07:16+08:00 ] 172.16.14.1 /share/home/user/login?username=xiaohuanshu&password=buzhidao&__hash__=eb303eaa1279310266b530528776a075_cfd3fd6c5d627974711775c0476046ea
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+
+[ 2014-12-04T14:07:18+08:00 ] 172.16.14.1 /share/home/api/index?time=1417673236&code=d611mKj%2BH54s7sMi0rDrYjph6A8iMgx6ogOqDDKJ8pcZ4GuJrVAcHwHFVGZ0vuy9pPfAwOkt1ZCMEnhPzGiYKzFMZ%2FBF5JfOh4gPmaqSScDI4qYdeHCboPPptZIM7ElowcmMqEt3z0%2BPBkgsAiEY8dJVajfNsq0rj%2B3ml4LlZzo%2F
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000714s ]
+
+[ 2014-12-04T14:07:23+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+
+[ 2014-12-04T14:08:17+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+
+[ 2014-12-04T14:08:19+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000065s ]
+
+[ 2014-12-04T14:08:19+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000060s ]
+
+[ 2014-12-04T14:08:20+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000179s ]
+
+[ 2014-12-04T14:08:21+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000067s ]
+
+[ 2014-12-04T15:05:23+08:00 ] 172.16.14.1 /share/home/movie/mlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.043317s ]
+INFO: [ app_init ] --END-- [ RunTime:0.066815s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.046807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.046909s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `think_movielist` [ RunTime:0.484518s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_movielist` WHERE `statue` = 4 LIMIT 1   [ RunTime:0.037218s ]
+SQL: SELECT * FROM `think_movielist` WHERE `statue` = 4 ORDER BY updatetime desc LIMIT 0,12   [ RunTime:0.028788s ]
+NOTIC: [8] Undefined index: type /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 95 行.
+NOTIC: [8] Undefined index: userid /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.010630s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010701s ]
+SQL: SHOW COLUMNS FROM `think_mvfalist` [ RunTime:0.060115s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.026913s ]
+SQL: SHOW COLUMNS FROM `think_mvlikelist` [ RunTime:0.007812s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.000211s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=2 ) LIMIT 1   [ RunTime:0.001107s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=2 ) LIMIT 1   [ RunTime:0.000093s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=3 ) LIMIT 1   [ RunTime:0.000047s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=3 ) LIMIT 1   [ RunTime:0.000051s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=4 ) LIMIT 1   [ RunTime:0.000055s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=4 ) LIMIT 1   [ RunTime:0.000071s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=5 ) LIMIT 1   [ RunTime:0.000071s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=5 ) LIMIT 1   [ RunTime:0.000107s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=6 ) LIMIT 1   [ RunTime:0.000111s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=6 ) LIMIT 1   [ RunTime:0.000129s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=7 ) LIMIT 1   [ RunTime:0.000041s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=7 ) LIMIT 1   [ RunTime:0.000059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=8 ) LIMIT 1   [ RunTime:0.000037s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=8 ) LIMIT 1   [ RunTime:0.000177s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=9 ) LIMIT 1   [ RunTime:0.000044s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=9 ) LIMIT 1   [ RunTime:0.000111s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=10 ) LIMIT 1   [ RunTime:0.023353s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=10 ) LIMIT 1   [ RunTime:0.000783s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=11 ) LIMIT 1   [ RunTime:0.000111s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=11 ) LIMIT 1   [ RunTime:0.000064s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=12 ) LIMIT 1   [ RunTime:0.000080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=12 ) LIMIT 1   [ RunTime:0.021168s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.653274s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.653341s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.024620s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.048576s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.073313s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005312s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005472s ]
+
+[ 2014-12-04T15:05:24+08:00 ] 172.16.14.1 /share/home/movie/mlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000047s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/Application/Ucenter/Client/uc_client/lib/db.class.php 第 41 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `think_movielist` [ RunTime:0.161608s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_movielist` WHERE `statue` = 4 LIMIT 1   [ RunTime:0.044521s ]
+SQL: SELECT * FROM `think_movielist` WHERE `statue` = 4 ORDER BY updatetime desc LIMIT 0,12   [ RunTime:0.000156s ]
+NOTIC: [8] Undefined index: type /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 95 行.
+NOTIC: [8] Undefined index: userid /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+SQL: SHOW COLUMNS FROM `think_mvfalist` [ RunTime:0.001811s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.000155s ]
+SQL: SHOW COLUMNS FROM `think_mvlikelist` [ RunTime:0.000677s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=1 ) LIMIT 1   [ RunTime:0.000050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=2 ) LIMIT 1   [ RunTime:0.000047s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=2 ) LIMIT 1   [ RunTime:0.000040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=3 ) LIMIT 1   [ RunTime:0.000067s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=3 ) LIMIT 1   [ RunTime:0.000175s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=4 ) LIMIT 1   [ RunTime:0.000060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=4 ) LIMIT 1   [ RunTime:0.000148s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=5 ) LIMIT 1   [ RunTime:0.000084s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=5 ) LIMIT 1   [ RunTime:0.000200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=6 ) LIMIT 1   [ RunTime:0.000078s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=6 ) LIMIT 1   [ RunTime:0.000069s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=7 ) LIMIT 1   [ RunTime:0.000057s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=7 ) LIMIT 1   [ RunTime:0.000127s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=8 ) LIMIT 1   [ RunTime:0.000042s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=8 ) LIMIT 1   [ RunTime:0.000039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=9 ) LIMIT 1   [ RunTime:0.000037s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=9 ) LIMIT 1   [ RunTime:0.000078s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=10 ) LIMIT 1   [ RunTime:0.000041s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=10 ) LIMIT 1   [ RunTime:0.000049s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=11 ) LIMIT 1   [ RunTime:0.000050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=11 ) LIMIT 1   [ RunTime:0.000046s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvfalist` WHERE ( userid=1 and movieid=12 ) LIMIT 1   [ RunTime:0.000046s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_mvlikelist` WHERE ( userid=1 and movieid=12 ) LIMIT 1   [ RunTime:0.000037s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025901s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025928s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000149s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000116s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000157s ]
+
+[ 2014-12-04T15:05:29+08:00 ] 172.16.14.1 /share/home/movie/mlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+

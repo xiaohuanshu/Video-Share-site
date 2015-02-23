@@ -1,0 +1,42 @@
+  <!-- App -->
+  <script src="__PUBLIC__/js/app.js"></script>  
+  <script src="__PUBLIC__/js/slimscroll/jquery.slimscroll.min.js"></script>
+<if condition="$islogin==0">
+<div class="modal fade" id="modal-login" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body wrapper-lg">
+          <div class="row">
+            <div class="col-sm-6 b-r">
+              <h3 class="m-t-none m-b">登录</h3>
+              <p>登录后将可以上传、下载、请愿视频资源</p>
+              <form role="form"  action="__ROOT__/home/user/login" method="get">
+                <div class="form-group">
+                  <label>用户名</label>
+                  <input name="username" class="form-control" placeholder="请输入用户名">
+                </div>
+                <div class="form-group">
+                  <label>密码</label>
+                  <input name="password" type="password" class="form-control" placeholder="请输入密码">
+                </div>
+                <div class="checkbox m-t-lg">
+                  <button type="submit" class="btn btn-sm btn-success pull-right text-uc m-t-n-xs"><strong>登录</strong></button>
+                  
+                </div>                
+              </form>
+            </div>
+            <div class="col-sm-6">
+              <h4>没有账户？</h4>
+              <p>点击<a href="__ROOT__/home/user/register" class="text-info">这里</a>注册一个帐号</p>
+            </div>
+          </div>          
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+</if>
+    <script src="__PUBLIC__/js/app.plugin.js"></script>
+    <script src="__PUBLIC__/js/own.js"></script>
+<div style="display:none"><!--<script src='http://' language='JavaScript' charset='gb2312'></script> --></div>
+</body>
+</html>

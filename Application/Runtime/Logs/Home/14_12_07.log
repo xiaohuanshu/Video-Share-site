@@ -1,0 +1,299 @@
+[ 2014-12-07T22:46:34+08:00 ] 172.16.14.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.028684s ]
+
+[ 2014-12-07T22:46:38+08:00 ] 172.16.14.1 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000207s ]
+
+[ 2014-12-07T22:46:50+08:00 ] 172.16.14.1 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+
+[ 2014-12-07T22:46:55+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.001117s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.000128s ]
+SQL: SHOW COLUMNS FROM `think_movielist` [ RunTime:0.001025s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=4 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.000084s ]
+SQL: SHOW COLUMNS FROM `think_announce` [ RunTime:0.000568s ]
+SQL: SELECT * FROM `think_announce` ORDER BY time desc LIMIT 1   [ RunTime:0.000074s ]
+SQL: SHOW COLUMNS FROM `think_notice` [ RunTime:0.001133s ]
+SQL: SELECT * FROM `think_notice` ORDER BY time desc LIMIT 3   [ RunTime:0.000103s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=1 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.000072s ]
+SQL: SHOW COLUMNS FROM `think_locallist` [ RunTime:0.001116s ]
+SQL: SELECT `userid`,COUNT(  `think_locallist`.`id` ) as c FROM `think_locallist` GROUP BY `think_locallist`.`userid` ORDER BY COUNT(`think_locallist`.`id`) desc LIMIT 5   [ RunTime:0.000069s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 406 行.
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.000111s ]
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 406 行.
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=4 )  [ RunTime:0.000044s ]
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 406 行.
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=2 )  [ RunTime:0.000043s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019043s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019086s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000198s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000079s ]
+
+[ 2014-12-07T22:46:55+08:00 ] 172.16.14.1 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000047s ]
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `think_userinfo` [ RunTime:0.001787s ]
+SQL: SELECT * FROM `think_userinfo` ORDER BY registertime desc LIMIT 10   [ RunTime:0.000078s ]
+SQL: SHOW COLUMNS FROM `think_movielist` [ RunTime:0.000596s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=4 ) ORDER BY updatetime desc LIMIT 12   [ RunTime:0.000188s ]
+SQL: SHOW COLUMNS FROM `think_announce` [ RunTime:0.000640s ]
+SQL: SELECT * FROM `think_announce` ORDER BY time desc LIMIT 1   [ RunTime:0.000050s ]
+SQL: SHOW COLUMNS FROM `think_notice` [ RunTime:0.000366s ]
+SQL: SELECT * FROM `think_notice` ORDER BY time desc LIMIT 3   [ RunTime:0.000042s ]
+SQL: SELECT * FROM `think_movielist` WHERE ( statue=1 ) ORDER BY wishtime desc LIMIT 8   [ RunTime:0.000044s ]
+SQL: SHOW COLUMNS FROM `think_locallist` [ RunTime:0.000487s ]
+SQL: SELECT `userid`,COUNT(  `think_locallist`.`id` ) as c FROM `think_locallist` GROUP BY `think_locallist`.`userid` ORDER BY COUNT(`think_locallist`.`id`) desc LIMIT 5   [ RunTime:0.000059s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 347 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 361 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 406 行.
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=1 )  [ RunTime:0.000157s ]
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 406 行.
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=4 )  [ RunTime:0.000083s ]
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 406 行.
+SQL: SELECT * FROM `think_userinfo` WHERE ( userid=2 )  [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016246s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016294s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000358s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000094s ]
+
+[ 2014-12-07T22:46:58+08:00 ] 172.16.14.1 /share/home/movie/mlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000106s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `think_movielist` [ RunTime:0.000802s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_movielist` WHERE `statue` = 4 LIMIT 1   [ RunTime:0.000218s ]
+SQL: SELECT * FROM `think_movielist` WHERE `statue` = 4 ORDER BY updatetime desc LIMIT 0,12   [ RunTime:0.000314s ]
+NOTIC: [8] Undefined index: type /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 95 行.
+NOTIC: [8] Undefined index: userid /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033081s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033143s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000178s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000047s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000083s ]
+
+[ 2014-12-07T22:46:58+08:00 ] 172.16.14.1 /share/home/movie/mlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000052s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/html/share/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `think_movielist` [ RunTime:0.001249s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_movielist` WHERE `statue` = 4 LIMIT 1   [ RunTime:0.000063s ]
+SQL: SELECT * FROM `think_movielist` WHERE `statue` = 4 ORDER BY updatetime desc LIMIT 0,12   [ RunTime:0.000048s ]
+NOTIC: [8] Undefined index: type /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 95 行.
+NOTIC: [8] Undefined index: userid /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 370 行.
+NOTIC: [8] Undefined variable: uid /var/www/html/share/Application/Runtime/Cache/Home/e3483a9a82df7007fd8ccec48541137e.php 第 384 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014186s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014232s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000069s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000267s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000122s ]
+
+[ 2014-12-07T22:58:49+08:00 ] 172.16.14.1 /share/home/movie/mlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000178s ]
+
+[ 2014-12-07T23:04:44+08:00 ] 172.16.14.1 /share/home/movie/ilike?movieid=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000088s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+
+[ 2014-12-07T23:04:44+08:00 ] 172.16.14.1 /share/home/movie/ilike?movieid=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000048s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+
+[ 2014-12-07T23:04:46+08:00 ] 172.16.14.1 /share/home/movie/events.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000055s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+
+[ 2014-12-07T23:04:46+08:00 ] 172.16.14.1 /share/home/movie/events.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000213s ]
+NOTIC: [2048] Declaration of Home\Controller\MovieController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/html/share/Application/Home/Controller/MovieController.class.php 第 5 行.
+NOTIC: [8] Undefined index: name /var/www/html/share/Application/Home/Controller/GlobalAction.class.php 第 11 行.
+
+[ 2014-12-07T23:04:49+08:00 ] 172.16.14.1 /share/home/movie/mlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+

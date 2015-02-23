@@ -1,0 +1,149 @@
+<include file="Public:head" />
+<include file="Public:header" headerstyle="navbar-header aside bg-info nav-xs"/>
+<include file="Public:bodyframe-head" bodyframestyle="bg-black dk aside hidden-print nav-xs"/>
+	<script type="text/javascript" src="__ROOT__/Public/js/jquery-2.0.2.js"></script>
+    <script type="text/javascript" src="__ROOT__/Public/ueditor/ueditor.config.js"></script>    
+    <script type="text/javascript" src="__ROOT__/Public/ueditor/ueditor.all.min.js"></script>
+    <script>
+    $(function(){
+        var ue = UE.getEditor('container',{
+            serverUrl :'<?php echo U('Home/editor/ueditor');?>'
+        });
+    })
+    </script>
+<section id="content">
+          <section class="vbox">
+            <section class="scrollable padder">
+              <div class="m-b-md">
+                <h3 class="m-b-none">影视资源编辑-{$movieinfo.name}</h3>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <section class="panel panel-default">
+                    <div class="alert alert-warning alert-block">
+                      <button type="button" class="close" data-dismiss="alert">×</button>
+                      <h4><i class="fa fa-bell-alt"></i>注意!</h4>
+                      <p>内容审核后才会显示</p>
+                    </div>
+                    <div class="panel-body">
+                      <form role="form" class="form-horizontal" method="post" action="__ROOT__/home/movie/editcontentdeal/movieid/{$movieinfo.id}" enctype="multipart/form-data" id="gform">
+<div class="form-group">
+                      <label class="col-sm-2 control-label">视频信息</label>
+                      <div class="col-sm-10">
+                        <div class="btn-toolbar m-b-sm btn-editor" data-role="editor-toolbar" data-target="#editor">
+                          <div class="btn-group">
+                            <a class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" title="字体大小"><i class="fa fa-text-height"></i>&nbsp;<b class="caret"></b></a>
+                              <ul class="dropdown-menu">
+                              <li><a data-edit="fontSize 5" style="font-size:24px">大</a></li>
+                              <li><a data-edit="fontSize 3" style="font-size:18px">中</a></li>
+                              <li><a data-edit="fontSize 1" style="font-size:14px">小</a></li>
+                              </ul>
+                          </div>
+                          <div class="btn-group">
+                            <a class="btn btn-default btn-sm" data-edit="bold" title="加粗 (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
+                            <a class="btn btn-default btn-sm" data-edit="italic" title="倾斜 (Ctrl/Cmd+I)"><i class="fa fa-italic"></i></a>
+                            <a class="btn btn-default btn-sm" data-edit="strikethrough" title="删除线"><i class="fa fa-strikethrough"></i></a>
+                            <a class="btn btn-default btn-sm" data-edit="underline" title="下划线 (Ctrl/Cmd+U)"><i class="fa fa-underline"></i></a>
+                          </div>
+                          <div class="btn-group">
+                            <a class="btn btn-default btn-sm" data-edit="insertunorderedlist" title="列表"><i class="fa fa-list-ul"></i></a>
+                            <a class="btn btn-default btn-sm" data-edit="insertorderedlist" title="数字列表"><i class="fa fa-list-ol"></i></a>
+                            <a class="btn btn-default btn-sm" data-edit="outdent" title="减少缩进 (Shift+Tab)"><i class="fa fa-dedent"></i></a>
+                            <a class="btn btn-default btn-sm" data-edit="indent" title="缩进 (Tab)"><i class="fa fa-indent"></i></a>
+                          </div>
+                          <div class="btn-group">
+                            <a class="btn btn-default btn-sm" data-edit="justifyleft" title="靠左 (Ctrl/Cmd+L)"><i class="fa fa-align-left"></i></a>
+                            <a class="btn btn-default btn-sm" data-edit="justifycenter" title="居中 (Ctrl/Cmd+E)"><i class="fa fa-align-center"></i></a>
+                            <a class="btn btn-default btn-sm" data-edit="justifyright" title="靠右 (Ctrl/Cmd+R)"><i class="fa fa-align-right"></i></a>
+                            <a class="btn btn-default btn-sm" data-edit="justifyfull" title="正文 (Ctrl/Cmd+J)"><i class="fa fa-align-justify"></i></a>
+                          </div>
+                          <div class="btn-group">
+                            <a class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" title="超链接"><i class="fa fa-link"></i></a>
+                            <div class="dropdown-menu">
+                              <div class="input-group m-l-xs m-r-xs">
+                                <input class="form-control input-sm" placeholder="URL" type="text" data-edit="createLink"/>
+                                <div class="input-group-btn">
+                                  <button class="btn btn-default btn-sm" type="button">添加</button>
+                                </div>
+                              </div>
+                            </div>
+                            <a class="btn btn-default btn-sm" data-edit="unlink" title="移除链接"><i class="fa fa-cut"></i></a>
+                          </div>
+                          
+                          <div class="btn-group hide">
+                            <a class="btn btn-default btn-sm" title="添加图片 (or just drag & drop)" id="pictureBtn"><i class="fa fa-picture-o"></i></a>
+                            <input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" />
+                          </div>
+                          <div class="btn-group">
+                            <a class="btn btn-default btn-sm" data-edit="undo" title="撤销 (Ctrl/Cmd+Z)"><i class="fa fa-undo"></i></a>
+                            <a class="btn btn-default btn-sm" data-edit="redo" title="还原 (Ctrl/Cmd+Y)"><i class="fa fa-repeat"></i></a>
+                          </div>
+                        </div>
+                        <div id="editor" class="form-control" style="overflow:scroll;height:350px;max-height:350px">
+{$mvcontent.intro|default="<p>◎译　　名　<br>◎片　　名　<br>◎年　　代　<br>◎国　　家　<br>◎类　　别　<br>◎语　　言　<br>◎字　　幕　<br>◎IMDB评分 <br>◎文件格式　<br>◎视频尺寸　<br>◎文件大小　<br>◎片　　长　<br>◎导　　演　<br>◎主　　演　<br></p>"}
+                        </div>
+                      </div>
+                    </div>
+<input name="intro" type="hidden" id="information"/>
+                        <div class="line line-dashed b-b line-lg pull-in"></div>
+<div class="form-group">
+                      <label class="col-sm-2 control-label">视频简介</label>
+                      <div class="col-sm-10">
+                        <script id="container" name="content" type="text/plain" style="width:100%;height:400px">{$mvcontent.content}</script>
+                      </div>
+                    </div>
+                        <div class="line line-dashed b-b line-lg pull-in"></div>
+                        <div class="form-group">
+                          <div class="col-sm-4 col-sm-offset-2">
+                            <button type="submit" class="btn btn-primary">完成</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </section>
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+      </section>
+    </section>
+<include file="Public:bodyframe-foot" />
+<script src="/share/Public/js/wysiwyg/jquery.hotkeys.js"></script>
+<script src="/share/Public/js/wysiwyg/bootstrap-wysiwyg.js"></script>
+<script>
+$(function(){
+  function initToolbarBootstrapBindings() {
+    $('a[title]').tooltip({container:'body'});
+  	$('.dropdown-menu input').click(function() {return false;})
+	    .change(function () {$(this).parent('.dropdown-menu').siblings('.dropdown-toggle').dropdown('toggle');})
+      .keydown('esc', function () {this.value='';$(this).change();});
+
+    $('[data-role=magic-overlay]').each(function () { 
+      var overlay = $(this), target = $(overlay.data('target')); 
+      overlay.css('opacity', 0).css('position', 'absolute').offset(target.offset()).width(target.outerWidth()).height(target.outerHeight());
+    });
+    if ("onwebkitspeechchange" in document.createElement("input")) {
+      var editorOffset = $('#editor').offset();
+    } else {
+      $('#voiceBtn').hide();
+    }
+	};
+	function showErrorAlert (reason, detail) {
+		var msg='';
+		if (reason==='unsupported-file-type') { msg = "Unsupported format " +detail; }
+		else {
+			console.log("error uploading file", reason, detail);
+		}
+		$('<div class="alert"> <button type="button" class="close" data-dismiss="alert">&times;</button>'+ 
+		 '<strong>File upload error</strong> '+msg+' </div>').prependTo('#alerts');
+	};
+  initToolbarBootstrapBindings();  
+	$('#editor').wysiwyg({ fileUploadError: showErrorAlert} );
+});
+$('#gform').submit(function() {
+  $('#information').val($('#editor').html())
+});
+</script>
+<include file="Public:footer" />

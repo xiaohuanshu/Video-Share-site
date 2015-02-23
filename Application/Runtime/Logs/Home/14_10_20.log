@@ -1,0 +1,35 @@
+[ 2014-10-20T22:52:58+08:00 ] 192.168.1.232 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.028661s ]
+
+[ 2014-10-20T22:53:00+08:00 ] 192.168.1.232 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000136s ]
+
+[ 2014-10-20T22:53:12+08:00 ] 192.168.1.232 /share/home/movie/upload/movieid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+
+[ 2014-10-20T22:53:12+08:00 ] 192.168.1.232 /share/home/upload/uploadview/movieid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+
+[ 2014-10-20T22:53:33+08:00 ] 192.168.1.232 /share/home/upload/deal/movieid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000184s ]
+
+[ 2014-10-20T22:53:39+08:00 ] 192.168.1.232 /share/home/upload/deal2/movieid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000127s ]
+
+[ 2014-10-20T22:53:40+08:00 ] 192.168.1.232 /share/index.php/home/movie/show/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+

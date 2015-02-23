@@ -1,0 +1,40 @@
+<include file="Public:head" />
+<include file="Public:header" headerstyle="navbar-header aside bg-info nav-xs"/>
+<include file="Public:bodyframe-head" bodyframestyle="bg-black dk aside hidden-print nav-xs"/>
+<section id="content">
+          <section class="vbox">
+            <section class="scrollable padder">
+              <div class="m-b-md">
+                <h3 class="m-b-none">影视资源上传</h3>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <section class="panel panel-default">
+                    <header class="panel-heading font-bold">请更改视频标题</header>
+                    <div class="panel-body">
+                      <form role="form" method="post" action="__ROOT__/home/upload/deal2/movieid/{$movieid}">
+
+<volist name="uploader_name" id="uplist" empty="出现未知错误..." key="k">
+                        <div class="form-group">
+                          <input name="uploader_{$k-1}_name" type="text" class="form-control" value="{$uplist}">
+                        </div>
+</volist>
+<volist name="uploader_tmpname" id="uplist" empty="出现未知错误..." key="k">
+                          <input name="uploader_{$k-1}_tmpname" type="hidden" class="form-control" value="{$uplist}">
+</volist>               
+<input name="uploader_count" type="hidden" class="form-control" value="{$uploader_count}">
+                        <button type="submit" class="btn btn-sm btn-default">确认</button>
+                      </form>
+                    </div>
+                  </section>
+                </div>
+                
+              </div>
+              
+              
+            </section>
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+<include file="Public:bodyframe-foot" />
+<include file="Public:footer" />

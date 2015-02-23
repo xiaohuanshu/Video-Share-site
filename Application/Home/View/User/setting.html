@@ -1,0 +1,163 @@
+<include file="Public:head" />
+<include file="Public:header" headerstyle="navbar-header aside bg-info nav-xs"/>
+<include file="Public:bodyframe-head" bodyframestyle="bg-black dk aside hidden-print nav-xs"/>
+<section id="content">
+          <section class="vbox">
+            <section class="scrollable padder">
+              <div class="m-b-md">
+                <h3 class="m-b-none">用户资料编辑-{$username}</h3>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <section class="panel panel-default">
+                    <div class="panel-body">
+                      <form role="form" class="form-horizontal" method="post" action="__ROOT__/home/user/settingdeal" enctype="multipart/form-data">
+<div class="form-group">
+					<div class="form-group">
+					  <label class="col-sm-2 control-label">用户id</label>
+					  <div class="col-sm-10">
+						<span class="help-block m-b-none">{$userinfo.userid}</span>
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="col-sm-2 control-label">用户名</label>
+					  <div class="col-sm-10">
+					    <span class="help-block m-b-none">{$userinfo.username}</span>
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="col-sm-2 control-label">邮箱</label>
+					  <div class="col-sm-10">
+			            <span class="help-block m-b-none">{$userinfo.email}</span>
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="col-sm-2 control-label">性别</label>
+					  <div class="col-sm-10">
+						<div class="btn-group" data-toggle="buttons">
+<if condition="$userinfo['sex'] == 1">
+						  <label class="btn btn-sm btn-info active">
+						    <input name="sex" type="radio" value="1" checked><i class="fa fa-check text-active"></i> 帅哥
+						  </label>
+<else />
+						  <label class="btn btn-sm btn-info">
+						    <input name="sex" type="radio" value="1"><i class="fa fa-check text-active"></i> 帅哥
+						  </label>
+</if>
+<if condition="$userinfo['sex'] == 2">
+						  <label class="btn btn-sm btn-success active">
+						    <input name="sex" type="radio" value="2" checked><i class="fa fa-check text-active"></i> 美女
+						  </label>
+<else />
+						  <label class="btn btn-sm btn-success">
+						    <input name="sex" type="radio" value="2"><i class="fa fa-check text-active"></i> 美女
+						  </label>
+</if>
+<if condition="$userinfo['sex'] == 0">
+						  <label class="btn btn-sm btn-primary active">
+						    <input name="sex" type="radio" value="0" checked><i class="fa fa-check text-active"></i> 保密
+						  </label>
+<else />
+						  <label class="btn btn-sm btn-primary">
+						    <input name="sex" type="radio" value="0"><i class="fa fa-check text-active"></i> 保密
+						  </label>
+</if>
+						</div>
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="col-sm-2 control-label">密码</label>
+					  <div class="col-sm-10">
+					    <input name="password" type="password" class="form-control">
+						<span class="help-block m-b-none">填写视为修改</span>
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="col-sm-2 control-label">头像</label>
+					  <div class="col-sm-10">
+					    {$avatar}
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="col-sm-2 control-label">学号</label>
+					  <div class="col-sm-10">
+					    <input name="studentid" type="text" class="form-control" value="{$userinfo.studentid}">
+						<span class="help-block m-b-none">由9位数字组成</span>
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="col-sm-2 control-label">真实姓名</label>
+					  <div class="col-sm-10">
+					    <input name="realname" type="text" class="form-control" value="{$userinfo.realname}">
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="col-sm-2 control-label">QQ</label>
+					  <div class="col-sm-10">
+					    <input name="qq" type="text" class="form-control" value="{$userinfo.qq}">
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="col-sm-2 control-label">院系专业</label>
+					  <div class="col-sm-10">
+						  院系-
+						<div class="btn-group m-r">
+						  <button data-toggle="dropdown" class="btn btn-sm btn-default dropdown-toggle">
+						    <span class="dropdown-label">{$userinfo.college|default="保密"}</span> 
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu dropdown-select">
+<volist name=":C('college')" id="col">
+<if condition="$userinfo['college'] == $col">
+						    <li class="active"><input name="college" type="radio" value="{$col}" checked="checked"><a href="#">{$col}</a></li>
+<else />
+						    <li><input name="college" type="radio" value="{$col}"><a href="#">{$col}</a></li>
+</if>
+</volist>
+						  </ul>
+					   </div>
+					   	  专业-
+						<div class="btn-group m-r">
+						  <button data-toggle="dropdown" class="btn btn-sm btn-default dropdown-toggle">
+						    <span class="dropdown-label">{$userinfo.major|default="保密"}</span> 
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu dropdown-select">
+<volist name=":C('major.'.$userinfo['college'])" id="col">
+<if condition="$userinfo['major'] == $col">
+						    <li class="active"><input name="major" type="radio" value="{$col}" checked="checked"><a href="#">{$col}</a></li>
+<else />
+						    <li><input name="major" type="radio" value="{$col}"><a href="#">{$col}</a></li>
+</if>
+</volist>
+						  </ul>
+					   </div>
+					   
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="col-sm-2 control-label">自我介绍</label>
+					  <div class="col-sm-10">
+					    <textarea name="intro" class="form-control parsley-validated" rows="6" data-minwords="6" data-required="true" placeholder="在此输入自我介绍..." >{$userinfo.intro}</textarea>
+					  </div>
+					</div>
+					
+                      <div class="line line-dashed b-b line-lg pull-in"></div>
+                      <div class="form-group">
+                      <div class="col-sm-4 col-sm-offset-2">
+                        <button type="submit" class="btn btn-primary">保存</button>
+                      </div>
+                    </div>
+                      </div>
+                      </form>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </section>
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+<include file="Public:bodyframe-foot" />
+<script src="__PUBLIC__/js/file-input/bootstrap-filestyle.min.js"></script>
+<include file="Public:footer" />

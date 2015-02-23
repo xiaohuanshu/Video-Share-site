@@ -1,0 +1,395 @@
+[ 2015-01-18T15:19:09+08:00 ] 192.168.1.102 /share/home/editor
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000203s ]
+
+[ 2015-01-18T15:19:09+08:00 ] 192.168.1.102 /share/index.php/Home/editor/ueditor.html?action=config&&noCache=1421565549853
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000135s ]
+
+[ 2015-01-18T16:59:01+08:00 ] 192.168.1.107 /share/home/movie/mlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+
+[ 2015-01-18T16:59:01+08:00 ] 192.168.1.107 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+
+[ 2015-01-18T16:59:07+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+
+[ 2015-01-18T17:02:46+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+
+[ 2015-01-18T17:04:16+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000199s ]
+
+[ 2015-01-18T17:05:02+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+
+[ 2015-01-18T17:05:13+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000530s ]
+
+[ 2015-01-18T17:05:51+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+
+[ 2015-01-18T17:05:51+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/epiceditor/themes/preview/github.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000064s ]
+
+[ 2015-01-18T17:05:51+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/epiceditor/themes/base/epiceditor.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000067s ]
+
+[ 2015-01-18T17:05:51+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/epiceditor/themes/editor/epic-dark.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+
+[ 2015-01-18T17:08:29+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000122s ]
+
+[ 2015-01-18T17:08:29+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/epiceditor/themes/editor/epic-dark.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000070s ]
+
+[ 2015-01-18T17:08:29+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/epiceditor/themes/preview/github.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+
+[ 2015-01-18T17:08:29+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/epiceditor/themes/base/epiceditor.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000053s ]
+
+[ 2015-01-18T17:08:52+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000189s ]
+
+[ 2015-01-18T17:08:52+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/epiceditor/themes/base/epiceditor.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000062s ]
+
+[ 2015-01-18T17:08:52+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/epiceditor/themes/preview/github.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+
+[ 2015-01-18T17:08:52+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/epiceditor/themes/editor/epic-dark.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+
+[ 2015-01-18T17:09:11+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+
+[ 2015-01-18T17:09:21+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+
+[ 2015-01-18T17:09:24+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+
+[ 2015-01-18T17:11:33+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000137s ]
+
+[ 2015-01-18T17:11:33+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/epiceditor/share/Public/js/markdown/bartik.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000137s ]
+
+[ 2015-01-18T17:11:33+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/epiceditor/share/Public/js/markdown/epic-light.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.007953s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008173s ]
+
+[ 2015-01-18T17:11:33+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/epiceditor/share/Public/js/markdown/epiceditor.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+
+[ 2015-01-18T17:11:59+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/epiceditor/share/Public/js/markdown/epic-light.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000136s ]
+
+[ 2015-01-18T17:11:59+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/epiceditor/share/Public/js/markdown/bartik.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000061s ]
+
+[ 2015-01-18T17:11:59+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/epiceditor/share/Public/js/markdown/epiceditor.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000052s ]
+
+[ 2015-01-18T17:12:43+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+
+[ 2015-01-18T17:13:41+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+
+[ 2015-01-18T17:14:38+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+
+[ 2015-01-18T17:21:40+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000134s ]
+
+[ 2015-01-18T17:21:40+08:00 ] 192.168.1.107 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000181s ]
+
+[ 2015-01-18T17:21:55+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+
+[ 2015-01-18T17:22:02+08:00 ] 192.168.1.107 /share/home/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+
+[ 2015-01-18T17:22:06+08:00 ] 192.168.1.107 /share/home/user/login?username=xiaohuanshu&password=buzhidao&__hash__=7a927f37a4066d51ce1cb5aaee59d949_fec6fdf344a48699f89360a548c40c90
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+
+[ 2015-01-18T17:22:06+08:00 ] 192.168.1.107 /share/home/api/index?time=1421572926&code=f0e8IH28DBP5nH8sOsqgMZV%2BSxxFh0bDHHtvMVbpN2LW2zMGMOS%2BxCWb%2BPl1E9gAcLtcyk8nY53Rxa95umLMUmKivF5EO09jCNTFzupl%2FgIE6tBCasmNjYIxhPdC3RpBkdyOX4Ph8M%2BHItm%2Bg00641hl8qT9q4bqP9UR4mQgHKKZ
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000096s ]
+
+[ 2015-01-18T17:22:12+08:00 ] 192.168.1.107 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000111s ]
+
+[ 2015-01-18T17:22:15+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000188s ]
+
+[ 2015-01-18T17:23:01+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000112s ]
+
+[ 2015-01-18T17:24:09+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+
+[ 2015-01-18T17:28:03+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000138s ]
+
+[ 2015-01-18T17:28:30+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+
+[ 2015-01-18T17:28:48+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+
+[ 2015-01-18T17:31:48+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+
+[ 2015-01-18T17:33:20+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+
+[ 2015-01-18T17:34:59+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+
+[ 2015-01-18T17:35:40+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000119s ]
+
+[ 2015-01-18T17:36:44+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+
+[ 2015-01-18T17:37:38+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+
+[ 2015-01-18T17:40:59+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000119s ]
+
+[ 2015-01-18T17:41:12+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000133s ]
+
+[ 2015-01-18T17:41:45+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+
+[ 2015-01-18T17:43:33+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+
+[ 2015-01-18T17:44:01+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000118s ]
+
+[ 2015-01-18T17:44:17+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000118s ]
+
+[ 2015-01-18T17:45:53+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+
+[ 2015-01-18T17:46:09+08:00 ] 192.168.1.107 /share/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000155s ]
+
+[ 2015-01-18T17:46:11+08:00 ] 192.168.1.107 /share/home/movie/show?id=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-01-18T17:48:00+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+
+[ 2015-01-18T17:48:48+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+
+[ 2015-01-18T17:49:03+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+
+[ 2015-01-18T17:49:51+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+
+[ 2015-01-18T17:52:13+08:00 ] 192.168.1.107 /share/home/editor
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000099s ]
+
+[ 2015-01-18T17:52:13+08:00 ] 192.168.1.107 /share/index.php/Home/editor/ueditor.html?action=config&&noCache=1421597986930
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000637s ]
+
+[ 2015-01-18T17:53:39+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+
+[ 2015-01-18T17:53:40+08:00 ] 192.168.1.107 /share/index.php/Home/editor/ueditor.html?action=config&&noCache=1421598073469
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+
+[ 2015-01-18T17:56:22+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+
+[ 2015-01-18T17:56:23+08:00 ] 192.168.1.107 /share/index.php/Home/editor/ueditor.html?action=config&&noCache=1421598236642
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004258s ]
+
+[ 2015-01-18T17:56:40+08:00 ] 192.168.1.107 /share/index.php/Home/editor/ueditor.html?action=config&&noCache=1421598236642
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000070s ]
+
+[ 2015-01-18T17:57:19+08:00 ] 192.168.1.107 /share/index.php/Home/editor/ueditor.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+
+[ 2015-01-18T17:58:13+08:00 ] 192.168.1.107 /share/index.php/Home/editor/ueditor.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+
+[ 2015-01-18T17:58:18+08:00 ] 192.168.1.107 /share/home/movie/editcontent/movieid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000221s ]
+
+[ 2015-01-18T17:58:18+08:00 ] 192.168.1.107 /share/index.php/Home/editor/ueditor.html?action=config&&noCache=1421598351980
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000134s ]
+
+[ 2015-01-18T17:58:46+08:00 ] 192.168.1.107 /share/index.php/Home/editor/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000120s ]
+
+[ 2015-01-18T17:58:47+08:00 ] 192.168.1.107 /share/index.php/Home/editor/ueditor.html?action=config&&noCache=1421598380445
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+

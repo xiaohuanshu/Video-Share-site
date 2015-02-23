@@ -1,0 +1,54 @@
+<include file="Public:head" />
+<include file="Public:header" headerstyle="navbar-header aside bg-info nav-xs"/>
+<include file="Public:bodyframe-head" bodyframestyle="bg-black dk aside hidden-print nav-xs"/>
+<section id="content">
+          <section class="vbox">
+            <section class="scrollable padder">
+              <div class="m-b-md">
+                <h3 class="m-b-none">影视资源发布</h3>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <section class="panel panel-default">
+                    <header class="panel-heading font-bold">请输入影视资源标题</header>
+                    <div class="panel-body">
+                      <form role="form" method="post" action="__ROOT__/home/movie/addtitle">
+
+                        <div class="form-group">
+                          <input name="mv_name" type="text" class="form-control" value="">
+                        </div>
+<div class="m-b-sm">
+<empty name="iswish">
+		                <div class="btn-group" data-toggle="buttons">
+		                  <label class="btn btn-sm btn-info">
+		                    <input type="radio" name="iswish" value="1"><i class="fa fa-check text-active"></i>请愿</label>
+		                  <label class="btn btn-sm btn-primary active">
+		                    <input type="radio" name="iswish" value="2" checked><i class="fa fa-check text-active"></i>上传</label>
+		                  
+		                </div>
+		              </div>
+<else />
+		                <div class="btn-group" data-toggle="buttons">
+		                  <label class="btn btn-sm btn-info active">
+		                    <input type="radio" name="iswish" value="1" checked><i class="fa fa-check text-active"></i>请愿</label>
+		                  <label class="btn btn-sm btn-primary">
+		                    <input type="radio" name="iswish" value="2"><i class="fa fa-check text-active"></i>上传</label>
+		                  
+		                </div>
+		              </div>
+</empty>
+                        <button type="submit" class="btn btn-sm btn-default">确认</button>
+                      </form>
+                    </div>
+                  </section>
+                </div>
+                
+              </div>
+              
+              
+            </section>
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+<include file="Public:bodyframe-foot" />
+<include file="Public:footer" />

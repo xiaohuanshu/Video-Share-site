@@ -1,0 +1,237 @@
+<include file="Public:head" />
+<include file="Public:header" headerstyle="navbar-header aside bg-info nav-xs"/>
+<include file="Public:bodyframe-head" bodyframestyle="bg-black dk aside hidden-print nav-xs"/>
+<section id="content">
+          <section class="vbox">
+            <section class="scrollable wrapper-lg">
+              <div class="row">
+                <div class="col-sm-9">
+                  <div class="blog-post">                   
+                    <div class="post-item">
+<empty name='playid'>
+                      <div class="post-media">
+                        <img src="{$movieinfo.image}" class="img-full">
+                      </div>
+<else />
+                      <div class="caption wrapper-lg">
+                        <h2 class="post-title"><a href="#">当前播放视频：{$movieinfo.name}</a></h2>
+                      </div>
+    <video width="100%" poster="{$movieinfo.image}" controls="controls">
+<volist name="playlist" id="pllist">
+      <source type="video/mp4" src="{$pllist.url}" />
+</volist>
+    </video>
+</empty>
+                      <div class="caption wrapper-lg">
+                        <h2 class="post-title"><a href="#">{$movieinfo.name}</a></h2>
+                        <div class="post-sum">
+{$mvcontent.intro|default="没有人进行编辑..."}
+                        </div>
+                        <div class="line line-lg"></div>
+                        <div class="text-muted">
+                          <i class="fa fa-user icon-muted"></i> by <a href="__ROOT__/home/user/profile/uid/{$mvcontent.userid}" class="m-r-sm">{$mvcontent.userid|getusernamebyid}</a>
+                          <i class="fa fa-clock-o icon-muted"></i> {$mvcontent.time}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post-item">
+                      <div class="caption wrapper-lg">
+{$mvcontent.content|default="没有人进行编辑..."}
+                        <h2 class="post-title">&nbsp;</h2><div class="post-sum">
+                        </div>
+                        <div class="line line-lg"></div>
+                        <div class="text-muted">
+                          <i class="fa fa-user icon-muted"></i> by <a href="__ROOT__/home/user/profile/uid/{$mvcontent.userid}" class="m-r-sm">{$mvcontent.userid|getusernamebyid}</a>
+                          <i class="fa fa-clock-o icon-muted"></i> {$mvcontent.time}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6" style="width:100%">
+                  <section class="panel panel-default">
+                    <header class="panel-heading">
+                      
+                      下载列表
+                    </header>
+                    <table class="table table-striped m-b-none">
+                      <thead>
+                        <tr>
+                          <th style="width:70%;"> 标题</th>
+                          <th style="width:20%;">上传者</th>                    
+                          <th style="width:10%;">操作</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+<volist name="locallist" id="lolist" empty="$listempty">
+                        <tr>                    
+                          <td>
+                            {$lolist.title}
+                          </td>
+                          <td>{$lolist.userid|getusernamebyid}</td>
+                          <td class="text-right">
+                            <div class="btn-group" style="float:left">
+<if condition="$lolist['online'] == 1">
+  <a href="__ROOT__/home/movie/show/id/{$movieinfo.id}/playid/{$lolist.id}"><i class="fa fa-play-circle"></i></a>
+</if>
+                            </div>
+<div class="btn-group" style="float:right">
+                              
+  <a href="{$lolist.url}" download="{$lolist.title}.{$lolist.url|strrchr='.'|substr=1}"><i class="fa fa-download"></i></a>{//|strrchr='/uploads/'|substr=1}
+                            </div>{//substr(strrchr($lolist.url, '.'), 1)}
+                          </td>
+                        </tr>
+</volist>                        
+                        
+                        
+                      </tbody>
+                    </table>
+                  </section>
+                </div>
+                  <h4 class="m-t-lg m-b">{$mvcommentcount} 条评论</h4>
+                  <section class="comment-list block">
+<volist name="commentlist" id="cmlist" empty="">
+                    <article id="comment-id-1" class="comment-item">
+                      <a class="pull-left thumb-sm">
+                        <img src="/ucenter/avatar.php?uid={$cmlist.userid}&type=virtual&size=middle" class="img-circle">
+                      </a>
+                      <section class="comment-body m-b">
+                        <header>
+                          <a href="__ROOT__/home/user/profile/uid/{$cmlist.userid}"><strong>{$cmlist.userid|getusernamebyid}</strong></a>
+                          {$cmlist.userid|mvshowusertype=$cmlist['movieid']}
+                          <span class="text-muted text-xs block m-t-xs">
+                            {$cmlist.time}
+                          </span>
+                        </header>
+                        <div class="m-t-sm">{$cmlist.content}</div>
+                      </section>
+                    </article>
+</volist>
+                  </section>
+<A NAME="comment"></a>
+                  <h4 class="m-t-lg m-b">留下你的评论</h4>
+                  <form action="/share/home/movie/addcomment/id/{$movieinfo.id}" method="post" name="comform">
+                    <div class="form-group">
+                      <textarea name="content" id="comcon" class="form-control" rows="5" placeholder="写下你的评论..."></textarea>
+                    </div>
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-success">发布评论</button><span>Ctrl+Enter发送</span>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-sm-3">
+                  <h5 class="font-bold">视频统计</h5>
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <a href="#">
+                        <span class="badge pull-right">{$listcount}</span>视频数量</a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="#">
+                        <span class="badge pull-right">{$wishcount}</span>
+                        请愿人数
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="#">
+                        <span class="badge pull-right">{$mvfacount}</span>
+                        收藏人数
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="#">
+                        <span class="badge pull-right">{$movieinfo.downloadcount}</span>
+                        下载次数
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="#">
+                        <span class="badge pull-right">{$movieinfo.playcount}</span>
+                        播放次数
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="doc-buttons">
+		                <a href="__ROOT__/home/movie/upload/movieid/{$movieinfo.id}" class="btn btn-s-md btn-default">我要上传</a>  
+<if condition="ismy($movieinfo['id'],$uid) == '0'">
+		                <a href="#" class="btn btn-s-md btn-primary" data-toggle="class:" onclick="ifa({$movieinfo.id});">
+                                  <span class="text">收藏</span>
+                                  <span class="text-active">收藏✔</span>
+                                </a>
+<else />
+		                <a href="#" class="btn btn-s-md btn-primary active" data-toggle="class:" onclick="ifa({$movieinfo.id});">
+                                  <span class="text">收藏</span>
+                                  <span class="text-active">收藏✔</span>
+                                </a>
+</if>
+		                <a href="__ROOT__/home/movie/edit/movieid/{$movieinfo.id}" class="btn btn-s-md btn-default">编辑内容</a>
+<if condition="iswish($movieinfo['id'],$uid) == '0'">
+		                <a href="#" class="btn btn-s-md btn-info" data-toggle="class:" onclick="iwish({$movieinfo.id});">
+                                  <span class="text">请愿</span>
+                                  <span class="text-active">请愿✔</span>
+                                </a>
+<else />
+		                <a href="#" class="btn btn-s-md btn-info active" data-toggle="class:" onclick="iwish({$movieinfo.id});">
+                                  <span class="text">请愿</span>
+                                  <span class="text-active">请愿✔</span>
+                                </a>
+</if>
+		                <a href="#" class="btn btn-s-md btn-danger">举报</a>
+		              </div>
+                  <div class="tags m-b-lg l-h-2x">
+<volist name=":explode(',',$movieinfo['type'])" id="mtype" key='k'>
+<a href="__ROOT__/home/movie/mlist?type={$mtype}" class="label bg-primary">{$mtype} </a> |
+</volist>
+                  </div>
+                  <h5 class="font-bold">视频动态</h5>
+                  <div class="timeline">
+                    <article class="timeline-item active">
+                        <div class="timeline-caption">
+                          <div class="panel bg-primary lt no-borders">
+                            <div class="panel-body">
+                              <div class="m-t-sm timeline-action">
+                                <span class="h3 pull-left m-r-sm">发布时间线</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </article>
+<volist name="timeline" id="tl" key="tlk" empty="没有数据">
+<if condition="($tlk+1)%2==1">
+                    <article class="timeline-item alt">
+<else/>
+                    <article class="timeline-item">
+</if>
+                        <div class="timeline-caption">                
+                          <div class="panel panel-default">
+                            <div class="panel-body">
+<if condition="($tlk+1)%2==1">
+                              <span class="arrow right"></span>
+<else/>
+                              <span class="arrow left"></span>
+</if>
+                              <span class="timeline-icon"><i class="{$tl.icon}"></i></span>
+                              <span class="timeline-date">{$tl.time|strtotime|date="Y-m-d",###}</span>
+                              <div class="text-sm">{$tl.footer}</div>
+                              <h5>{$tl.title}</h5>
+                              <p>{$tl.content}</p>
+                            </div>
+                          </div>
+                        </div>
+                    </article>
+</volist>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+<include file="Public:bodyframe-foot" />
+<script type="text/javascript">
+          $('#comcon').keypress(function(e){
+            if(e.ctrlKey && e.which == 13 || e.which == 10) {
+                   $('form[name=comform]').submit();
+                  }
+                });
+</script>
+<include file="Public:footer" />
