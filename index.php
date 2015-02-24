@@ -1,12 +1,10 @@
 <?php
 // +----------------------------------------------------------------------
-// | ThinkPHP [ WE CAN DO IT JUST THINK ]
-// +----------------------------------------------------------------------
-// | Copyright (c) 2006-2014 http://thinkphp.cn All rights reserved.
+// | Video-share
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
-// | Author: liu21st <liu21st@gmail.com>
+// | Author: xiaohuanshu <xiaohuanshu@gmail.com>
 // +----------------------------------------------------------------------
 
 // 应用入口文件
@@ -23,5 +21,3 @@ define('DIR_SECURE_FILENAME', 'index.html,index.htm,default.html,default.htm');
 define('DIR_SECURE_CONTENT', 'deney Access!');
 // 引入ThinkPHP入口文件
 require './ThinkPHP/ThinkPHP.php';
-
-// 亲^_^ 后面不需要任何代码了 就是如此简单
