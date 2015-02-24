@@ -119,13 +119,13 @@ class UserController extends GlobalAction
 		$this->assign('userinfo', $data[0]);
 		$movielist=M('videolist');
 		$localvideo=M('localvideo');
-		$uploadcount=$localvideo->where('userid=%d',$uid)->count();
+		$uploadcount=$localvideo->where('userid=%d',$uid)->cache(true,600)->count();
 		$wishlist=M('wishlist');
-		$wishcount=$wishlist->where('userid=%d',$uid)->count();
-		$uploadlist = $movielist->join("join `think_localvideo` on  `think_videolist`.`id`=`think_localvideo`.`movieid` and `think_localvideo`.`userid` = " . intval($uid))->group('`think_videolist`.`id`')->limit(12)->select();
-		$wishlist = $movielist->join("join `think_wishlist` on  `think_videolist`.`id`=`think_wishlist`.`movieid` and `think_wishlist`.`userid` = " . intval($uid))->group('`think_videolist`.`id`')->limit(12)->select();
+		$wishcount=$wishlist->where('userid=%d',$uid)->cache(true,600)->count();
+		$uploadlist = $movielist->join("join `think_localvideo` on  `think_videolist`.`id`=`think_localvideo`.`movieid` and `think_localvideo`.`userid` = " . intval($uid))->group('`think_videolist`.`id`')->limit(12)->cache(true,600)->select();
+		$wishlist = $movielist->join("join `think_wishlist` on  `think_videolist`.`id`=`think_wishlist`.`movieid` and `think_wishlist`.`userid` = " . intval($uid))->group('`think_videolist`.`id`')->limit(12)->cache(true,600)->select();
 		$videocomment=M('videocomment');
-		$commentlist=$videocomment->where('userid=%d',$uid)->limit(12)->select();
+		$commentlist=$videocomment->where('userid=%d',$uid)->limit(12)->cache(true,600)->select();
 		$this->assign('uploadcount', $uploadcount);
 		$this->assign('wishcount', $wishcount);
 		$this->assign('uploadlist', $uploadlist);

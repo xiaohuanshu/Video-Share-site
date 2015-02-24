@@ -16,27 +16,27 @@ class MovieController extends GlobalAction
     {
         //视频基础信息
         $movieinfo = M('videolist');
-        $data      = $movieinfo->where('id=%d', $_GET['id'])->select();
+        $data      = $movieinfo->where('id=%d', $_GET['id'])->field('id,name,image,type,playcount,downloadcount')->limit(1)->select();
         $this->assign('movieinfo', $data[0]);
         //视频简介
         $contentlist = M('videocontent');
-        $data        = $contentlist->where('verify=1 and movieid=%d', $_GET['id'])->order('time desc')->limit(0)->select();
+        $data        = $contentlist->where('verify=1 and movieid=%d', $_GET['id'])->order('time desc')->limit(1)->select();
         $this->assign('mvcontent', $data[0]);
         //时间线信息
         $timeline = M('videotimeline');
-        $data     = $timeline->where('movieid=%d', $_GET['id'])->order('time')->select();
+        $data     = $timeline->where('movieid=%d', $_GET['id'])->order('time')->cache(true,600)->select();
         $this->assign('timeline', $data);
         //下载地址信息
         $locallist = M('localvideo');
-        $data      = $locallist->where('movieid=%d and verify=1', $_GET['id'])->select();
+        $data      = $locallist->where('movieid=%d and verify=1', $_GET['id'])->cache(true,60)->select();
         //下载资源数量
-        $listcount = $locallist->where('verify=1 and movieid=%d', $_GET['id'])->count();
+        $listcount = $locallist->where('verify=1 and movieid=%d', $_GET['id'])->cache(true,60)->count();
         $this->assign('listempty', '<tr><td>没有视频资源</td><td></td><td></td></tr>');
         $this->assign('locallist', $data);
         $this->assign('listcount', $listcount);
         //情愿数量
         $wishlist  = M('wishlist');
-        $wishcount = $wishlist->where('movieid=%d', $_GET['id'])->count();
+        $wishcount = $wishlist->where('movieid=%d', $_GET['id'])->cache(true,600)->count();
         $this->assign('wishcount', $wishcount);
         //喜爱人数
         /*$mvlikelist  = M('mvlikelist');
@@ -44,11 +44,11 @@ class MovieController extends GlobalAction
         $this->assign('mvlikecount', $mvlikecount);*/
         //收藏人数
         $mvfalist  = M('videofavorite');
-        $mvfacount = $mvfalist->where('movieid=%d', $_GET['id'])->count();
+        $mvfacount = $mvfalist->where('movieid=%d', $_GET['id'])->cache(true,600)->count();
         $this->assign('mvfacount', $mvfacount);
         //评论加载
         $mvcommentlist  = M('videocomment');
-        $mvcommentcount = $mvcommentlist->where('movieid=%d', $_GET['id'])->count();
+        $mvcommentcount = $mvcommentlist->where('movieid=%d', $_GET['id'])->cache(true,600)->count();
         $this->assign('mvcommentcount', $mvcommentcount);
         $commentlist = $mvcommentlist->where('movieid=%d', $_GET['id'])->select();
         $this->assign('commentlist', $commentlist);
@@ -56,7 +56,7 @@ class MovieController extends GlobalAction
         if (!empty($_GET['playid'])) {
             $this->assign('playid', $_GET['playid']);
             //$locallist = M('locallist');
-            $data = $locallist->where('movieid=%d and verify=1 and id=%d', $_GET['id'], $_GET['playid'])->select();
+            $data = $locallist->where('movieid=%d and verify=1 and id=%d', $_GET['id'], $_GET['playid'])->limit(1)->select();
             //dump($data);
             $this->assign('playlist', $data);
         }
@@ -121,10 +121,6 @@ class MovieController extends GlobalAction
         $this->assign('page', $show); // 赋值分页输出
         $this->display();
         
-    }
-    public function add()
-    {
-        echo 'hello';
     }
     public function ifa()
     {
@@ -248,10 +244,10 @@ class MovieController extends GlobalAction
         }
         $this->assign('movieid', $movieid);
         $movielist = M("videolist");
-        $data      = $movielist->where('id=%d', $movieid)->select();
+        $data      = $movielist->where('id=%d', $movieid)->limit(1)->select();
         $this->assign('movieinfo', $data[0]);
         $contentlist = M('videocontent');
-        $data        = $contentlist->where('verify=1 and movieid=%d', $movieid)->order('time desc')->limit(0)->select();
+        $data        = $contentlist->where('verify=1 and movieid=%d', $movieid)->order('time desc')->limit(1)->select();
         $this->assign('mvcontent', $data[0]);
         $this->display();
         

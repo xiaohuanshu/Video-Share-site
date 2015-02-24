@@ -18,7 +18,7 @@ function getusernamebyid($uid)
         return '';
     }
     $user = M('userinfo');
-    $data = $user->where('userid=%d', $uid)->select();
+    $data = $user->where('userid=%d', $uid)->field('username')->limit(1)->select();
     return $data[0]["username"];
 }
 function getmovienamebyid($movieid)
@@ -27,7 +27,7 @@ function getmovienamebyid($movieid)
         return '';
     }
     $movie = M('videolist');
-    $data  = $movie->where('id=%d', $movieid)->limit(1)->select();
+    $data  = $movie->where('id=%d', $movieid)->field('name')->limit(1)->select();
     return $data[0]["name"];
 }
 function isMy($movieid, $uid)
@@ -65,17 +65,17 @@ function mvshowusertype($userid, $movieid)
         return '<label class="label bg-primary m-l-xs">管理员</label>';
     }
     $m    = M('localvideo');
-    $data = $m->where('userid=%d and movieid=%d', $userid, $movieid)->count();
+    $data = $m->where('userid=%d and movieid=%d', $userid, $movieid)->cache(true,20)->count();
     if ($data <> 0) {
         return '<label class="label bg-success m-l-xs">上传者</label>';
     }
     $m    = M('videocontent');
-    $data = $m->where('userid=%d and movieid=%d', $userid, $movieid)->count();
+    $data = $m->where('userid=%d and movieid=%d', $userid, $movieid)->cache(true,20)->count();
     if ($data <> 0) {
         return '<label class="label bg-info m-l-xs">内容编辑者</label>';
     }
     $m    = M('wishlist');
-    $data = $m->where('userid=%d and movieid=%d', $userid, $movieid)->count();
+    $data = $m->where('userid=%d and movieid=%d', $userid, $movieid)->cache(true,20)->count();
     if ($data <> 0) {
         return '<label class="label bg-dark m-l-xs">请愿者</label>';
     }
@@ -122,7 +122,7 @@ function videoinfo($path)
 function getwishcount($movieid)
 {
     $wishlist  = M('wishlist');
-    $wishcount = $wishlist->where('movieid=%d', $movieid)->count();
+    $wishcount = $wishlist->where('movieid=%d', $movieid)->cache(true,600)->count();
     return $wishcount;
 }
 function addtimeline($movieid, $title, $content, $footer, $icon)
