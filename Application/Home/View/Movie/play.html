@@ -84,7 +84,7 @@
                       </a>
                       <section class="comment-body m-b">
                         <header>
-                          <a href="__ROOT__/home/user/profile/uid/{$cmlist.userid}"><strong>{$cmlist.userid|getusernamebyid}</strong></a>
+                          <a href="__MODULE__/user/profile/uid/{$cmlist.userid}"><strong>{$cmlist.userid|getusernamebyid}</strong></a>
                           <label class="label bg-info m-l-xs">Editor</label> {//<label class="label bg-dark m-l-xs"></label> }
                           <span class="text-muted text-xs block m-t-xs">
                             {$cmlist.time}
@@ -96,7 +96,7 @@
 </volist>
                   </section>
                   <h4 class="m-t-lg m-b">留下你的评论</h4>
-                  <form action="/share/home/movie/addcomment/id/{$movieinfo.id}" method="post">
+                  <form action="__MODULE__/movie/addcomment/id/{$movieinfo.id}" method="post">
                     <div class="form-group">
                       <textarea name="content" class="form-control" rows="5" placeholder="写下你的评论..."></textarea>
                     </div>

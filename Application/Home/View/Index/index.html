@@ -101,7 +101,7 @@
 </notempty>
                           <div class="item-overlay opacity r r-2x bg-black">
                             <div class="center text-center m-t-n">
-                              <a href="__ROOT__/home/movie/show?id={$mvlist.id}"><i class="icon-control-play i-2x"></i></a>
+                              <a href="__MODULE__/movie/show?id={$mvlist.id}"><i class="icon-control-play i-2x"></i></a>
                             </div>
                             <div class="bottom padder m-b-sm">
 <if condition="(ismy($mvlist['id'],$uid) == '0')">
@@ -114,12 +114,12 @@
                               </a>
                             </div>
                           </div>
-                          <a href="#"><img src="{$mvlist.image|default='__ROOT__/Public/images/nopicture.jpg'}.thumb.jpg" alt="" class="r r-2x img-full"></a>
+                          <a href="#"><img src="{$mvlist.image|default='__PUBLIC__/images/nopicture.jpg'}.thumb.jpg" alt="" class="r r-2x img-full"></a>
                         </div>
                         <div class="padder-v">
-                          <a href="__ROOT__/home/movie/show?id={$mvlist.id}" class="text-ellipsis">{$mvlist.name}</a>
+                          <a href="__MODULE__/movie/show?id={$mvlist.id}" class="text-ellipsis">{$mvlist.name}</a>
 <volist name=":explode(',',$mvlist['type'])" id="mtype">
-<a href="__ROOT__/home/movie/mlist?type={$mtype}" class="text-xs text-muted">{$mtype} </a>
+<a href="__MODULE__/movie/mlist?type={$mtype}" class="text-xs text-muted">{$mtype} </a>
 </volist>
                         </div>
                       </div>
@@ -137,10 +137,10 @@
                         <div class="col-xs-6 col-sm-3">
                           <div class="item">
                             <div class="pos-rlt">
-                              <a href="__ROOT__/home/movie/show?id={$wslist.id}"><img src="{$wslist.image|default='__ROOT__/Public/images/nopicture.jpg'}.thumb.jpg" alt="" class="r r-2x img-full"></a>
+                              <a href="__MODULE__/movie/show?id={$wslist.id}"><img src="{$wslist.image|default='__PUBLIC__/images/nopicture.jpg'}.thumb.jpg" alt="" class="r r-2x img-full"></a>
                             </div>
                             <div class="padder-v">
-                              <a href="__ROOT__/home/movie/show?id={$wslist.id}" class="text-ellipsis">{$wslist.name}</a>
+                              <a href="__MODULE__/movie/show?id={$wslist.id}" class="text-ellipsis">{$wslist.name}</a>
                               <a href="#" class="text-ellipsis text-xs text-muted">请愿人数:{$wslist.id|getwishcount}</a>
                             </div>
                           </div>
@@ -152,7 +152,7 @@
                       <h3 class="font-thin">分享资源榜</h3>
                       <div class="list-group bg-white list-group-lg no-bg auto">       
 <volist name="sharelist" id="srlist" key='sk' >
-<a href="__ROOT__/home/user/profile/uid/{$srlist.userid}" class="list-group-item clearfix">
+<a href="__MODULE__/user/profile/uid/{$srlist.userid}" class="list-group-item clearfix">
                           <span class="pull-right h2 text-muted m-l">{$sk}</span>
                           <span class="pull-left thumb-sm avatar m-r">
                             <img src="/ucenter/avatar.php?uid={$uid}&type=virtual&size=middle" alt="...">
@@ -211,7 +211,7 @@
                         <img src="/ucenter/avatar.php?uid={$nul.userid}&type=virtual&size=middle" alt="..." class="img-circle">
                       </span>
                       <div class="clear">
-                        <div><a href="__ROOT__/home/user/profile/uid/{$nul.userid}">{$nul.username}</a></div>
+                        <div><a href="__MODULE__/user/profile/uid/{$nul.userid}">{$nul.username}</a></div>
                         <small class="text-muted">{$nul.realname}</small>
                       </div>
                     </li>

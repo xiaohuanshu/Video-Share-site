@@ -3,7 +3,7 @@
         <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
           <i class="icon-list"></i>
         </a>
-        <a href="__ROOT__/home" class="navbar-brand text-lt">
+        <a href="__MODULE__" class="navbar-brand text-lt">
           <i class="icon-grid"></i>
           <img src="__PUBLIC__/images/logo.png" alt="." class="hide">
           <span class="hidden-nav-xs m-l-sm">MV Share</span>
@@ -19,7 +19,7 @@
           </a>
         </li>
       </ul>
-      <form class="navbar-form navbar-left input-s-lg m-t m-l-n-xs hidden-xs" role="search"  action="/share/home/movie/mlist" method="get">
+      <form class="navbar-form navbar-left input-s-lg m-t m-l-n-xs hidden-xs" role="search"  action="__MODULE__/movie/mlist" method="get">
         <div class="form-group">
           <div class="input-group">
             <span class="input-group-btn">
@@ -44,7 +44,7 @@
                 </div>
                 <div class="list-group list-group-alt">
 <volist name="messagelist" id="mdata">
-                  <a href="__ROOT__/home/user/messagecenter/action/3/inf/{$mdata.msgfromid}" class="media list-group-item">
+                  <a href="__MODULE__/user/messagecenter/action/3/inf/{$mdata.msgfromid}" class="media list-group-item">
                     <span class="pull-left thumb-sm text-center">
                       <i class="fa fa-envelope-o fa-2x text-success"></i>
                     </span>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="panel-footer text-sm">
                   <!--<a href="/forum/home.php?mod=space&do=pm&subop=setting" class="pull-right"><i class="fa fa-cog"></i></a>-->
-                  <a href="__ROOT__/home/user/messagecenter">进入短消息中心</a>
+                  <a href="__MODULE__/user/messagecenter">进入短消息中心</a>
                 </div>
               </section>
             </section>
@@ -81,13 +81,13 @@
             <ul class="dropdown-menu animated fadeInRight">            
               <li>
                 <span class="arrow top"></span>
-                <a href="__ROOT__/home/user/setting">设置</a>
+                <a href="__MODULE__/user/setting">设置</a>
               </li>
               <li>
-                <a href="__ROOT__/home/user/profile/uid/{$uid}">主页</a>
+                <a href="__MODULE__/user/profile/uid/{$uid}">主页</a>
               </li>
               <li>
-                <a href="__ROOT__/home/user/messagecenter/action/1">
+                <a href="__MODULE__/user/messagecenter/action/1">
                   <if condition="($messagemember neq 0)"><span class="badge bg-danger pull-right">{$messagemember}</span></if>
                   消息
                 </a>
@@ -97,7 +97,7 @@
               </li>
               <li class="divider"></li>
               <li>
-                <a href="__ROOT__/home/user/logout">注销</a>
+                <a href="__MODULE__/user/logout">注销</a>
               </li>
             </ul>
           </li>
@@ -108,7 +108,7 @@
               <a href="#modal-login" data-toggle="modal">登录</a>
           </li>
 <li class="">
-            <a href="__ROOT__/home/user/register">
+            <a href="__MODULE__/user/register">
               注册
             </a>
           </li>

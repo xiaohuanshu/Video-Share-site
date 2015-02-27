@@ -29,15 +29,15 @@
                           <div class="item-overlay opacity r r-2x bg-black">
                             
                             <div class="center text-center m-t-n">
-                              <a href="__ROOT__/home/movie/show?id={$mvlist.movieid}"><i class="icon-control-play i-2x"></i></a>
+                              <a href="__MODULE__/movie/show?id={$mvlist.movieid}"><i class="icon-control-play i-2x"></i></a>
                             </div>
                           </div>
                           <a href="#"><img src="{$mvlist.image|default='__PUBLIC__/images/nopicture.jpg'}.thumb.jpg" alt="" class="r r-2x img-full"></a>
                         </div>
                         <div class="padder-v">
-                          <a href="__ROOT__/home/movie/show?id={$mvlist.id}" class="text-ellipsis">{$mvlist.name}</a>
+                          <a href="__MODULE__/movie/show?id={$mvlist.id}" class="text-ellipsis">{$mvlist.name}</a>
 <volist name=":explode(',',$mvlist['type'])" id="mtype" key='k'>
-<a href="__ROOT__/home/movie/mlist?type={$mtype}" class="text-xs text-muted">{$mtype} </a>
+<a href="__MODULE__/movie/mlist?type={$mtype}" class="text-xs text-muted">{$mtype} </a>
 </volist>
                         </div>
                       </div>

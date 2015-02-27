@@ -29,14 +29,14 @@
                           <div class="item-overlay opacity r r-2x bg-black">
                             
                             <div class="center text-center m-t-n">
-                              <a href="__ROOT__/home/movie/show?id={$mvlist.id}"><i class="icon-control-play i-2x"></i></a>
+                              <a href="__MODULE__/movie/show?id={$mvlist.id}"><i class="icon-control-play i-2x"></i></a>
                             </div>
                           </div>
                           <a href="#"><img src="{$mvlist.image}" alt="" class="r r-2x img-full"></a>
                         </div>
                         <div class="padder-v">
-                          <a href="__ROOT__/home/movie/show?id={$mvlist.id}" class="text-ellipsis">{$mvlist.name}</a>
-                          <a href="__ROOT__/home/movie/mlist?type={$mvlist.type}" class="text-ellipsis text-xs text-muted">{$mvlist.type|default="未知"}</a>
+                          <a href="__MODULE__/movie/show?id={$mvlist.id}" class="text-ellipsis">{$mvlist.name}</a>
+                          <a href="__MODULE__/movie/mlist?type={$mvlist.type}" class="text-ellipsis text-xs text-muted">{$mvlist.type|default="未知"}</a>
                         </div>
                       </div>
                     </div>

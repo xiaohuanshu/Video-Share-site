@@ -42,7 +42,7 @@ class UploadController extends GlobalAction
         for ($i = 0; $i <= intval($_POST['uploader_count']) - 1; $i++) {
             $c['userid']  = $uid;
             $c['movieid'] = $_GET['movieid'];
-            $c['url']     = '/share/Uploads/movie/' . $_POST['uploader_' . $i . '_tmpname'];
+            $c['url']     = __ROOT__.'/Uploads/movie/' . $_POST['uploader_' . $i . '_tmpname'];
             $c['title']   = $_POST['uploader_' . $i . '_name'];
             $c['verify']  = 0;
             $c['time']    = date('Y-m-d H:i:s');
@@ -56,7 +56,7 @@ class UploadController extends GlobalAction
             $locallist->add($c);
         }
         addtimeline($_GET['movieid'], '上传视频', $_POST['uploader_' . $i . '_tmpname'], $username, 'fa fa-cloud-upload time-icon bg-dark');
-        $this->success("上传成功", U("home/movie/show/id/" . $_GET['movieid']));
+        $this->success("上传成功", U("movie/show?id=" . $_GET['movieid']));
     }
     public function poster()
     {
@@ -98,7 +98,7 @@ class UploadController extends GlobalAction
             $c['image'] = '/share/Uploads/' . $info['uimage']['savepath'] . $info['uimage']['savename'];
             $videolist->where('id=%d', $_GET['movieid'])->save($c);
             addtimeline($_GET['movieid'], '编辑内容', '基础信息', $username, 'fa fa-file-text time-icon bg-info');
-            $this->success('上传成功！', U("home/movie/editcontent/movieid/" . $_GET['movieid']));
+            $this->success('上传成功！', U("movie/editcontent?movieid=" . $_GET['movieid']));
         }
     }
 }

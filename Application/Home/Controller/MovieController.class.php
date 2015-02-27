@@ -10,7 +10,7 @@ class MovieController extends GlobalAction
     }
     public function index()
     {
-        header("location:/share/home/movie/mlist");
+        header("location:".U('Movie/mlist'));
     }
     public function show()
     {
@@ -204,13 +204,13 @@ class MovieController extends GlobalAction
                 $wc['time'] = date('Y-m-d H:i:s');
                 $wishlist->add($wc);
                 addtimeline($movieid, '请愿发布', $_POST['mv_name'], $username, 'fa fa-gift time-icon bg-primary');
-                header("location:/share/home/movie/wishsuccess/movieid/$movieid");
+                header("location:".U('Movie/wishsuccess?movieid='.$movieid));
             } else {
                 $c['name']     = $_POST['mv_name'];
                 //$c['statue']  = 1;
                 $c['wishtime'] = date('Y-m-d H:i:s');
                 $movieid       = $movielist->add($c);
-                header("location:/share/home/movie/upload/movieid/$movieid");
+                header("location:".U('Movie/upload?movieid='.$movieid));
             }
         }
     }
@@ -230,7 +230,7 @@ class MovieController extends GlobalAction
         $movielist = M("videolist");
         $data      = $movielist->where('id=%d', $movieid)->select();
         if($data[0]['image']!=''){
-            header("location:/share/home/movie/editcontent/movieid/$movieid");
+            header("location:".U('Movie/editcontent?movieid='.$movieid));
         }
         $this->assign('movieinfo', $data[0]);
         $this->display();
@@ -272,7 +272,7 @@ class MovieController extends GlobalAction
         $c['time']    = date('Y-m-d H:i:s');
         $contentlist->add($c);
         addtimeline($movieid, '编辑内容', '视频介绍', $username, 'fa fa-file-text time-icon bg-info');
-        $this->success('编辑成功', U('Home/movie/show/id/' . $movieid));
+        $this->success('编辑成功', U('Movie/show?id='.$movieid));
     }
     public function addcomment()
     {

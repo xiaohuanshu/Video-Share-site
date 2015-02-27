@@ -1,9 +1,9 @@
 <include file="Public:head" />
 <include file="Public:header" headerstyle="navbar-header aside bg-info nav-xs"/>
 <include file="Public:bodyframe-head" bodyframestyle="bg-black dk aside hidden-print nav-xs"/>
-	<script type="text/javascript" src="__ROOT__/Public/js/jquery-2.0.2.js"></script>
-    <script type="text/javascript" src="__ROOT__/Public/ueditor/ueditor.config.js"></script>    
-    <script type="text/javascript" src="__ROOT__/Public/ueditor/ueditor.all.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-2.0.2.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/ueditor/ueditor.config.js"></script>    
+    <script type="text/javascript" src="__PUBLIC__/ueditor/ueditor.all.min.js"></script>
     <script>
     $(function(){
         var ue = UE.getEditor('container',{
@@ -26,7 +26,7 @@
                       <p>内容审核后才会显示</p>
                     </div>
                     <div class="panel-body">
-                      <form role="form" class="form-horizontal" method="post" action="__ROOT__/home/movie/editcontentdeal/movieid/{$movieinfo.id}" enctype="multipart/form-data" id="gform">
+                      <form role="form" class="form-horizontal" method="post" action="__MODULE__/movie/editcontentdeal/movieid/{$movieinfo.id}" enctype="multipart/form-data" id="gform">
 <div class="form-group">
                       <label class="col-sm-2 control-label">视频信息</label>
                       <div class="col-sm-10">
@@ -110,8 +110,8 @@
       </section>
     </section>
 <include file="Public:bodyframe-foot" />
-<script src="/share/Public/js/wysiwyg/jquery.hotkeys.js"></script>
-<script src="/share/Public/js/wysiwyg/bootstrap-wysiwyg.js"></script>
+<script src="__PUBLIC__/js/wysiwyg/jquery.hotkeys.js"></script>
+<script src="__PUBLIC__/js/wysiwyg/bootstrap-wysiwyg.js"></script>
 <script>
 $(function(){
   function initToolbarBootstrapBindings() {
