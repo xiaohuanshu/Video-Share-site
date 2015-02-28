@@ -380,13 +380,13 @@ function uc_user_getcredit($appid, $uid, $credit) {
 	return uc_api_post('user', 'getcredit', array('appid'=>$appid, 'uid'=>$uid, 'credit'=>$credit));
 }
 
-function uc_pm_location($uid, $action = 0, $inf = '') {
+function uc_pm_location($uid, $action = 0, $inf = '', $inf2 = '') {
 	$other='';
 	if ($action==1){//打开未读邮件列表
 		$other="&folder=newbox";
 	}
 	if ($action==2){//发送给
-		$other="&a=send&msgto=".$inf;
+		$other="&a=send&msgto=".$inf."&message=".$inf2;
 	}
 	if ($action==3){//打开信息
 		$other="&a=view&touid=".$inf;

@@ -29,11 +29,11 @@ class UserController extends GlobalAction
 		//exit();
         $this->success('注销成功' . $uc->uc_user_synlogout(), U('index'), 5);
     }
-    public function messagecenter($action=0,$inf='')
+    public function messagecenter($action=0,$inf='',$inf2='')
     {       
         $uc = new \Ucenter\Client\Client();
 		list($uid, $username) = getuserinfo();
-        header('Location:'.$uc->uc_pm_location($uid,$action,$inf));
+        header('Location:'.$uc->uc_pm_location($uid,$action,$inf,$inf2));
     }
 	public function register(){
 		$this->show();
