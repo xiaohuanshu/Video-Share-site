@@ -30,6 +30,10 @@ class GlobalAction extends Controller
             if ($myfacount != 0) {
                 $this->assign('myfacount', $myfacount);
             }
+			//是否管理员
+			if (in_array($userid,C('ADMIN_ID'))) {
+				$this->assign('isadmin', 1);
+			}
         }
 		//请愿数量相关
         $movielist = M('videolist');

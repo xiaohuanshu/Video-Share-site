@@ -13,15 +13,51 @@
                         <img src="{$movieinfo.image}" class="img-full">
                       </div>
 <else />
+<link rel="stylesheet" href="__PUBLIC__/css/px-video.css" />
                       <div class="caption wrapper-lg">
                         <h2 class="post-title"><a href="#">当前播放视频：{$movieinfo.name}</a></h2>
                       </div>
-    <video width="100%" poster="{$movieinfo.image}" controls="controls">
+					  
+<div class="px-video-container" id="myvid">
+    <div class="px-video-img-captions-container">
+        <div class="px-video-captions hide" aria-hidden="true"></div>
+        <video width="100%" poster="{$movieinfo.image}" controls>
 <volist name="playlist" id="pllist">
       <source type="video/mp4" src="{$pllist.url}" />
 </volist>
-    </video>
+            {//<track kind="captions" label="English captions" src="media/foo.vtt" srclang="en" default />}
+        </video>
+    </div>
+    <div class="px-video-controls"></div>
+</div>
+
+<script src="__PUBLIC__/js/px-video.js"></script>
+<script>
+// Initialize
+new InitPxVideo({
+	//"width":"%100",
+    "videoId": "myvid",
+    "captionsOnDefault": true,
+    "seekInterval": 20,
+    "videoTitle": "{$movieinfo.name}",
+    //"debug": true
+});
+</script>
+<span>全屏：Safari浏览器：右键视频，选择全屏模式 其他浏览器：右键视频,显示控件，右下角有全屏标志</span>
 </empty>
+<notempty name='contentV'>
+	                    <div class="alert alert-warning alert-block">
+	                      <button type="button" class="close" data-dismiss="alert">×</button>
+	                      <p>您当前有视频介绍内容正在被审核...请等待审核后显示</p>
+	                    </div>
+<else />
+ <notempty name='contentO'>
+	                    <div class="alert alert-warning alert-block">
+	                      <button type="button" class="close" data-dismiss="alert">×</button>
+	                      <p>当前有别人提交的视频介绍内容正在被审核...请等待审核后显示，您可以自己提交自己的视频介绍</p>
+	                    </div>
+ </notempty>
+</notempty>
                       <div class="caption wrapper-lg">
                         <h2 class="post-title"><a href="#">{$movieinfo.name}</a></h2>
                         <div class="post-sum">
@@ -47,7 +83,20 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6" style="width:100%">
+                  <div class="col-sm-12">
+<notempty name='localV'>
+	                    <div class="alert alert-warning alert-block">
+	                      <button type="button" class="close" data-dismiss="alert">×</button>
+	                      <p>您当前有视频资源正在被审核...请等待审核后显示</p>
+	                    </div>
+<else />
+ <notempty name='localO'>
+	                    <div class="alert alert-warning alert-block">
+	                      <button type="button" class="close" data-dismiss="alert">×</button>
+	                      <p>当前有别人上传的视频正在被审核...请等待审核后显示，您也可以分享自己的视频资源</p>
+	                    </div>
+ </notempty>
+</notempty>
                   <section class="panel panel-default">
                     <header class="panel-heading">
                       
@@ -76,7 +125,7 @@
                             </div>
 <div class="btn-group" style="float:right">
                               
-  <a href="{$lolist.url}" download="{$lolist.title}.{$lolist.url|strrchr='.'|substr=1}"><i class="fa fa-download"></i></a>{//|strrchr='/uploads/'|substr=1}
+  <a href="{$lolist.url}" download="{$lolist.title}.{$lolist.url|strrchr='.'|substr=1}" onclick="downloadinc({$movieinfo.id});"><i class="fa fa-download"></i></a>{//|strrchr='/uploads/'|substr=1}
                             </div>{//substr(strrchr($lolist.url, '.'), 1)}
                           </td>
                         </tr>
@@ -122,32 +171,19 @@
                   <h5 class="font-bold">视频统计</h5>
                   <ul class="list-group">
                     <li class="list-group-item">
-                      <a href="#">
-                        <span class="badge pull-right">{$listcount}</span>视频数量</a>
+                        <span class="badge pull-right">{$listcount}</span>视频数量
                     </li>
                     <li class="list-group-item">
-                      <a href="#">
-                        <span class="badge pull-right">{$wishcount}</span>
-                        请愿人数
-                      </a>
+                        <span class="badge pull-right">{$wishcount}</span>请愿人数
                     </li>
                     <li class="list-group-item">
-                      <a href="#">
-                        <span class="badge pull-right">{$mvfacount}</span>
-                        收藏人数
-                      </a>
+                        <span class="badge pull-right">{$mvfacount}</span>收藏人数
                     </li>
                     <li class="list-group-item">
-                      <a href="#">
-                        <span class="badge pull-right">{$movieinfo.downloadcount}</span>
-                        下载次数
-                      </a>
+                        <span class="badge pull-right">{$movieinfo.downloadcount}</span>下载次数
                     </li>
                     <li class="list-group-item">
-                      <a href="#">
-                        <span class="badge pull-right">{$movieinfo.playcount}</span>
-                        播放次数
-                      </a>
+                        <span class="badge pull-right">{$movieinfo.playcount}</span>播放次数
                     </li>
                   </ul>
                   <div class="doc-buttons">
@@ -178,9 +214,11 @@
 		                <a href="__MODULE__/user/messagecenter/action/2/inf/xiaohuanshu/inf2/用户举报--被举报资源名称:{$movieinfo.name}--被举报资源id:{$movieinfo.id}--资源举报原因:" class="btn btn-s-md btn-danger">举报</a>
 		              </div>
                   <div class="tags m-b-lg l-h-2x">
+<notempty name="$movieinfo['type']">
 <volist name=":explode(',',$movieinfo['type'])" id="mtype" key='k'>
 <a href="__MODULE__/movie/mlist?type={$mtype}" class="label bg-primary">{$mtype} </a> |
 </volist>
+</notempty>
                   </div>
                   <h5 class="font-bold">视频动态</h5>
                   <div class="timeline">

@@ -61,7 +61,7 @@ function mvshowusertype($userid, $movieid)
     if (empty($userid)) {
         return '';
     }
-    if ($userid == 1) {
+    if (in_array($userid,C('ADMIN_ID'))) {
         return '<label class="label bg-primary m-l-xs">管理员</label>';
     }
     $m    = M('localvideo');
@@ -79,7 +79,8 @@ function mvshowusertype($userid, $movieid)
     if ($data <> 0) {
         return '<label class="label bg-dark m-l-xs">请愿者</label>';
     }
-    return '<label class="label bg-dark m-l-xs">用户</label>';
+	return '';
+    //return '<label class="label bg-dark m-l-xs">用户</label>';
 }
 function videoinfo($path)
 {

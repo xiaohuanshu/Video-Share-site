@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 
 // Settings
 //$targetDir = ini_get("upload_tmp_dir") . DIRECTORY_SEPARATOR . "plupload";
-$targetDir = 'share/Uploads/movie';
+$targetDir = 'Uploads/movie';
 //echo $targetDir;
 $cleanupTargetDir = true; // Remove old files
 $maxFileAge = 5 * 3600; // Temp file age in seconds
@@ -127,66 +127,6 @@ while ($buff = fread($in, 4096)) {
 if (!$chunks || $chunk == $chunks - 1) {
 	// Strip the temp .part suffix off 
 	rename("{$filePath}.part", $filePath);
-
-
-
-
-
-
-
-
-
-
-
-/*
-$db_host='localhost';
-$db_database='share';
-$db_username='root';
-$db_password='buzhidao';
-$connection=mysql_connect($db_host,$db_username,$db_password);//连接到数据库
-mysql_query("set names 'utf8'");//编码转化
-if(!$connection){
-die('{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "could not connect to the database."}, "id" : "id"}');
-}
-$db_selecct=mysql_select_db($db_database);//选择数据库
-if(!$db_selecct)
-{
-die('{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "could not to the database."}, "id" : "id"}');
-}
-$query="insert into think_uploadtemp (fileid,userid,movieid,dir) values($_GET[fileid],$_GET[userid],$_GET[movieid],'$filePath')";//构建查询语句
-//echo $query;
-$result=mysql_query($query);//执行查询
-if(!$result)
-{
-die('{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "could not to the database."}, "id" : "id"}');
-
-}
-
-
-
-mysql_close($connection);//关闭连接
-
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*$open=fopen("log.txt","a" );
-fwrite($open,$fileName."    {$filePath}");
-fclose($open);*/
 }
 
 // Return Success JSON-RPC response

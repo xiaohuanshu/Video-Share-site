@@ -14,6 +14,7 @@ class MovieController extends GlobalAction
     }
     public function show()
     {
+		list($uid, $username) = getuserinfo();
         //视频基础信息
         $movieinfo = M('videolist');
         $data      = $movieinfo->where('id=%d', $_GET['id'])->field('id,name,image,type,playcount,downloadcount')->limit(1)->select();
@@ -58,9 +59,24 @@ class MovieController extends GlobalAction
             //$locallist = M('locallist');
             $data = $locallist->where('movieid=%d and verify=1 and id=%d', $_GET['id'], $_GET['playid'])->limit(1)->select();
             //dump($data);
+			$movieinfo->where('id=%d',$_GET['id'])->setInc('playcount',1);
             $this->assign('playlist', $data);
         }
-        
+        //判断是否存在未审核资源
+		if(!empty($uid)){
+			if($locallist->where('verify=0 and movieid=%d and userid=%d', $_GET['id'], $uid)->count()){
+				$this->assign('localV', 1);
+			}
+			if($contentlist->where('verify=0 and movieid=%d and userid=%d', $_GET['id'], $uid)->count()){
+				$this->assign('contentV', 1);
+			}
+			if($locallist->where('verify=0 and movieid=%d', $_GET['id'])->count()){
+				$this->assign('localO', 1);
+			}
+			if($contentlist->where('verify=0 and movieid=%d', $_GET['id'])->count()){
+				$this->assign('contentO', 1);
+			}
+		}
         $this->display();
         
     }
@@ -121,6 +137,11 @@ class MovieController extends GlobalAction
         $this->assign('page', $show); // 赋值分页输出
         $this->display();
         
+    }
+    public function downloadinc($movieid)
+    {
+        $videolist = M('videolist');
+        $videolist->where('id=%d',$movieid)->setInc('downloadcount',1);
     }
     public function ifa()
     {

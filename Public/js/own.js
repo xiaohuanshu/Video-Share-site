@@ -12,3 +12,10 @@ function ifa(id){
         data: { movieid: id }
     });
 }
+function downloadinc(id){
+    $.ajax({
+        type: "GET",
+        url: "/share/home/movie/downloadinc",
+        data: { movieid: id }
+    });
+}
