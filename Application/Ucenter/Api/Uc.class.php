@@ -94,18 +94,11 @@ abstract class Uc extends Controller
     public function synlogin($get, $post)
     {
         $userinfo = M('userinfo');
-        // 读取数据
-        //dump($get);
         $uid      = intval($get['uid']);
-        //echo $uid;
         $data     = $userinfo->where('userid=%d',$uid)->select();
-        //dump($data);
         if ($data) {
-            //dump($data);
             $username = $data[0]['username'];
-            //echo $data[0]['username'];
         } else {
-            //echo 2;
             $data['userid'] = $uid;
             $uc             = new \Ucenter\Client\Client();
             if ($ucdata = $uc->uc_get_user($uid, 1)) {
@@ -116,17 +109,18 @@ abstract class Uc extends Controller
                 exit($this->error);
             }
             $data['username']     = $username;
+			$data['email']     = $email;
             $data['password']     = 'md5.' . $get['password'];
-            //echo date('Y-m-d H:i:s');
+			$data['ip']=get_client_ip();
             $data['registertime'] = date('Y-m-d H:i:s');
-            //$data['email']    =   $email;
             $userinfo->add($data);
         }
-        //$this->display();
+		$c['ip']=get_client_ip();
+		$c['lastlogintime']=date('Y-m-d H:i:s');
+		$userinfo->where('userid=%d',$uid)->save($c);
         header('P3P: CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"');
         $cookiecode = $uid . "/t" . $username;
         setcookie('userinfo', _uc_authcode($cookiecode, 'ENCODE'), time() + 86400 * 365, '/');
-        //echo $cookiecode;
     }
     
     public function synlogout()

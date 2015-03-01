@@ -11,7 +11,6 @@ class UserController extends GlobalAction
     {       
         $uc = new \Ucenter\Client\Client();
         list($uid, $username, $password, $email) = $uc->uc_user_login($_GET['username'], $_GET['password']);
-		//die($uc->uc_user_synlogin($uid));
         if ($uid > 0) {
             $this->success('登录成功' . $uc->uc_user_synlogin($uid), U('index'), 5);
         } elseif ($uid == -1) {
@@ -25,8 +24,6 @@ class UserController extends GlobalAction
     public function logout()
     {       
         $uc = new \Ucenter\Client\Client();
-		//die($uc->uc_user_synlogout());
-		//exit();
         $this->success('注销成功' . $uc->uc_user_synlogout(), U('index'), 5);
     }
     public function messagecenter($action=0,$inf='',$inf2='')
@@ -66,6 +63,8 @@ class UserController extends GlobalAction
 			$c['email']=$_POST['email'];
 			$c['password']='real.'.$_POST['password'];
 			$c['username']=$_POST['username'];
+			$c['ip']=get_client_ip();
+			$c['registertime']=date('Y-m-d H:i:s');
 			if($userinfo->add($c)){
 				$this->success('注册成功' . $uc->uc_user_synlogin($uid), U('user/setting'), 5);
 			}else{
