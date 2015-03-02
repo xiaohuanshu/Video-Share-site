@@ -171,11 +171,12 @@ function InitPxVideo(options) {
 	}
 	obj.controls.innerHTML = '<div class="clearfix">' + 
 			'<div class="pull-left">' + 
-				'<button class="px-video-restart"><span class="sr-only">Restart</span></button>' + 
-				'<button class="px-video-rewind"><span class="sr-only">rewind <span class="px-seconds">10</span> seconds</span></button>' + 
-				'<button class="px-video-play" aria-label="'+obj.playAriaLabel+'"><span class="sr-only">Play</span></button>' + 
-				'<button class="px-video-pause hide"><span class="sr-only">Pause</span></button>' + 
-				'<button class="px-video-forward"><span class="sr-only">forward <span class="px-seconds">10</span> seconds</span></button>' + 
+				'<button class="px-video-restart"><span class="sr-only">重置</span></button>' + 
+				'<button class="px-video-rewind"><span class="sr-only">倒退 <span class="px-seconds">10</span> 秒</span></button>' + 
+				'<button class="px-video-play" aria-label="'+obj.playAriaLabel+'"><span class="sr-only">播放</span></button>' + 
+				'<button class="px-video-pause hide"><span class="sr-only">暂停</span></button>' + 
+				'<button class="px-video-forward"><span class="sr-only">前进 <span class="px-seconds">10</span> 秒</span></button>' + 
+				'<button class="video-fullscreen icon-size-fullscreen" id="fs"></button>' +
 			'</div>' + 
 			'<div class="px-video-mute-btn-container pull-left">' + 
 				'<input class="px-video-mute sr-only" id="btnMute'+obj.randomNum+'" type="checkbox" />' + 
@@ -189,11 +190,11 @@ function InitPxVideo(options) {
 				'<label for="btnCaptions'+obj.randomNum+'"><span class="sr-only">Captions</span></label>' + 
 			'</div>' + 
 			'<div class="px-video-time">' + 
-				'<span class="sr-only">time</span> <span class="px-video-duration">00:00</span>' + 
+				'<span class="sr-only">时间</span> <span class="px-video-duration">00:00</span>' + 
 			'</div>' + 
 		'</div>' + 
 		'<div>' + 
-			'<progress class="px-video-progress" max="100" value="0"><span>0</span>% played</progress>' + 
+			'<progress class="px-video-progress" max="100" value="0"><span>0</span>% 已播放</progress>' + 
 		'</div>';
 
 	// Adjust layout per width of video - container
@@ -536,4 +537,56 @@ function InitPxVideo(options) {
 		}
 
 	}
+	
+	var videoContainer = document.getElementById('video');
+	var video = document.getElementById('videos');
+	var videoControls = document.getElementById('video-controls');
+		// Check if the browser supports the Fullscreen API
+		var fullScreenEnabled = !!(document.fullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled || document.webkitSupportsFullscreen || document.webkitFullscreenEnabled || document.createElement('video').webkitRequestFullScreen);
+		// If the browser doesn't support the Fulscreen API then hide the fullscreen button
+		if (!fullScreenEnabled) {
+			document.getElementById('fs').style.display = 'none';
+		}
+	   	var handleFullscreen = function() {
+	   		// If fullscreen mode is active...	
+			if (isFullScreen()) {
+				if (document.exitFullscreen) document.exitFullscreen();
+				else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
+				else if (document.webkitCancelFullScreen) document.webkitCancelFullScreen();
+				else if (document.msExitFullscreen) document.msExitFullscreen();
+				setFullscreenData(false);
+			}
+			else {
+				//if (movie.requestFullscreen) movie.requestFullscreen();
+				//else if (movie.mozRequestFullScreen) movie.mozRequestFullScreen();
+				//else if (movie.webkitRequestFullScreen) {
+					video.webkitRequestFullScreen();
+					//}
+				//else if (movie.msRequestFullscreen) movie.msRequestFullscreen();
+				setFullscreenData(true);
+			}
+	  	}
+		document.getElementById('fs').addEventListener('click', function(e) {
+			handleFullscreen();
+		});
+		var isFullScreen = function() {
+		   return !!(document.fullScreen || document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement || document.fullscreenElement);
+		}
+		var setFullscreenData = function(state) {
+		   videoContainer.setAttribute('data-fullscreen', !!state);
+		}
+	
+		document.addEventListener('fullscreenchange', function(e) {
+		   setFullscreenData(!!(document.fullScreen || document.fullscreenElement));
+		});
+		document.addEventListener('webkitfullscreenchange', function() {
+		   setFullscreenData(!!document.webkitIsFullScreen);
+		});
+		document.addEventListener('mozfullscreenchange', function() {
+		   setFullscreenData(!!document.mozFullScreen);
+		});
+		document.addEventListener('msfullscreenchange', function() {
+		   setFullscreenData(!!document.msFullscreenElement);
+		});
+	
 };

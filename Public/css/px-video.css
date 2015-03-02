@@ -91,6 +91,9 @@
 .px-video-controls button.px-video-restart {
 	background-position: -9px -333px;
 }
+.px-video-controls button.video-fullscreen {
+	background:none;
+}
 .px-video-controls button.px-video-restart:hover,
 .px-video-controls button.px-video-restart:focus {
 	background-position: -9px -297px;

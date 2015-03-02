@@ -18,17 +18,17 @@
                         <h2 class="post-title"><a href="#">当前播放视频：{$movieinfo.name}</a></h2>
                       </div>
 					  
-<div class="px-video-container" id="myvid">
+<div class="px-video-container" id="video">
     <div class="px-video-img-captions-container">
         <div class="px-video-captions hide" aria-hidden="true"></div>
-        <video width="100%" poster="{$movieinfo.image}" controls>
+        <video width="100%" poster="{$movieinfo.image}" id="videos" controls>
 <volist name="playlist" id="pllist">
       <source type="video/mp4" src="{$pllist.url}" />
 </volist>
             {//<track kind="captions" label="English captions" src="media/foo.vtt" srclang="en" default />}
         </video>
     </div>
-    <div class="px-video-controls"></div>
+    <div class="px-video-controls" id="video-controls"></div>
 </div>
 
 <script src="__PUBLIC__/js/px-video.js"></script>
@@ -36,14 +36,14 @@
 // Initialize
 new InitPxVideo({
 	//"width":"%100",
-    "videoId": "myvid",
+    "videoId": "video",
     "captionsOnDefault": true,
     "seekInterval": 20,
     "videoTitle": "{$movieinfo.name}",
     //"debug": true
 });
 </script>
-<span>全屏：Safari浏览器：右键视频，选择全屏模式 其他浏览器：右键视频,显示控件，右下角有全屏标志</span>
+
 </empty>
 <notempty name='contentV'>
 	                    <div class="alert alert-warning alert-block">
