@@ -381,7 +381,13 @@ function InitPxVideo(options) {
 
 	// Skip when clicking progress bar
 	obj.progressBar.addEventListener('click', function(e) {
-		obj.pos = (e.pageX - this.offsetLeft) / this.offsetWidth;
+		var parObj=this; 
+		var allleft=this.offsetLeft; 
+		while(parObj=parObj.offsetParent){ 
+		allleft+=parObj.offsetLeft; 
+		} 
+		//obj.pos = (e.pageX - this.offsetLeft) / this.offsetWidth;
+		obj.pos = (e.pageX - allleft) / this.offsetWidth;
 		obj.movie.currentTime = obj.pos * obj.movie.duration;
 		
 		// Special handling for "manual" captions

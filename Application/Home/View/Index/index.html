@@ -101,7 +101,7 @@
 </notempty>
                           <div class="item-overlay opacity r r-2x bg-black">
                             <div class="center text-center m-t-n">
-                              <a href="__MODULE__/movie/show?id={$mvlist.id}"><i class="icon-control-play i-2x"></i></a>
+                              <a href="__MODULE__/movie/show/id/{$mvlist.id}"><i class="icon-control-play i-2x"></i></a>
                             </div>
                             <div class="bottom padder m-b-sm">
 <if condition="(ismy($mvlist['id'],$uid) == '0')">
@@ -155,7 +155,7 @@
 <a href="__MODULE__/user/profile/uid/{$srlist.userid}" class="list-group-item clearfix">
                           <span class="pull-right h2 text-muted m-l">{$sk}</span>
                           <span class="pull-left thumb-sm avatar m-r">
-                            <img src="/ucenter/avatar.php?uid={$uid}&type=virtual&size=middle" alt="...">
+                            <img src="{:C('UC_URL')}/avatar.php?uid={$uid}&type=virtual&size=middle" alt="...">
                           </span>
                           <span class="clear">
                             <span>{$srlist.userid|getusernamebyid}</span>
@@ -208,7 +208,7 @@
 <volist name="newuserlist" id="nul" key='i' empty="没有查询到结果...">
 <li class="list-group-item">
                       <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-                        <img src="/ucenter/avatar.php?uid={$nul.userid}&type=virtual&size=middle" alt="..." class="img-circle">
+                        <img src="{:C('UC_URL')}/avatar.php?uid={$nul.userid}&type=virtual&size=middle" alt="..." class="img-circle">
                       </span>
                       <div class="clear">
                         <div><a href="__MODULE__/user/profile/uid/{$nul.userid}">{$nul.username}</a></div>

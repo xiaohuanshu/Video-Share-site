@@ -12,7 +12,7 @@ class UserController extends GlobalAction
         $uc = new \Ucenter\Client\Client();
         list($uid, $username, $password, $email) = $uc->uc_user_login($_GET['username'], $_GET['password']);
         if ($uid > 0) {
-            $this->success('登录成功' . $uc->uc_user_synlogin($uid), U('index'), 5);
+            $this->success('登录成功' . $uc->uc_user_synlogin($uid), U('index/index'), 5);
         } elseif ($uid == -1) {
             $this->error('用户不存在,或者被删除');
         } elseif ($uid == -2) {
@@ -24,7 +24,7 @@ class UserController extends GlobalAction
     public function logout()
     {       
         $uc = new \Ucenter\Client\Client();
-        $this->success('注销成功' . $uc->uc_user_synlogout(), U('index'), 5);
+        $this->success('注销成功' . $uc->uc_user_synlogout(), U('index/index'), 5);
     }
     public function messagecenter($action=0,$inf='',$inf2='')
     {       
@@ -98,8 +98,7 @@ class UserController extends GlobalAction
 		$c['studentid']=$_POST['studentid'];
 		$c['realname']=$_POST['realname'];
 		$c['qq']=$_POST['qq'];
-		$c['college']=$_POST['college'];
-		$c['major']=$_POST['major'];
+		list($c['college'],$c['major'])=explode('.',$_POST['collegemajor']);
 		$c['intro']=$_POST['intro'];
 		if(!empty($_POST['password'])){
 			$uc = new \Ucenter\Client\Client();

@@ -216,7 +216,7 @@ class MovieController extends GlobalAction
             }
             if ($_POST['iswish'] == 1) {
                 $c['name']     = $_POST['mv_name'];
-                //$c['statue']  = 1;
+                $c['verify']  = 1;
                 $c['wishtime'] = date('Y-m-d H:i:s');
                 $movieid       = $movielist->add($c);
                 $wishlist      = M('wishlist');
@@ -250,12 +250,11 @@ class MovieController extends GlobalAction
         $this->assign('movieid', $movieid);
         $movielist = M("videolist");
         $data      = $movielist->where('id=%d', $movieid)->select();
-        if($data[0]['image']!=''){
+        if($data[0]['image']!=''&&$_GET['admin']!='yes'){
             header("location:".U('Movie/editcontent?movieid='.$movieid));
         }
         $this->assign('movieinfo', $data[0]);
         $this->display();
-        
     }
     public function editcontent($movieid)
     {
@@ -289,11 +288,19 @@ class MovieController extends GlobalAction
         $c['intro']   = $xss->getHtml();
         $xss      = new \Think\Xsshtml($_POST['content']);
         $c['content'] = $xss->getHtml();
-        $c['verify']  = 0;
+		if (in_array($uid,C('ADMIN_ID'))) {
+        	$c['verify']  = 1;
+		}else{
+			$c['verify']  = 0;
+		}
         $c['time']    = date('Y-m-d H:i:s');
         $contentlist->add($c);
         addtimeline($movieid, '编辑内容', '视频介绍', $username, 'fa fa-file-text time-icon bg-info');
-        $this->success('编辑成功', U('Movie/show?id='.$movieid));
+		if($_GET['admin']=='yes'){
+			$this->success('编辑成功', U('admin/video'));
+		}else{
+			$this->success('编辑成功', U('Movie/show?id='.$movieid));
+		}
     }
     public function addcomment()
     {

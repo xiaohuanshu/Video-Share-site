@@ -1,6 +1,7 @@
 <include file="Public:head" />
 <include file="Public:header" headerstyle="navbar-header aside bg-info nav-xs"/>
 <include file="Public:bodyframe-head" bodyframestyle="bg-black dk aside hidden-print nav-xs"/>
+<link rel="stylesheet" href="__PUBLIC__/js/chosen/chosen.css" type="text/css" />
 <section id="content">
           <section class="vbox">
             <section class="scrollable padder">
@@ -97,44 +98,26 @@
 					    <input name="qq" type="text" class="form-control" value="{$userinfo.qq}">
 					  </div>
 					</div>
-					<div class="form-group">
-					  <label class="col-sm-2 control-label">院系专业</label>
-					  <div class="col-sm-10">
-						  院系-
-						<div class="btn-group m-r">
-						  <button data-toggle="dropdown" class="btn btn-sm btn-default dropdown-toggle">
-						    <span class="dropdown-label">{$userinfo.college|default="保密"}</span> 
-						    <span class="caret"></span>
-						  </button>
-						  <ul class="dropdown-menu dropdown-select">
+
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">专业</label>
+                      <div class="col-sm-10">
+                        <select style="width:260px" class="chosen-select" name="collegemajor">
 <volist name=":C('college')" id="col">
-<if condition="$userinfo['college'] == $col">
-						    <li class="active"><input name="college" type="radio" value="{$col}" checked="checked"><a href="#">{$col}</a></li>
+                            <optgroup label="{$col}">
+<volist name=":C('major.'.$col)" id="maj">
+<if condition="$userinfo['major'] == $maj && $userinfo['college'] == $col">
+                                <option value="{$col}.{$maj}" selected>{$maj}</option>
 <else />
-						    <li><input name="college" type="radio" value="{$col}"><a href="#">{$col}</a></li>
+								<option value="{$col}.{$maj}">{$maj}</option>
 </if>
 </volist>
-						  </ul>
-					   </div>
-					   	  专业-
-						<div class="btn-group m-r">
-						  <button data-toggle="dropdown" class="btn btn-sm btn-default dropdown-toggle">
-						    <span class="dropdown-label">{$userinfo.major|default="保密"}</span> 
-						    <span class="caret"></span>
-						  </button>
-						  <ul class="dropdown-menu dropdown-select">
-<volist name=":C('major.'.$userinfo['college'])" id="col">
-<if condition="$userinfo['major'] == $col">
-						    <li class="active"><input name="major" type="radio" value="{$col}" checked="checked"><a href="#">{$col}</a></li>
-<else />
-						    <li><input name="major" type="radio" value="{$col}"><a href="#">{$col}</a></li>
-</if>
+                            </optgroup>
 </volist>
-						  </ul>
-					   </div>
-					   
-					  </div>
-					</div>
+                        </select>
+                      </div>
+                    </div>
+
 					<div class="form-group">
 					  <label class="col-sm-2 control-label">自我介绍</label>
 					  <div class="col-sm-10">
@@ -159,5 +142,5 @@
           <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
         </section>
 <include file="Public:bodyframe-foot" />
-<script src="__PUBLIC__/js/file-input/bootstrap-filestyle.min.js"></script>
+<script src="__PUBLIC__/js/chosen/chosen.jquery.min.js"></script>
 <include file="Public:footer" />

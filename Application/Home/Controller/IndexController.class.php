@@ -51,7 +51,7 @@ class IndexController extends GlobalAction
         $this->assign('noticelist', $data);
 		
 		//请愿信息
-        $data = $movielist->where('uploadstatus=0')->order('wishtime desc')->limit(8)->select();
+        $data = $movielist->where('verify=1 and uploadstatus=0')->order('wishtime desc')->limit(8)->select();
         $this->assign('wishlist', $data);
 		//分享者排名
         $sharelist = M('localvideo');

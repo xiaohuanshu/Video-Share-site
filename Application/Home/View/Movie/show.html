@@ -21,9 +21,13 @@
 <div class="px-video-container" id="video">
     <div class="px-video-img-captions-container">
         <div class="px-video-captions hide" aria-hidden="true"></div>
-        <video width="100%" poster="{$movieinfo.image}" id="videos" controls>
+        <video width="100%" poster="__ROOT__/Uploads/shot/{$playlist.0.url}.jpg" id="videos" controls>
 <volist name="playlist" id="pllist">
-      <source type="video/mp4" src="{$pllist.url}" />
+<if condition="C('RESOURCEURL') == ''">
+      <source type="video/mp4" src="__ROOT__/Uploads/movie/{$pllist.url}" />
+<else />
+      <source type="video/mp4" src="{:C('RESOURCEURL')}/{$pllist.url}" />
+</if>
 </volist>
             {//<track kind="captions" label="English captions" src="media/foo.vtt" srclang="en" default />}
         </video>
@@ -125,7 +129,7 @@ new InitPxVideo({
                             </div>
 <div class="btn-group" style="float:right">
                               
-  <a href="{$lolist.url}" download="{$lolist.title}.{$lolist.url|strrchr='.'|substr=1}" onclick="downloadinc({$movieinfo.id});"><i class="fa fa-download"></i></a>{//|strrchr='/uploads/'|substr=1}
+  <a href="{:C('RESOURCEURL')}{$lolist.url}" download="{$lolist.title}.{$lolist.url|strrchr='.'|substr=1}" onclick="downloadinc({$movieinfo.id});"><i class="fa fa-download"></i></a>{//|strrchr='/uploads/'|substr=1}
                             </div>{//substr(strrchr($lolist.url, '.'), 1)}
                           </td>
                         </tr>
@@ -141,7 +145,7 @@ new InitPxVideo({
 <volist name="commentlist" id="cmlist" empty="">
                     <article id="comment-id-1" class="comment-item">
                       <a class="pull-left thumb-sm">
-                        <img src="/ucenter/avatar.php?uid={$cmlist.userid}&type=virtual&size=middle" class="img-circle">
+                        <img src="{:C('UC_URL')}/avatar.php?uid={$cmlist.userid}&type=virtual&size=middle" class="img-circle">
                       </a>
                       <section class="comment-body m-b">
                         <header>
@@ -213,6 +217,15 @@ new InitPxVideo({
 </if>
 		                <a href="__MODULE__/user/messagecenter/action/2/inf/xiaohuanshu/inf2/用户举报--被举报资源名称:{$movieinfo.name}--被举报资源id:{$movieinfo.id}--资源举报原因:" class="btn btn-s-md btn-danger">举报</a>
 		              </div>
+					  <span>管理员功能：</span>
+					  <div class="doc-buttons">
+<if condition="$movieinfo['verify'] == 1">
+					    <a href="__MODULE__/admin/video_forbidden/movieid/{$movieinfo.id}" class="btn btn-s-md btn-danger">禁用</a>
+<else />
+						<a href="__MODULE__/admin/video_verify/movieid/{$movieinfo.id}" class="btn btn-s-md btn-success">通过</a>
+</if>
+						<a href="__MODULE__/admin/video_delete/movieid/{$movieinfo.id}" class="btn btn-s-md btn-danger">删除</a>
+				  	  </div>
                   <div class="tags m-b-lg l-h-2x">
 <notempty name="$movieinfo['type']">
 <volist name=":explode(',',$movieinfo['type'])" id="mtype" key='k'>

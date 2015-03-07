@@ -120,11 +120,25 @@ function videoinfo($path)
         );
     }
 }
+function videoshot($path)
+{
+    str_replace("|", '', $path);
+    $path1 = "Uploads/movie/" . $path;
+	$path2 = "Uploads/shot/" . $path . ".jpg";
+    $re   = array();
+    exec("ffmpeg -ss 00:02:06  -i $path1 $path2  -r 1 -vframes 1 -an -f mjpeg", $re);
+}
 function getwishcount($movieid)
 {
     $wishlist  = M('wishlist');
     $wishcount = $wishlist->where('movieid=%d', $movieid)->cache(true,600)->count();
     return $wishcount;
+}
+function getfacount($movieid)
+{
+    $videofavorite  = M('videofavorite');
+    $count = $videofavorite->where('movieid=%d', $movieid)->cache(true,600)->count();
+    return $count;
 }
 function addtimeline($movieid, $title, $content, $footer, $icon)
 {
@@ -136,5 +150,27 @@ function addtimeline($movieid, $title, $content, $footer, $icon)
     $c['icon']    = $icon;
     $c['time']    = date('Y-m-d H:i:s');
     $timeline->add($c);
+}
+function getvideocontentstatus($movieid)
+{
+    $videocontent  = M('videocontent');
+    if($count=$videocontent->where('verify=0 and movieid=%d', $movieid)->count()){
+    	return '需要审核('.$count.')';
+    }
+    if($count=$videocontent->where('movieid=%d', $movieid)->count()){
+    	return '正常('.$count.')';
+    }
+    return '暂无';
+}
+function getlocalvideostatus($movieid)
+{
+    $localvideo  = M('localvideo');
+    if($count=$localvideo->where('verify=0 and movieid=%d', $movieid)->count()){
+    	return '需要审核('.$count.')';
+    }
+    if($count=$localvideo->where('movieid=%d', $movieid)->count()){
+    	return '正常('.$count.')';
+    }
+    return '暂无';
 }
 ?>

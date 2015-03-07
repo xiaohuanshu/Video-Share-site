@@ -42,16 +42,22 @@ class UploadController extends GlobalAction
         for ($i = 0; $i <= intval($_POST['uploader_count']) - 1; $i++) {
             $c['userid']  = $uid;
             $c['movieid'] = $_GET['movieid'];
-            $c['url']     = __ROOT__.'/Uploads/movie/' . $_POST['uploader_' . $i . '_tmpname'];
+            $c['url']     = $_POST['uploader_' . $i . '_tmpname'];
             $c['title']   = $_POST['uploader_' . $i . '_name'];
-            $c['verify']  = 0;
+			if (in_array($uid,C('ADMIN_ID'))) {
+	        	$c['verify']  = 1;
+			}else{
+				$c['verify']  = 0;
+			}
             $c['time']    = date('Y-m-d H:i:s');
             //判断能否在线播放
             list($video, $audio) = videoinfo($_POST['uploader_' . $i . '_tmpname']);
             if (strpos($video, "h264")) { //&&strpos($audio,"aac")){
-                $c['canplay'] = 1;
+                $c['online'] = 1;
+				//视频截图
+				videoshot($_POST['uploader_' . $i . '_tmpname']);
             } else {
-                $c['canplay'] = 0;
+                $c['online'] = 0;
             }
             $locallist->add($c);
         }
@@ -98,7 +104,12 @@ class UploadController extends GlobalAction
             $c['image'] = '/share/Uploads/' . $info['uimage']['savepath'] . $info['uimage']['savename'];
             $videolist->where('id=%d', $_GET['movieid'])->save($c);
             addtimeline($_GET['movieid'], '编辑内容', '基础信息', $username, 'fa fa-file-text time-icon bg-info');
-            $this->success('上传成功！', U("movie/editcontent?movieid=" . $_GET['movieid']));
+			if($_GET['admin']=='yes'){
+				$this->success('上传成功！', U("admin/video"));
+			}else{
+				$this->success('上传成功！', U("movie/editcontent?movieid=" . $_GET['movieid']));
+			}
+            
         }
     }
 }
