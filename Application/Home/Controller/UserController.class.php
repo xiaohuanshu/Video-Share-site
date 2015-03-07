@@ -60,9 +60,9 @@ class UserController extends GlobalAction
 	            $this->error("令牌验证错误,请返回重试"); // 令牌验证错误
 	        }
 			$c['userid']=$uid;
-			$c['email']=$_POST['email'];
-			$c['password']='real.'.$_POST['password'];
-			$c['username']=$_POST['username'];
+			$c['email']=I('post.email');
+			$c['password']='real.'.I('post.password');
+			$c['username']=I('post.username');
 			$c['ip']=get_client_ip();
 			$c['registertime']=date('Y-m-d H:i:s');
 			if($userinfo->add($c)){
@@ -94,16 +94,16 @@ class UserController extends GlobalAction
         if (!$userinfo->autoCheckToken($_POST)) {
             $this->error("令牌验证错误,请返回重试"); // 令牌验证错误
         }
-		$c['sex']=$_POST['sex'];
-		$c['studentid']=$_POST['studentid'];
-		$c['realname']=$_POST['realname'];
-		$c['qq']=$_POST['qq'];
-		list($c['college'],$c['major'])=explode('.',$_POST['collegemajor']);
-		$c['intro']=$_POST['intro'];
+		$c['sex']=I('post.sex');
+		$c['studentid']=I('post.studentid');
+		$c['realname']=I('post.realname');
+		$c['qq']=I('post.qq');
+		list($c['college'],$c['major'])=explode('.',I('post.collagemajor'));
+		$c['intro']=I('post.intro');
 		if(!empty($_POST['password'])){
 			$uc = new \Ucenter\Client\Client();
 			$ucresult = $uc->uc_user_edit($username, '', $_POST['password'], '',1);
-			$c['password']="real.".$_POST['password'];
+			$c['password']="real.".I('post.password');
 		}
 		if($userinfo->where("userid=%d",$uid)->save($c)){
 			$this->success('修改成功', U('user/setting'), 3);

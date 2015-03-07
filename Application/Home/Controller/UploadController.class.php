@@ -7,32 +7,34 @@ class UploadController extends GlobalAction
     {
         parent::_initialize();
     }
-    public function uploadview()
+    public function uploadview($movieid)
     {
         list($uid, $username) = getuserinfo();
         if (empty($uid)) {
             $this->error('您还没有登录');
         }
-        $this->assign('movieid', $_GET['movieid']);
+        $this->assign('movieid', I('get.movieid'));
         $this->display();
     }
-    public function deal()
+    public function deal($movieid)
     {
         list($uid, $username) = getuserinfo();
         if (empty($uid)) {
             $this->error('您还没有登录');
         }
         for ($i = 0; $i <= intval($_POST['uploader_count']) - 1; $i++) {
-            $uploader_tmpname[$i] = $_POST['uploader_' . $i . '_tmpname'];
-            $uploader_name[$i]    = $_POST['uploader_' . $i . '_name'];
+            //$uploader_tmpname[$i] = $_POST['uploader_' . $i . '_tmpname'];
+            //$uploader_name[$i]    = $_POST['uploader_' . $i . '_name'];
+            $uploader_tmpname[$i] = I('post.uploader_' . $i . '_tmpname');
+            $uploader_name[$i]    = I('post.uploader_' . $i . '_name');
         }
         $this->assign('uploader_name', $uploader_name);
         $this->assign('uploader_tmpname', $uploader_tmpname);
-        $this->assign('uploader_count', $_POST['uploader_count']);
-        $this->assign('movieid', $_GET['movieid']);
+        $this->assign('uploader_count', I('post.uploader_count'));
+        $this->assign('movieid', I('get.movieid'));
         $this->display();
     }
-    public function deal2()
+    public function deal2($movieid)
     {
         list($uid, $username) = getuserinfo();
         if (empty($uid)) {
@@ -41,9 +43,9 @@ class UploadController extends GlobalAction
         $locallist = M('localvideo');
         for ($i = 0; $i <= intval($_POST['uploader_count']) - 1; $i++) {
             $c['userid']  = $uid;
-            $c['movieid'] = $_GET['movieid'];
-            $c['url']     = $_POST['uploader_' . $i . '_tmpname'];
-            $c['title']   = $_POST['uploader_' . $i . '_name'];
+            $c['movieid'] = $movieid;
+            $c['url']     = I('post.uploader_' . $i . '_tmpname');
+            $c['title']   = I('post.uploader_' . $i . '_name');
 			if (in_array($uid,C('ADMIN_ID'))) {
 	        	$c['verify']  = 1;
 			}else{
@@ -51,20 +53,20 @@ class UploadController extends GlobalAction
 			}
             $c['time']    = date('Y-m-d H:i:s');
             //判断能否在线播放
-            list($video, $audio) = videoinfo($_POST['uploader_' . $i . '_tmpname']);
+            list($video, $audio) = videoinfo(I('post.uploader_' . $i . '_tmpname'));
             if (strpos($video, "h264")) { //&&strpos($audio,"aac")){
                 $c['online'] = 1;
 				//视频截图
-				videoshot($_POST['uploader_' . $i . '_tmpname']);
+				videoshot(I('post.uploader_' . $i . '_tmpname'));
             } else {
                 $c['online'] = 0;
             }
             $locallist->add($c);
         }
-        addtimeline($_GET['movieid'], '上传视频', $_POST['uploader_' . $i . '_tmpname'], $username, 'fa fa-cloud-upload time-icon bg-dark');
-        $this->success("上传成功", U("movie/show?id=" . $_GET['movieid']));
+        addtimeline($movieid, '上传视频', I('post.uploader_' . $i . '_tmpname'), $username, 'fa fa-cloud-upload time-icon bg-dark');
+        $this->success("上传成功", U("movie/show?id=" . $movieid));
     }
-    public function poster()
+    public function poster($movieid)
     {
         list($uid, $username) = getuserinfo();
         if (empty($uid)) {
@@ -94,20 +96,20 @@ class UploadController extends GlobalAction
             if (empty($_POST['options'])) {
                 $c['type'] = "其他";
             } else {
-                $c['type'] = implode($_POST['options'], ',');
+                $c['type'] = implode(I('post.options'), ',');
             }
-            $c['time'] = $_POST['time'];
+            $c['time'] = date('Y-m-d H:i:s');
             $videolist = M('videolist');
             if (!$videolist->autoCheckToken($_POST)) {
                 $this->error("令牌验证错误,请返回重试"); // 令牌验证错误
             }
             $c['image'] = '/share/Uploads/' . $info['uimage']['savepath'] . $info['uimage']['savename'];
-            $videolist->where('id=%d', $_GET['movieid'])->save($c);
-            addtimeline($_GET['movieid'], '编辑内容', '基础信息', $username, 'fa fa-file-text time-icon bg-info');
+            $videolist->where('id=%d', $movieid)->save($c);
+            addtimeline($movieid, '编辑内容', '基础信息', $username, 'fa fa-file-text time-icon bg-info');
 			if($_GET['admin']=='yes'){
 				$this->success('上传成功！', U("admin/video"));
 			}else{
-				$this->success('上传成功！', U("movie/editcontent?movieid=" . $_GET['movieid']));
+				$this->success('上传成功！', U("movie/editcontent?movieid=" . $movieid));
 			}
             
         }

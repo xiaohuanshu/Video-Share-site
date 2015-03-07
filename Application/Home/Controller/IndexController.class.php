@@ -26,11 +26,11 @@ class IndexController extends GlobalAction
             $userinfo        = M('userinfo');
             $sql['username'] = array(
                 'like',
-                '%' . $_GET['searchuser'] . '%'
+                '%' . I('get.searchuser') . '%'
             );
             $sql['realname'] = array(
                 'like',
-                '%' . $_GET['searchuser'] . '%'
+                '%' . I('get.searchuser') . '%'
             );
             $sql['_logic']   = 'OR';
             $data            = $userinfo->where($sql)->select();

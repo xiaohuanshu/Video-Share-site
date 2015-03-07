@@ -12,32 +12,32 @@ class MovieController extends GlobalAction
     {
         header("location:".U('Movie/mlist'));
     }
-    public function show()
+    public function show($id)
     {
 		list($uid, $username) = getuserinfo();
         //视频基础信息
         $movieinfo = M('videolist');
-        $data      = $movieinfo->where('id=%d', $_GET['id'])->field('id,name,image,type,playcount,downloadcount')->limit(1)->select();
+        $data      = $movieinfo->where('id=%d', $id)->field('id,name,image,type,playcount,downloadcount')->limit(1)->select();
         $this->assign('movieinfo', $data[0]);
         //视频简介
         $contentlist = M('videocontent');
-        $data        = $contentlist->where('verify=1 and movieid=%d', $_GET['id'])->order('time desc')->limit(1)->select();
+        $data        = $contentlist->where('verify=1 and movieid=%d', $id)->order('time desc')->limit(1)->select();
         $this->assign('mvcontent', $data[0]);
         //时间线信息
         $timeline = M('videotimeline');
-        $data     = $timeline->where('movieid=%d', $_GET['id'])->order('time')->cache(true,600)->select();
+        $data     = $timeline->where('movieid=%d', $id)->order('time')->cache(true,600)->select();
         $this->assign('timeline', $data);
         //下载地址信息
         $locallist = M('localvideo');
-        $data      = $locallist->where('movieid=%d and verify=1', $_GET['id'])->cache(true,60)->select();
+        $data      = $locallist->where('movieid=%d and verify=1', $id)->cache(true,60)->select();
         //下载资源数量
-        $listcount = $locallist->where('verify=1 and movieid=%d', $_GET['id'])->cache(true,60)->count();
+        $listcount = $locallist->where('verify=1 and movieid=%d', $id)->cache(true,60)->count();
         $this->assign('listempty', '<tr><td>没有视频资源</td><td></td><td></td></tr>');
         $this->assign('locallist', $data);
         $this->assign('listcount', $listcount);
         //情愿数量
         $wishlist  = M('wishlist');
-        $wishcount = $wishlist->where('movieid=%d', $_GET['id'])->cache(true,600)->count();
+        $wishcount = $wishlist->where('movieid=%d', $id)->cache(true,600)->count();
         $this->assign('wishcount', $wishcount);
         //喜爱人数
         /*$mvlikelist  = M('mvlikelist');
@@ -45,35 +45,35 @@ class MovieController extends GlobalAction
         $this->assign('mvlikecount', $mvlikecount);*/
         //收藏人数
         $mvfalist  = M('videofavorite');
-        $mvfacount = $mvfalist->where('movieid=%d', $_GET['id'])->cache(true,600)->count();
+        $mvfacount = $mvfalist->where('movieid=%d', $id)->cache(true,600)->count();
         $this->assign('mvfacount', $mvfacount);
         //评论加载
         $mvcommentlist  = M('videocomment');
-        $mvcommentcount = $mvcommentlist->where('movieid=%d', $_GET['id'])->cache(true,600)->count();
+        $mvcommentcount = $mvcommentlist->where('movieid=%d', $id)->cache(true,600)->count();
         $this->assign('mvcommentcount', $mvcommentcount);
-        $commentlist = $mvcommentlist->where('movieid=%d', $_GET['id'])->select();
+        $commentlist = $mvcommentlist->where('movieid=%d', $id)->select();
         $this->assign('commentlist', $commentlist);
         //播放功能加载
         if (!empty($_GET['playid'])) {
-            $this->assign('playid', $_GET['playid']);
+            $this->assign('playid', I('get.playid'));
             //$locallist = M('locallist');
-            $data = $locallist->where('movieid=%d and verify=1 and id=%d', $_GET['id'], $_GET['playid'])->limit(1)->select();
+            $data = $locallist->where('movieid=%d and verify=1 and id=%d', $id, I('get.playid'))->limit(1)->select();
             //dump($data);
-			$movieinfo->where('id=%d',$_GET['id'])->setInc('playcount',1);
+			$movieinfo->where('id=%d',$id)->setInc('playcount',1);
             $this->assign('playlist', $data);
         }
         //判断是否存在未审核资源
 		if(!empty($uid)){
-			if($locallist->where('verify=0 and movieid=%d and userid=%d', $_GET['id'], $uid)->count()){
+			if($locallist->where('verify=0 and movieid=%d and userid=%d', $id, $uid)->count()){
 				$this->assign('localV', 1);
 			}
-			if($contentlist->where('verify=0 and movieid=%d and userid=%d', $_GET['id'], $uid)->count()){
+			if($contentlist->where('verify=0 and movieid=%d and userid=%d', $id, $uid)->count()){
 				$this->assign('contentV', 1);
 			}
-			if($locallist->where('verify=0 and movieid=%d', $_GET['id'])->count()){
+			if($locallist->where('verify=0 and movieid=%d', $id)->count()){
 				$this->assign('localO', 1);
 			}
-			if($contentlist->where('verify=0 and movieid=%d', $_GET['id'])->count()){
+			if($contentlist->where('verify=0 and movieid=%d', $id)->count()){
 				$this->assign('contentO', 1);
 			}
 		}
@@ -90,13 +90,13 @@ class MovieController extends GlobalAction
         if (!empty($_GET['type'])) {
             $sql['type'] = array(
                 'like',
-                '%' . $_GET['type'] . '%'
+                '%' . I('get.type') . '%'
             );
         }
         if (!empty($_GET['name'])) {
             $sql['name'] = array(
                 'like',
-                '%' . $_GET['name'] . '%'
+                '%' . I('get.name') . '%'
             );
         }
         if (!empty($_GET['userid'])) {
@@ -116,8 +116,8 @@ class MovieController extends GlobalAction
         }
         
         $this->assign('movielist', $data);
-        $this->assign('type', $_GET['type']);
-        $this->assign('searchid', $_GET['userid']);
+        $this->assign('type', I('get.type'));
+        $this->assign('searchid', I('get.userid'));
         $this->assign('page', $show); // 赋值分页输出
         $this->display();
         
@@ -143,7 +143,7 @@ class MovieController extends GlobalAction
         $videolist = M('videolist');
         $videolist->where('id=%d',$movieid)->setInc('downloadcount',1);
     }
-    public function ifa()
+    public function ifa($movieid)
     {
         list($uid, $username) = getuserinfo();
         if (empty($uid)) {
@@ -153,42 +153,39 @@ class MovieController extends GlobalAction
             die();
         }
         $movielist = M('videofavorite');
-        $count     = $movielist->where("movieid=%d and userid=%d", $_GET['movieid'], $uid)->count();
+        $count     = $movielist->where("movieid=%d and userid=%d", $movieid, $uid)->count();
         if ($count == 0) {
             $data['userid']  = $uid;
-            $data['movieid'] = $_GET['movieid'];
+            $data['movieid'] = $movieid;
             $movielist->add($data);
         } else {
-            $movielist->where('userid=%d and movieid=%d', $uid, $_GET['movieid'])->delete();
+            $movielist->where('userid=%d and movieid=%d', $uid, $movieid)->delete();
         }
     }
-    public function iwish()
+    public function iwish($movieid)
     {
         list($uid, $username) = getuserinfo();
         if (empty($uid)) {
             die();
         }
-        if (empty($_GET['movieid'])) {
-            die();
-        }
         $movielist = M('wishlist');
-        $count     = $movielist->where('userid=%d and movieid=%d', $uid, $_GET['movieid'])->count();
+        $count     = $movielist->where('userid=%d and movieid=%d', $uid, $movieid)->count();
         if ($count == 0) {
             $data['userid']  = $uid;
-            $data['movieid'] = $_GET['movieid'];
+            $data['movieid'] = $movieid;
             $data['time']    = date('Y-m-d H:i:s');
             $movielist->add($data);
         } else {
-            $movielist->where('userid=%d and movieid=%d', $uid, $_GET['movieid'])->delete();
+            $movielist->where('userid=%d and movieid=%d', $uid, $movieid)->delete();
         }
     }
-    public function upload()
+    public function upload($movieid)
     {
         list($uid, $username) = getuserinfo();
         if (empty($uid)) {
             $this->error('您还没有登录');
         }
-        $this->assign('movieid', $_GET['movieid']);
+        $this->assign('movieid', I('get.movieid'));
         $this->display();
     }
     public function wish()
@@ -215,7 +212,7 @@ class MovieController extends GlobalAction
                 $this->error("令牌验证错误,请返回重试"); // 令牌验证错误
             }
             if ($_POST['iswish'] == 1) {
-                $c['name']     = $_POST['mv_name'];
+                $c['name']     = I('post.mv_name');
                 $c['verify']  = 1;
                 $c['wishtime'] = date('Y-m-d H:i:s');
                 $movieid       = $movielist->add($c);
@@ -224,10 +221,10 @@ class MovieController extends GlobalAction
 				$wc['userid']   = $uid;
                 $wc['time'] = date('Y-m-d H:i:s');
                 $wishlist->add($wc);
-                addtimeline($movieid, '请愿发布', $_POST['mv_name'], $username, 'fa fa-gift time-icon bg-primary');
+                addtimeline($movieid, '请愿发布', I('post.mv_name'), $username, 'fa fa-gift time-icon bg-primary');
                 header("location:".U('Movie/wishsuccess?movieid='.$movieid));
             } else {
-                $c['name']     = $_POST['mv_name'];
+                $c['name']     = I('post.mv_name');
                 //$c['statue']  = 1;
                 $c['wishtime'] = date('Y-m-d H:i:s');
                 $movieid       = $movielist->add($c);
@@ -237,7 +234,7 @@ class MovieController extends GlobalAction
     }
     public function wishsuccess($movieid)
     {
-        $this->assign('movieid', $movieid);
+        $this->assign('movieid', I('get.movieid'));
         $this->display();
         
     }
@@ -247,7 +244,7 @@ class MovieController extends GlobalAction
         if (empty($uid)) {
             $this->error('您还没有登录');
         }
-        $this->assign('movieid', $movieid);
+        $this->assign('movieid', I('get.movieid'));
         $movielist = M("videolist");
         $data      = $movielist->where('id=%d', $movieid)->select();
         if($data[0]['image']!=''&&$_GET['admin']!='yes'){
@@ -262,7 +259,7 @@ class MovieController extends GlobalAction
         if (empty($uid)) {
             $this->error('您还没有登录');
         }
-        $this->assign('movieid', $movieid);
+        $this->assign('movieid', I('get.movieid'));
         $movielist = M("videolist");
         $data      = $movielist->where('id=%d', $movieid)->limit(1)->select();
         $this->assign('movieinfo', $data[0]);
@@ -302,14 +299,8 @@ class MovieController extends GlobalAction
 			$this->success('编辑成功', U('Movie/show?id='.$movieid));
 		}
     }
-    public function addcomment()
+    public function addcomment($id)
     {
-        if (empty($_POST)) {
-            $this->error('没有获取到评论');
-        }
-        if (empty($_GET)) {
-            $this->error('没有获取到视频地址');
-        }
         $mvcommentlist = M('videocomment');
         // 手动进行令牌验证
         if (!$mvcommentlist->autoCheckToken($_POST)) {
@@ -324,8 +315,8 @@ class MovieController extends GlobalAction
             $this->error('没有内容');
         }
         $c['userid']  = $uid;
-        $c['content'] = htmlspecialchars($_POST['content']);
-        $c['movieid'] = $_GET['id'];
+        $c['content'] = I('post.content');
+        $c['movieid'] = $id;
         $c['time']    = date('Y-m-d H:i:s');
         $mvcommentlist->add($c);
         header("location:" . $_SERVER['HTTP_REFERER'] . "#comment");

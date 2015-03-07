@@ -10,7 +10,7 @@ class GlobalAction extends Controller
     }
     public function _initialize()
     {
-        $this->assign('searchname', htmlspecialchars($_GET['name']));
+        $this->assign('searchname', I('get.name'));
         list($uid, $username) = getuserinfo();
 		//判断用户是否登录
         if ($uid == '') {
