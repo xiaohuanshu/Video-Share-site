@@ -18,23 +18,23 @@
                    <section class="panel panel-default">
                     <header class="panel-heading">
                       
-                      影视资源列表
+                      影视内容简介列表-{$videocontent.0.movieid|getmovienamebyid}
                     </header>
                     <table class="table table-striped m-b-none">
                       <thead>
                         <tr>
-                          <th style="width:50%;">标题</th>
+                          <th style="width:5%;">编号</th>
 						  <th style="width:10%;">状态</th>
-						  <th style="width:10%;">内容状态</th>
-						  <th style="width:10%;">请愿/收藏</th>
-						  <th style="width:10%;">资源状态</th>                       
-                          <th style="width:10%;">操作</th>
+						  <th style="width:10%;">作者</th>
+						  <th style="width:17%;">基础信息</th>
+						  <th style="width:17%;">简介</th>                       
+                          <th style="width:41%;">操作</th>
                         </tr>
                       </thead>
                       <tbody>
-<volist name="videolist" id="vl" key='vlk'>
+<volist name="videocontent" id="vl" key='vlk'>
 						<tr>                    
-                          <td><a href="__MODULE__/movie/show/id/{$vl.id}">{$vl.name}</a></td>
+                          <td>{$vlk}</td>
                           <td>
 <if condition="$vl['verify'] == 0">
 							  禁用 /<br>等待审核
@@ -42,28 +42,19 @@
 							  正常
 </if>
 						  </td>
-						  <td>{$vl.id|getvideocontentstatus}</td>
-						  <td>{$vl.id|getwishcount}/{$vl.id|getfacount}</td>
-						  <td>{$vl.id|getlocalvideostatus}</td>
+						  <td>{$vl.userid|getusernamebyid}</td>
+						  <td><a href="#modal-intro-{$vlk}" data-toggle="modal">点击查看</a></td>
+						  <td><a href="#modal-content-{$vlk}" data-toggle="modal">点击查看</a></td>
                           <td>
-						    <div class="btn-group">
-		                      <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">操作 <span class="caret"></span></button>
-		                      <ul class="dropdown-menu">
-		                        <li><a href="__MODULE__/admin/content/movieid/{$vl.id}">内容介绍列表</a></li>
-								<li><a href="__MODULE__/admin/comment/movieid/{$vl.id}">评论列表</a></li>
-								<li><a href="#">视频资源列表</a></li>
-								<li class="divider"></li>
-		                        <li><a href="__MODULE__/movie/edit/movieid/{$vl.id}/admin/yes">修改基础内容</a></li>
-								<li><a href="__MODULE__/movie/editcontent/movieid/{$vl.id}/admin/yes">修改介绍内容</a></li>
-								<li class="divider"></li>
-		                        <li><a href="__MODULE__/admin/video_delete/movieid/{$vl.id}">删除</a></li>
-<if condition="$vl['verify'] == 1">
-		                        <li><a href="__MODULE__/admin/video_forbidden/movieid/{$vl.id}">禁用</a></li>
+	    					  <div class="doc-buttons">
+<if condition="$vl['verify'] == 0">
+	    						<a href="__MODULE__/admin/content_pass/contentid/{$vl.id}" class="btn btn-s-md btn-success">通过</a>
 <else />
-		                        <li><a href="__MODULE__/admin/video_verify/movieid/{$vl.id}">通过</a></li>
+								<a href="__MODULE__/admin/content_forbidden/contentid/{$vl.id}" class="btn btn-s-md btn-danger">禁用</a>
 </if>
-		                      </ul>
-		                    </div>
+								<a href="__MODULE__/admin/content_delete/contentid/{$vl.id}" class="btn btn-s-md btn-danger">删除</a>
+								<a href="__MODULE__/movie/editcontent/contentid/{$vl.id}/movieid/{$vl.movieid}" class="btn btn-s-md btn-default">编辑</a>
+	    					  </div>
                           </td>
                         </tr>                        
 </volist>
@@ -84,4 +75,20 @@
           <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
         </section>
 <include file="Public:bodyframe-foot" />
+<volist name="videocontent" id="vl" key='vlk'>
+  <div class="modal fade" id="modal-intro-{$vlk}" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        {$vl.intro}
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+  <div class="modal fade" id="modal-content-{$vlk}" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        {$vl.content}
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+</volist>
 <include file="Public:footer" />

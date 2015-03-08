@@ -153,6 +153,9 @@ new InitPxVideo({
                           {$cmlist.userid|mvshowusertype=$cmlist['movieid']}
                           <span class="text-muted text-xs block m-t-xs">
                             {$cmlist.time}
+<notempty name="isadmin">
+							<a href="__MODULE__/admin/comment_delete/id/{$cmlist.id}" class="btn btn-danger btn-xs">删除</a>
+</notempty>
                           </span>
                         </header>
                         <div class="m-t-sm">{$cmlist.content}</div>
@@ -217,15 +220,17 @@ new InitPxVideo({
 </if>
 		                <a href="__MODULE__/user/messagecenter/action/2/inf/xiaohuanshu/inf2/用户举报--被举报资源名称:{$movieinfo.name}--被举报资源id:{$movieinfo.id}--资源举报原因:" class="btn btn-s-md btn-danger">举报</a>
 		              </div>
+<notempty name="isadmin">
 					  <span>管理员功能：</span>
 					  <div class="doc-buttons">
-<if condition="$movieinfo['verify'] == 1">
+<if condition="$movieinfo['verify'] == '1'">
 					    <a href="__MODULE__/admin/video_forbidden/movieid/{$movieinfo.id}" class="btn btn-s-md btn-danger">禁用</a>
 <else />
 						<a href="__MODULE__/admin/video_verify/movieid/{$movieinfo.id}" class="btn btn-s-md btn-success">通过</a>
 </if>
 						<a href="__MODULE__/admin/video_delete/movieid/{$movieinfo.id}" class="btn btn-s-md btn-danger">删除</a>
 				  	  </div>
+</notempty>
                   <div class="tags m-b-lg l-h-2x">
 <notempty name="$movieinfo['type']">
 <volist name=":explode(',',$movieinfo['type'])" id="mtype" key='k'>

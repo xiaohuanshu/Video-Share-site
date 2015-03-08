@@ -15,14 +15,21 @@ class MovieController extends GlobalAction
     public function show($id)
     {
 		list($uid, $username) = getuserinfo();
-        //视频基础信息
-        $movieinfo = M('videolist');
-        $data      = $movieinfo->where('id=%d', $id)->field('id,name,image,type,playcount,downloadcount')->limit(1)->select();
-        $this->assign('movieinfo', $data[0]);
-        //视频简介
-        $contentlist = M('videocontent');
-        $data        = $contentlist->where('verify=1 and movieid=%d', $id)->order('time desc')->limit(1)->select();
-        $this->assign('mvcontent', $data[0]);
+    	//视频基础信息
+    	$movieinfo = M('videolist');
+    	$data      = $movieinfo->where('id=%d', $id)->field('id,name,image,type,playcount,downloadcount,verify')->limit(1)->select();
+    	$this->assign('movieinfo', $data[0]);
+		//视频简介
+		if(empty($_GET['contentid'])){
+        	$contentlist = M('videocontent');
+        	$data        = $contentlist->where('verify=1 and movieid=%d', $id)->order('time desc')->limit(1)->select();
+        	$this->assign('mvcontent', $data[0]);
+		}else{
+        	$contentlist = M('videocontent');
+        	$data        = $contentlist->where('verify=1 and movieid=%d and id=%d', $id, $_GET['contentid'])->order('time desc')->limit(1)->select();
+        	$this->assign('mvcontent', $data[0]);
+			$this->assign('mvcontentid', I('get.contentid'));
+		}
         //时间线信息
         $timeline = M('videotimeline');
         $data     = $timeline->where('movieid=%d', $id)->order('time')->cache(true,600)->select();
@@ -264,7 +271,11 @@ class MovieController extends GlobalAction
         $data      = $movielist->where('id=%d', $movieid)->limit(1)->select();
         $this->assign('movieinfo', $data[0]);
         $contentlist = M('videocontent');
-        $data        = $contentlist->where('verify=1 and movieid=%d', $movieid)->order('time desc')->limit(1)->select();
+		if(empty($_GET['contentid'])){
+			$data        = $contentlist->where('verify=1 and movieid=%d', $movieid)->order('time desc')->limit(1)->select();
+		}else{
+			$data        = $contentlist->where('verify=1 and id=%d', $_GET['contentid'])->limit(1)->select();
+		}
         $this->assign('mvcontent', $data[0]);
         $this->display();
         
@@ -314,6 +325,9 @@ class MovieController extends GlobalAction
         if (empty($_POST['content'])) {
             $this->error('没有内容');
         }
+		if(false === \Org\Util\SensitiveFilter::filter($_POST['content'])){
+			$this->error("含有敏感词汇");
+	 	}
         $c['userid']  = $uid;
         $c['content'] = I('post.content');
         $c['movieid'] = $id;

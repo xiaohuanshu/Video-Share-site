@@ -31,7 +31,7 @@ class GlobalAction extends Controller
                 $this->assign('myfacount', $myfacount);
             }
 			//是否管理员
-			if (in_array($userid,C('ADMIN_ID'))) {
+			if (in_array($uid,C('ADMIN_ID'))) {
 				$this->assign('isadmin', 1);
 			}
         }

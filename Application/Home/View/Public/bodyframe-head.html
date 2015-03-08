@@ -41,12 +41,14 @@
                         <span class="font-bold">上传</span>
                       </a>
                     </li>
-                    <!--<li>
-                      <a href="/forum">
-                        <i class="icon-users icon  text-success"></i>
-                        <span class="font-bold">论坛</span>
+<notempty name="isadmin">
+                    <li>
+                      <a href="__MODULE__/admin">
+                        <i class="icon-bag icon  text-danger"></i>
+                        <span class="font-bold">后台</span>
                       </a>
-                    </li>-->
+                    </li>
+</notempty>
                     <!--<li>
                       <a href="video.html" data-target="#content" data-el="#bjax-el" data-replace="true">
                         <i class="icon-social-youtube icon  text-primary"></i>

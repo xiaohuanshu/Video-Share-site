@@ -1,0 +1,62 @@
+<include file="Public:head" />
+<include file="Public:header" headerstyle="navbar-header aside bg-info nav-xs"/>
+<include file="Public:bodyframe-head" bodyframestyle="bg-black dk aside hidden-print nav-xs"/>
+<section id="content">
+          <section class="vbox">
+            <section class="w-f-md" id="bjax-target">
+              <section class="hbox stretch">
+                <section>
+                  <section class="vbox">
+                    <section class="scrollable padder-lg">
+						
+   					 <div class="doc-buttons">
+   					   <a href="__MODULE__/admin/video" class="btn btn-s-md btn-default">影视列表</a>
+   					   <a href="__MODULE__/admin/comment" class="btn btn-s-md btn-default">评论列表</a>
+   					   <a href="{:C('UC_URL')}" class="btn btn-s-md btn-default">用户中心</a>
+   					 </div>
+
+                   <section class="panel panel-default">
+                    <header class="panel-heading">
+                      
+                      影视评论列表
+                    </header>
+                    <table class="table table-striped m-b-none">
+                      <thead>
+                        <tr>
+                          <th style="width:20%;">影视</th>
+						  <th style="width:60%;">内容</th>
+						  <th style="width:10%;">作者</th>
+                          <th style="width:10%;">操作</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+<volist name="videocomment" id="vl" key='vlk'>
+						<tr>                    
+                          <td><a href="__MODULE__/admin/comment/movieid/{$vl.movieid}">{$vl.movieid|getmovienamebyid}</a></td>
+                          <td>{$vl.content}</td>
+						  <td>{$vl.userid|getusernamebyid}</td>
+                          <td>
+	    					  <div class="doc-buttons">
+								<a href="__MODULE__/admin/comment_delete/id/{$vl.id}" class="btn btn-s-md btn-danger">删除</a>
+	    					  </div>
+                          </td>
+                        </tr>                        
+</volist>
+                        
+                      </tbody>
+                    </table>
+                  </section>
+				
+				
+				</section>
+				</section>
+				</section>
+				</section>
+                  </section>
+                </section>
+              </section>
+            </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+<include file="Public:bodyframe-foot" />
+<include file="Public:footer" />
