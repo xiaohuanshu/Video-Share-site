@@ -85,6 +85,7 @@ function mvshowusertype($userid, $movieid)
 function videoinfo($path)
 {
     str_replace("|", '', $path);
+	str_replace("`", '', $path);
     $path = "Uploads/movie/" . $path;
     $re   = array();
     exec("ffmpeg -i $path 2>&1", $re);
@@ -123,10 +124,37 @@ function videoinfo($path)
 function videoshot($path)
 {
     str_replace("|", '', $path);
+	str_replace("`", '', $path);
     $path1 = "Uploads/movie/" . $path;
 	$path2 = "Uploads/shot/" . $path . ".jpg";
     $re   = array();
     exec("ffmpeg -ss 00:02:06  -i $path1 $path2  -r 1 -vframes 1 -an -f mjpeg", $re);
+}
+function videocheckshot($path)
+{
+    str_replace("|", '', $path);
+	str_replace("`", '', $path);
+    $path1 = "Uploads/movie/" . $path;
+	$timeshot=C('timeshot');
+	$re   = array();
+	if (!file_exists("Uploads/temp/" . $path . "/")){
+		mkdir ("Uploads/temp/" . $path . "/");
+		$flag=0;
+	}else{
+		$flag=1;
+	}
+	$shotlist=array();
+	foreach($timeshot as $time){ 
+		$path2 = "Uploads/temp/" . $path . "/".str_replace(":", '.', $time).".jpg";
+		//echo "ffmpeg -ss $time  -i $path1 $path2  -r 1 -vframes 1 -an -f mjpeg"."<br>";
+		if($flag==0){
+			exec("ffmpeg -ss $time  -i $path1 $path2  -r 1 -vframes 1 -an -f mjpeg", $re);
+		}
+		if (file_exists($path2)){
+			$shotlist[]=array('time'=>$time,'url'=>__ROOT__.'/'.$path2);
+		}
+	} 
+	return $shotlist;
 }
 function getwishcount($movieid)
 {

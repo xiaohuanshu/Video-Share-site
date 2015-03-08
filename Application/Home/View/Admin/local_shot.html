@@ -1,0 +1,64 @@
+<include file="Public:head" />
+<include file="Public:header" headerstyle="navbar-header aside bg-info nav-xs"/>
+<include file="Public:bodyframe-head" bodyframestyle="bg-black dk aside hidden-print nav-xs"/>
+<section id="content">
+          <section class="vbox">
+            <section class="w-f-md" id="bjax-target">
+              <section class="hbox stretch">
+                <section>
+                  <section class="vbox">
+                    <section class="scrollable padder-lg">
+						
+   					 <div class="doc-buttons">
+   					   <a href="__MODULE__/admin/video" class="btn btn-s-md btn-default">影视列表</a>
+   					   <a href="__MODULE__/admin/comment" class="btn btn-s-md btn-default">评论列表</a>
+   					   <a href="{:C('UC_URL')}" class="btn btn-s-md btn-default">用户中心</a>
+   					 </div>
+
+                   <section class="panel panel-default">
+                    <header class="panel-heading">
+                      
+                      影视资源截图-{$localvideo.movieid|getmovienamebyid}-{$localvideo.title}
+    					 <div class="doc-buttons">
+    					   <a href="__MODULE__/admin/local_delete/localid/{$localvideo.id}" class="btn btn-s-md btn-danger">删除</a>
+<if condition="$localvideo['verify'] == 0">
+    					   <a href="__MODULE__/admin/local_pass/localid/{$localvideo.id}" class="btn btn-s-md btn-success">通过</a>
+<else />
+    					   <a href="__MODULE__/admin/local_forbidden/localid/{$localvideo.id}" class="btn btn-s-md btn-danger">禁用</a>
+</if>
+    					 </div>
+                    </header>
+                    <table class="table table-striped m-b-none">
+                      <thead>
+                        <tr>
+                          <th style="width:10%;">序号</th>
+                          <th style="width:10%;">时间</th>
+						  <th style="width:80%;">图片</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+<volist name="localshot" id="vl" key='vlk'>
+						<tr>                    
+                          <td>{$vlk}</td>
+						  <td>{$vl.time}</td>
+                          <td><img src="{$vl.url}" class="img-full"></td>
+                        </tr>                        
+</volist>
+                        
+                      </tbody>
+                    </table>
+                  </section>
+				
+				
+				</section>
+				</section>
+				</section>
+				</section>
+                  </section>
+                </section>
+              </section>
+            </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+<include file="Public:bodyframe-foot" />
+<include file="Public:footer" />

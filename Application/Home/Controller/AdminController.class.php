@@ -95,5 +95,51 @@ class AdminController extends GlobalAction
 			$this->error('失败');
 		}
 	}
+    public function local($movieid)
+    {
+		$localvideo=M('localvideo');
+		$data=$localvideo->where('movieid=%d',$movieid)->select();
+		$this->assign('localvideo', $data);
+        $this->display();
+    }
+	public function local_forbidden($localid){
+		$localvideo=M('localvideo');
+		if($localvideo->where('id=%d',$localid)->setField('verify','0')){
+			$this->success('已禁用');
+		}else{
+			$this->error('失败');
+		}
+	}
+	public function local_pass($localid){
+		$localvideo=M('localvideo');
+		if($localvideo->where('id=%d',$localid)->setField('verify','1')){
+			$this->success('已审核通过');
+		}else{
+			$this->error('失败');
+		}
+	}
+	public function local_delete($localid){
+		$localvideo=M('localvideo');
+		$data=$localvideo->where('id=%d',$localid)->limit(1)->select();
+		$url="Uploads/movie/" . $data[0]['url'];
+		if($localvideo->where('id=%d',$localid)->limit(1)->delete()){
+			if (file_exists($url)){
+				unlink($url);
+			}
+			$this->success('已删除');
+		}else{
+			$this->error('失败');
+		}
+	}
+	public function local_shot($localid){
+		$localvideo=M('localvideo');
+		$data=$localvideo->where('id=%d',$localid)->select();
+		$this->assign('localvideo', $data[0]);
+		
+		$localshot=videocheckshot($data[0][url]);
+		$this->assign('localshot', $localshot);
+		
+        $this->display();
+	}
 }
 ?>

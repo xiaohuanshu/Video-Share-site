@@ -18,23 +18,23 @@
                    <section class="panel panel-default">
                     <header class="panel-heading">
                       
-                      影视列表
+                      影视资源列表-{$localvideo.0.movieid|getmovienamebyid}
                     </header>
                     <table class="table table-striped m-b-none">
                       <thead>
                         <tr>
-                          <th style="width:50%;">标题</th>
+                          <th style="width:60%;">标题</th>
+                          <th style="width:10%;">上传者</th>
 						  <th style="width:10%;">状态</th>
-						  <th style="width:10%;">内容状态</th>
-						  <th style="width:10%;">请愿/收藏</th>
-						  <th style="width:10%;">资源状态</th>                       
+						  <th style="width:10%;">在线</th>                    
                           <th style="width:10%;">操作</th>
                         </tr>
                       </thead>
                       <tbody>
-<volist name="videolist" id="vl" key='vlk'>
+<volist name="localvideo" id="vl" key='vlk'>
 						<tr>                    
-                          <td><a href="__MODULE__/movie/show/id/{$vl.id}">{$vl.name}</a></td>
+                          <td>{$vl.title}</td>
+						  <td>{$vl.userid|getusernamebyid}</td>
                           <td>
 <if condition="$vl['verify'] == 0">
 							  禁用 /<br>等待审核
@@ -42,26 +42,26 @@
 							  正常
 </if>
 						  </td>
-						  <td>{$vl.id|getvideocontentstatus}</td>
-						  <td>{$vl.id|getwishcount}/{$vl.id|getfacount}</td>
-						  <td>{$vl.id|getlocalvideostatus}</td>
+						  <td>
+<if condition="$vl['online'] == 0">
+							  不支持
+<else/>
+							  支持
+</if>
+						  </td>
                           <td>
 						    <div class="btn-group">
 		                      <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">操作 <span class="caret"></span></button>
 		                      <ul class="dropdown-menu">
-		                        <li><a href="__MODULE__/admin/content/movieid/{$vl.id}">内容介绍列表</a></li>
-								<li><a href="__MODULE__/admin/comment/movieid/{$vl.id}">评论列表</a></li>
-								<li><a href="__MODULE__/admin/local/movieid/{$vl.id}">视频资源列表</a></li>
+								<li><a href="__MODULE__/movie/show/id/{$vl.movieid}/playid/{$vl.id}">查看截图</a></li>
+		                        <li><a href="__MODULE__/movie/show/id/{$vl.movieid}/playid/{$vl.id}">播放</a></li>
 								<li class="divider"></li>
-		                        <li><a href="__MODULE__/movie/edit/movieid/{$vl.id}/admin/yes">修改基础内容</a></li>
-								<li><a href="__MODULE__/movie/editcontent/movieid/{$vl.id}/admin/yes">修改介绍内容</a></li>
-								<li class="divider"></li>
-		                        <li><a href="__MODULE__/admin/video_delete/movieid/{$vl.id}">删除</a></li>
+		                        <li><a href="__MODULE__/admin/local_delete/localid/{$vl.id}">删除</a></li>
 								<li class="divider"></li>
 <if condition="$vl['verify'] == 1">
-		                        <li><a href="__MODULE__/admin/video_forbidden/movieid/{$vl.id}">禁用</a></li>
+		                        <li><a href="__MODULE__/admin/local_forbidden/localid/{$vl.id}">禁用</a></li>
 <else />
-		                        <li><a href="__MODULE__/admin/video_verify/movieid/{$vl.id}">通过</a></li>
+		                        <li><a href="__MODULE__/admin/local_pass/localid/{$vl.id}">通过</a></li>
 </if>
 		                      </ul>
 		                    </div>
