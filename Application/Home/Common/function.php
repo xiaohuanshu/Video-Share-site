@@ -201,4 +201,10 @@ function getlocalvideostatus($movieid)
     }
     return '暂无';
 }
+function changeuploadstatus($movieid){
+	$videolist  = M('videolist');
+	if($videolist->where('id=%d',$movieid)->field('uploadstatus')->limit(1)->select()[0]['uploadstatus']==0){
+		$videolist->where('id=%d',$movieid)->setField('uploadstatus',1);
+	}
+}
 ?>

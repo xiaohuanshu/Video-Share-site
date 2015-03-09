@@ -48,6 +48,7 @@ class UploadController extends GlobalAction
             $c['title']   = I('post.uploader_' . $i . '_name');
 			if (in_array($uid,C('ADMIN_ID'))) {
 	        	$c['verify']  = 1;
+				changeuploadstatus($movieid);
 			}else{
 				$c['verify']  = 0;
 			}

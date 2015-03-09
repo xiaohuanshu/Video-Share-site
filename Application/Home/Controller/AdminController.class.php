@@ -29,16 +29,20 @@ class AdminController extends GlobalAction
         $this->display();
     }
 	public function content_forbidden($contentid){
+		list($uid, $username) = getuserinfo();
 		$videocontent=M('videocontent');
 		if($videocontent->where('id=%d',$contentid)->setField('verify','0')){
+			addtimeline($movieid, '内容屏蔽', '影视介绍存在违规内容', $username, 'fa fa-eye-slash time-icon bg-danger');
 			$this->success('已禁用');
 		}else{
 			$this->error('失败');
 		}
 	}
 	public function content_pass($contentid){
+		list($uid, $username) = getuserinfo();
 		$videocontent=M('videocontent');
 		if($videocontent->where('id=%d',$contentid)->setField('verify','1')){
+			addtimeline($movieid, '审核通过', '影视介绍内容通过审核', $username, 'fa fa-eye time-icon bg-info');
 			$this->success('已审核通过');
 		}else{
 			$this->error('失败');
@@ -53,16 +57,20 @@ class AdminController extends GlobalAction
 		}
 	}
 	public function video_forbidden($movieid){
+		list($uid, $username) = getuserinfo();
 		$videolist=M('videolist');
 		if($videolist->where('id=%d',$movieid)->setField('verify','0')){
+			addtimeline($movieid, '资源屏蔽', '影视资源存在违规内容', $username, 'fa fa-eye-slash time-icon bg-danger');
 			$this->success('已禁用');
 		}else{
 			$this->error('失败');
 		}
 	}
 	public function video_verify($movieid){
+		list($uid, $username) = getuserinfo();
 		$videolist=M('videolist');
 		if($videolist->where('id=%d',$movieid)->setField('verify','1')){
+			addtimeline($movieid, '审核通过', '影视通过审核', $username, 'fa fa-eye time-icon bg-info');
 			$this->success('已审核通过');
 		}else{
 			$this->error('失败');
@@ -103,16 +111,21 @@ class AdminController extends GlobalAction
         $this->display();
     }
 	public function local_forbidden($localid){
+		list($uid, $username) = getuserinfo();
 		$localvideo=M('localvideo');
 		if($localvideo->where('id=%d',$localid)->setField('verify','0')){
+			addtimeline($movieid, '资源屏蔽', '影视资源存在违规内容', $username, 'fa fa-eye-slash time-icon bg-danger');
 			$this->success('已禁用');
 		}else{
 			$this->error('失败');
 		}
 	}
 	public function local_pass($localid){
+		list($uid, $username) = getuserinfo();
 		$localvideo=M('localvideo');
 		if($localvideo->where('id=%d',$localid)->setField('verify','1')){
+			changeuploadstatus($localvideo->where('id=%d',$localid)->field('movieid')->limit(1)->select()[0]['movieid']);
+			addtimeline($movieid, '审核通过', '影视资源通过审核', $username, 'fa fa-eye time-icon bg-info');
 			$this->success('已审核通过');
 		}else{
 			$this->error('失败');

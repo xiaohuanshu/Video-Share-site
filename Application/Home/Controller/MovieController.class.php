@@ -303,7 +303,7 @@ class MovieController extends GlobalAction
 		}
         $c['time']    = date('Y-m-d H:i:s');
         $contentlist->add($c);
-        addtimeline($movieid, '编辑内容', '视频介绍', $username, 'fa fa-file-text time-icon bg-info');
+        addtimeline($movieid, '编辑内容', '视频介绍', $username, 'fa fa-file-text time-icon bg-success');
 		if($_GET['admin']=='yes'){
 			$this->success('编辑成功', U('admin/video'));
 		}else{
