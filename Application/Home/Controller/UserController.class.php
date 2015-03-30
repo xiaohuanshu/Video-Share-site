@@ -100,7 +100,7 @@ class UserController extends GlobalAction
 		$c['studentid']=I('post.studentid');
 		$c['realname']=I('post.realname');
 		$c['qq']=I('post.qq');
-		list($c['college'],$c['major'])=explode('.',I('post.collagemajor'));
+		list($c['college'],$c['major'])=explode('.',I('post.collegemajor'));
 		$c['intro']=I('post.intro');
 		if(!empty($_POST['password'])){
 			$uc = new \Ucenter\Client\Client();
