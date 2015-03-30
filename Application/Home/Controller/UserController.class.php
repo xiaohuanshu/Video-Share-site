@@ -30,7 +30,9 @@ class UserController extends GlobalAction
     {       
         $uc = new \Ucenter\Client\Client();
 		list($uid, $username) = getuserinfo();
-        header('Location:'.$uc->uc_pm_location($uid,$action,$inf,$inf2));
+		$this->assign('location', $uc->uc_pm_location($uid,$action,$inf,$inf2));
+		$this->show();
+        //header('Location:'.$uc->uc_pm_location($uid,$action,$inf,$inf2));
     }
 	public function register(){
 		$this->show();
