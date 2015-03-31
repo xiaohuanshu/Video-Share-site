@@ -74,7 +74,7 @@
 <volist name="uploadlist" id="uplist" empty="还没有上传过视频..." >
                             <li class="list-group-item">
                               <a href="#" class="thumb-sm pull-left m-r-sm">
-                                <img src="{$uplist.image|default='__PUBLIC__/images/nopicture.jpg'}.thumb.jpg">
+                                <img src="{$uplist.image|default='__PUBLIC__/images/nopicture.jpg'}.thumb.jpg" class="img-responsive">
                               </a>
                               <a href="__MODULE__/movie/show/id/{$uplist.movieid}" class="clear">
                                 <small class="pull-right">{$uplist.updatetime}</small>
@@ -90,7 +90,7 @@
 <volist name="wishlist" id="wslist"  empty="还没有情愿过视频..." >
                             <li class="list-group-item">
                               <a href="#" class="thumb-sm pull-left m-r-sm">
-                                <img src="{$wslist.image|default='__PUBLIC__/images/nopicture.jpg'}.thumb.jpg">
+                                <img src="{$wslist.image|default='__PUBLIC__/images/nopicture.jpg'}.thumb.jpg" class="img-responsive">
                               </a>
                               <a class="clear">
                                 <small class="pull-right">{$wslist.updatetime}</small>
