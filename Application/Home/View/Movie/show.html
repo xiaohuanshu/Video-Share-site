@@ -128,8 +128,12 @@ new InitPxVideo({
 </if>
                             </div>
 <div class="btn-group" style="float:right">
-                              
-  <a href="{:C('RESOURCEURL')}{$lolist.url}" download="{$lolist.title}.{$lolist.url|strrchr='.'|substr=1}" onclick="downloadinc({$movieinfo.id});"><i class="fa fa-download"></i></a>{//|strrchr='/uploads/'|substr=1}
+<if condition="C('RESOURCEURL') == ''">
+	  <a href="__ROOT__/Uploads/movie/{$lolist.url}" download="{$lolist.title}.{$lolist.url|strrchr='.'|substr=1}" onclick="downloadinc({$movieinfo.id});">
+<else />
+	  <a href="{:C('RESOURCEURL')}/{$lolist.url}" download="{$lolist.title}.{$lolist.url|strrchr='.'|substr=1}" onclick="downloadinc({$movieinfo.id});">
+</if>
+	  <i class="fa fa-download"></i></a>{//|strrchr='/uploads/'|substr=1}
                             </div>{//substr(strrchr($lolist.url, '.'), 1)}
                           </td>
                         </tr>
