@@ -10,7 +10,7 @@
                     <section class="scrollable">
                       <div class="wrapper">
                         <div class="text-center m-b m-t">
-                          <a href="" class="thumb-lg">
+                          <a href="__MODULE__/user/profile/uid/{$userinfo.userid}" class="thumb-lg">
                             <img src="{:C('UC_URL')}/avatar.php?uid={$userinfo.userid}&type=virtual&size=middle" class="img-circle">
                           </a>
                           <div>
@@ -27,10 +27,8 @@
                               </a>
                             </div>
                             <div class="col-xs-6">
-                              <a href="">
                                 <span class="m-b-xs h4 block">{$wishcount}</span>
                                 <small class="text-muted">请愿数量</small>
-                              </a>
                             </div>
                           </div>
                         </div>
@@ -78,7 +76,7 @@
                               <a href="#" class="thumb-sm pull-left m-r-sm">
                                 <img src="{$uplist.image|default='__PUBLIC__/images/nopicture.jpg'}.thumb.jpg">
                               </a>
-                              <a href="#" class="clear">
+                              <a href="__MODULE__/movie/show/id/{$uplist.movieid}" class="clear">
                                 <small class="pull-right">{$uplist.updatetime}</small>
                                 <strong class="block">{$userinfo.username}</strong>
                                 <small>{$uplist.name}</small>
@@ -94,7 +92,7 @@
                               <a href="#" class="thumb-sm pull-left m-r-sm">
                                 <img src="{$wslist.image|default='__PUBLIC__/images/nopicture.jpg'}.thumb.jpg">
                               </a>
-                              <a href="#" class="clear">
+                              <a class="clear">
                                 <small class="pull-right">{$wslist.updatetime}</small>
                                 <strong class="block">{$userinfo.username}</strong>
                                 <small>{$wslist.name}</small>
@@ -117,7 +115,7 @@
                         <ul class="list-group">
 <volist name="commentlist" id="cmlist"  empty="还没有评论过视频..." >
                           <li class="list-group-item">
-                              <p><a href="__MODULE__/movie/show/id/{$cmlist.id}" class="text-info">{$cmlist.movieid|getmovienamebyid}</a>:{$cmlist.content}</p>
+                              <p><a href="__MODULE__/movie/show/id/{$cmlist.movieid}" class="text-info">{$cmlist.movieid|getmovienamebyid}</a>:{$cmlist.content}</p>
                               <small class="block text-muted"><i class="fa fa-clock-o"></i>{$cmlist.time}</small>
                           </li>
 </volist>
