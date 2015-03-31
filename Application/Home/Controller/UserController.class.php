@@ -61,6 +61,9 @@ class UserController extends GlobalAction
 	        if (!$userinfo->autoCheckToken($_POST)) {
 	            $this->error("令牌验证错误,请返回重试"); // 令牌验证错误
 	        }
+			if (empty($_POST['password'])){
+				$this->error("请输入密码"); 
+			}
 			$c['userid']=$uid;
 			$c['email']=I('post.email');
 			$c['password']='real.'.I('post.password');
