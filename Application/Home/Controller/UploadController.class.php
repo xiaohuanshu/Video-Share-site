@@ -120,6 +120,7 @@ class UploadController extends GlobalAction
             $this->error("令牌验证错误,请返回重试"); // 令牌验证错误
         }
         $c['image'] = $dbfilepath;
+		$c['playtime'] = I('post.time');
         $videolist->where('id=%d', $movieid)->save($c);
         addtimeline($movieid, '编辑内容', '基础信息', $username, 'fa fa-file-text time-icon bg-info');
 		if($_GET['admin']=='yes'){

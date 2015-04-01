@@ -49,6 +49,8 @@ if __name__ == '__main__':
         #print info
         indent = d('#link-report')
         intro=indent("span").eq(0).text()
+        if u"... (展开全部)" in intro:
+            intro=indent(".hidden").eq(0).text()
         time = timedeal(re.findall(u"(?<=片长:).*?(?=分钟)",info,re.DOTALL)[0])
         type = re.findall(u"(?<=类型:).*?(?=\n)",info,re.DOTALL)[0].split("/")
         #print intro
