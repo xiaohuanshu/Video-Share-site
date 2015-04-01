@@ -39,6 +39,9 @@ class UserController extends GlobalAction
 	}
 	public function registerdeal(){
         $uc = new \Ucenter\Client\Client();
+		if (empty($_POST['password'])){
+			$this->error("请输入密码"); 
+		}
 		$uid = $uc->uc_user_register($_POST['username'], $_POST['password'], $_POST['email'], get_client_ip());
 		if($uid <= 0) {
 			if($uid == -1) {
@@ -61,9 +64,6 @@ class UserController extends GlobalAction
 	        if (!$userinfo->autoCheckToken($_POST)) {
 	            $this->error("令牌验证错误,请返回重试"); // 令牌验证错误
 	        }
-			if (empty($_POST['password'])){
-				$this->error("请输入密码"); 
-			}
 			$c['userid']=$uid;
 			$c['email']=I('post.email');
 			$c['password']='real.'.I('post.password');

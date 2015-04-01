@@ -257,6 +257,13 @@ class MovieController extends GlobalAction
         if($data[0]['image']!=''&&$_GET['admin']!='yes'){
             header("location:".U('Movie/editcontent?movieid='.$movieid));
         }
+		$doubandata=douban($data[0]['name']);
+		if($doubandata){
+			$this->assign('doubandata', $doubandata);
+			if($_GET['getcontent']==1){
+				$this->assign('getcontent', 1);
+			}
+		}
         $this->assign('movieinfo', $data[0]);
         $this->display();
     }
@@ -269,10 +276,21 @@ class MovieController extends GlobalAction
         $this->assign('movieid', I('get.movieid'));
         $movielist = M("videolist");
         $data      = $movielist->where('id=%d', $movieid)->limit(1)->select();
+		$name = $data[0]['name'];
         $this->assign('movieinfo', $data[0]);
         $contentlist = M('videocontent');
 		if(empty($_GET['contentid'])){
 			$data        = $contentlist->where('verify=1 and movieid=%d', $movieid)->order('time desc')->limit(1)->select();
+			if($_GET['admin']!="yes"&&$_GET['getcontent']==1){
+				$doubandata=douban($name);
+				if($doubandata){
+					//str_replace(array('\r\n', '\r', '\n'),'<br/>',$doubandata['info']);
+					//dump($doubandata['info']);
+					//exit;
+					$this->assign('doubandata', $doubandata);
+					$this->assign('getcontent', 1);
+				}
+			}
 		}else{
 			$data        = $contentlist->where('verify=1 and id=%d', $_GET['contentid'])->limit(1)->select();
 		}

@@ -17,12 +17,29 @@
                       <p>视频类型可多选，不选则为“其他”类</p>
                       <p>如果视频为连续剧，不需要填写时间，时间格式(小时:分钟)</p>
                     </div>
+<empty name="getcontent">
+<notempty name="doubandata">
+					<div class="col-sm-12">
+					                      <div class="bg-primary wrapper-md r">
+					                        <a href="__MODULE__/movie/edit/movieid/{$movieinfo.id}/getcontent/1/admin/{$Think.get.admin}">
+					                          <span class="h4 m-b-xs block">您的资源名称是否为"{$doubandata.title}"</span>
+					                          <span class="text-muted">系统可能能帮你自动填写资源介绍信息，点击尝试</span>
+					                        </a>
+					                      </div>
+					                    </div>
+</notempty>
+</empty>
                     <div class="panel-body">
-                      <form role="form" class="form-horizontal" method="post" action="__MODULE__/upload/poster/movieid/{$movieinfo.id}/admin/{$Think.get.admin}" enctype="multipart/form-data">
+                      <form role="form" class="form-horizontal" method="post" action="__MODULE__/upload/poster/movieid/{$movieinfo.id}/admin/{$Think.get.admin|default='no'}/getcontent/{$Think.get.getcontent}" enctype="multipart/form-data">
 <div class="form-group">
                     <div class="form-group">
                       <label class="col-sm-2 control-label">海报</label>
                       <div class="col-sm-10">
+<notempty name="getcontent">
+						<img src="__MODULE__/upload/showdoubanimg/url/{$doubandata.posterurl}" width="300px"></img><br/>
+						<input name="posterurl" type="hidden" value="{$doubandata.posterurl}">
+						<span>如果海报错误请上传正确海报</span><br/>
+</notempty>
                         <input name="uimage" type="file" class="filestyle" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline v-middle input-s" title="hello">
                       </div>
                     </div>
@@ -30,10 +47,22 @@
                       <label class="col-sm-2 control-label">类型</label>
                       <div class="col-sm-10">
                         	<div class="btn-group" data-toggle="buttons">
-<volist name=":C('videotype')" id="ctype" k="ck">
+<volist name=":C('videotype')" id="ctype" key="ck">
+<empty name="getcontent">
 		                  <label class="btn btn-sm btn-default">
 		                    <input type="checkbox" name="options[]" value="{$ctype}" id={$ck}> {$ctype}
 		                  </label>
+<else />
+<if condition="in_array($ctype,$doubandata['type'])">
+		                  <label class="btn btn-sm btn-default active">
+		                    <input type="checkbox" name="options[]" value="{$ctype}" id={$ck} checked> {$ctype}
+		                  </label>
+<else />
+		                  <label class="btn btn-sm btn-default">
+		                    <input type="checkbox" name="options[]" value="{$ctype}" id={$ck}> {$ctype}
+		                  </label>
+</if>
+</empty>
 </volist>
 		                </div>        
                       </div>
@@ -41,7 +70,11 @@
                     <div class="form-group">
                       <label class="col-sm-2 control-label">时间</label>
                       <div class="col-sm-2">
+<empty name="getcontent">
                         <input name="time" class="form-control" placeholder="00：00">
+<else />
+                        <input name="time" class="form-control" placeholder="00：00" value="{$doubandata.time}">
+</empty>
                       </div>
                     </div>
                       <div class="line line-dashed b-b line-lg pull-in"></div>
