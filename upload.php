@@ -64,7 +64,8 @@ if (isset($_REQUEST["name"])) {
 $allow_file = explode("|", "flv|mkv|avi|rm|rmvb|mpeg|mpg|mov|wmv|mp4|webm"); //允许上传的文件类型组
 $new_upload_file_ext = strtolower(end(explode(".", $fileName))); //取得被.隔开的最后字符串
 if (!in_array($new_upload_file_ext,$allow_file)){ //如果不在组类，提示处理
-	die('{"jsonrpc" : "2.0", "error" : {"code": 100, "message": "File type error."}, "id" : "id"}');   
+	header("HTTP/1.0 500 Internal Server Error");
+	die('{"jsonrpc" : "2.0", "error" : {"code": -601, "message": "File extension error."}, "id" : "id"}');   
 }
 $filePath = $targetDir . DIRECTORY_SEPARATOR . $fileName;
 
@@ -76,6 +77,7 @@ $chunks = isset($_REQUEST["chunks"]) ? intval($_REQUEST["chunks"]) : 0;
 // Remove old temp files	
 if ($cleanupTargetDir) {
 	if (!is_dir($targetDir) || !$dir = opendir($targetDir)) {
+		header("HTTP/1.0 500 Internal Server Error");
 		die('{"jsonrpc" : "2.0", "error" : {"code": 100, "message": "Failed to open temp directory."}, "id" : "id"}');
 	}
 
@@ -98,20 +100,24 @@ if ($cleanupTargetDir) {
 
 // Open temp file
 if (!$out = @fopen("{$filePath}.part", $chunks ? "ab" : "wb")) {
+	header("HTTP/1.0 500 Internal Server Error");
 	die('{"jsonrpc" : "2.0", "error" : {"code": 102, "message": "Failed to open output stream."}, "id" : "id"}');
 }
 
 if (!empty($_FILES)) {
 	if ($_FILES["file"]["error"] || !is_uploaded_file($_FILES["file"]["tmp_name"])) {
+		header("HTTP/1.0 500 Internal Server Error");
 		die('{"jsonrpc" : "2.0", "error" : {"code": 103, "message": "Failed to move uploaded file."}, "id" : "id"}');
 	}
 
 	// Read binary input stream and append it to temp file
 	if (!$in = @fopen($_FILES["file"]["tmp_name"], "rb")) {
+		header("HTTP/1.0 500 Internal Server Error");
 		die('{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "Failed to open input stream."}, "id" : "id"}');
 	}
 } else {	
 	if (!$in = @fopen("php://input", "rb")) {
+		header("HTTP/1.0 500 Internal Server Error");
 		die('{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "Failed to open input stream."}, "id" : "id"}');
 	}
 }
