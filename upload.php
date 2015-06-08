@@ -51,21 +51,22 @@ if (!file_exists($targetDir)) {
 	@mkdir($targetDir);
 //echo mkdir($targetDir);
 }//else{echo "yes";}
-
+//var_dump($_FILES);
+//echo 'hello:'.$_REQUEST["filenamename"];
 // Get a file name
+//var_dump($_REQUEST);
 if (isset($_REQUEST["name"])) {
 	$fileName = str_replace("/","",$_REQUEST["name"]);
-} elseif (!empty($_FILES)) {
-	$fileName = str_replace("/","",$_FILES["file"]["name"]);
-} else {
-	$fileName = uniqid("file_");
+}else {
+	header("HTTP/1.0 500 Internal Server Error");
+	die('{"jsonrpc" : "2.0", "error" : {"code": 100, "message": "File name error."}, "id" : "id"}');
 }
 //取得允许上传的文件类型，并判断 
 $allow_file = explode("|", "flv|mkv|avi|rm|rmvb|mpeg|mpg|mov|wmv|mp4|webm"); //允许上传的文件类型组
 $new_upload_file_ext = strtolower(end(explode(".", $fileName))); //取得被.隔开的最后字符串
 if (!in_array($new_upload_file_ext,$allow_file)){ //如果不在组类，提示处理
 	header("HTTP/1.0 500 Internal Server Error");
-	die('{"jsonrpc" : "2.0", "error" : {"code": -601, "message": "File extension error."}, "id" : "id"}');   
+	die('{"jsonrpc" : "2.0", "error" : {"code": -601, "message": "File extension error('.$fileName.')."}, "id" : "id"}');   
 }
 $filePath = $targetDir . DIRECTORY_SEPARATOR . $fileName;
 

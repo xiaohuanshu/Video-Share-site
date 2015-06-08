@@ -70,7 +70,16 @@ $(document).ready(function() {
    				}
      			   });
    			 }*/
+   		/*init:{
+                     BeforeUpload: function (up, file) {
 
+                     	//alert(file.name);
+                     	//alert(file);
+                         up.settings.multipart_params = {
+                 	       filenamename : file.name
+                 	   };
+                     }
+   		}*/
 
 
 	});
@@ -81,7 +90,6 @@ $(document).ready(function() {
 //function(up, 
 //file) 
 //{ $('#filelist').innerHTML = '' + file.percent + "%"; });
-
 
 
 
