@@ -4,42 +4,170 @@
 <section id="content">
           <section class="vbox">
             <section class="scrollable wrapper-lg">
-<script language="javascript" type="text/javascript"> 
-function dyniframesize(down) { 
-var pTar = null; 
-if (document.getElementById){ 
-pTar = document.getElementById(down); 
-} 
-else{ 
-eval('pTar = ' + down + ';'); 
-} 
-if (pTar && !window.opera){ 
-//begin resizing iframe 
-pTar.style.display="block" 
-if (pTar.contentDocument && pTar.contentDocument.body.offsetHeight){ 
-//ns6 syntax 
-pTar.height = pTar.contentDocument.body.offsetHeight +20; 
-//pTar.width = pTar.contentDocument.body.scrollWidth+20; 
-} 
-else if (pTar.Document && pTar.Document.body.scrollHeight){ 
-//ie5+ syntax 
-pTar.height = pTar.Document.body.scrollHeight; 
-//pTar.width = pTar.Document.body.scrollWidth; 
-} 
-} 
-} 
-</script> 
+                <link rel="stylesheet" type="text/css" href="__PUBLIC__/webuploader/webuploader.css">
                   <div class="alert alert-warning alert-block">
                     <button type="button" class="close" data-dismiss="alert">×</button>
                     <h4><i class="fa fa-bell-alt"></i>注意!</h4>
                     <p>只允许上传视频格式文件、限制大小为2GB，上传后需要等待人工审核后才会显示</p>
                     <p>如果上传的视频编码为H.264/ACC（一般为mp4格式），用户将可以在线观看视频</p>
-                    <p>支持上传的视频格式：flv mkv avi rm rmvb mpeg mpg mov wmv mp4 webm</p>
+
+                      <p>支持上传的视频格式：{:C('allow_ext')}</p>
                   </div>
-<iframe id="ifm" src="__MODULE__/upload/uploadview/movieid/{$movieid}" width="100%" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" onload="javascript:dyniframesize('ifm');"></iframe>
+
+                <div id="uploader" class="wu-style">
+                    <!--用来存放文件信息-->
+                    <div id="thelist" class="uploader-list"></div>
+                    <div class="btns">
+                        <div id="picker">选择文件</div>
+                        <button id="ctlBtn" class="btn btn-success">开始上传</button>
+                        <button id="ctlBtn" class="btn btn-info"
+                                onclick="window.location.href='__MODULE__/movie/show/id/{$movieid}'">进入视频主页
+                        </button>
+                    </div>
+                </div>
+
             </section>
           </section>
           <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
         </section>
 <include file="Public:bodyframe-foot" />
+<script type="text/javascript" src="__PUBLIC__/webuploader/webuploader.js"></script>
+<script type="text/javascript">
+    function randomString(len) {
+        len = len || 32;
+        var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';
+        var maxPos = $chars.length;
+        var pwd = '';
+        for (i = 0; i < len; i++) {
+            pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+
+        }
+        return pwd;
+    }
+    function delExtension(str) {
+        var reg = /\.\w+$/;
+        return str.replace(reg, '');
+    }
+    var state = 'pending';
+    var uploader = WebUploader.create({
+
+        // swf文件路径
+        swf: '__PUBLIC__/webuploader/Uploader.swf',
+
+        // 文件接收服务端。
+        server: '__MODULE__/upload/uploader',
+
+        // 选择文件的按钮。可选。
+        // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+        formData: {
+            movieid: {$movieid},
+        },
+        pick: {
+            id: '#picker',
+            multiple: true
+        },
+        // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
+        resize: false,
+
+        accept: {
+            title: 'Video files',
+            extensions: 'flv,mkv,avi,rm,rmvb,mpeg,mpg,mov,wmv,mp4,webm',
+            //mimeTypes: 'video/*,MKV*'
+        },
+        fileSingleSizeLimit: 4294967296,
+        chunked: true,
+        sendAsBinary: true,
+        threads: 1,
+        duplicate: true,
+
+    });
+    //添加文件后显示
+    uploader.on('fileQueued', function (file) {
+        $('#thelist').append('<div id="' + file.id + '" class="item">' +
+        '<h4 class="info">' + file.name + '</h4>' +
+        '<input type="text" class="form-control" value="' + delExtension(file.name) + '">' +
+        '<span class="help-block m-b-none">请在此处修改视频标题</span>' +
+        '<p class="state text-info">等待上传...</p>' +
+        '</div>');
+    });
+    // 文件上传过程中创建进度条实时显示。
+    uploader.on('uploadProgress', function (file, percentage) {
+        var $li = $('#' + file.id),
+                $percent = $li.find('.progress .progress-bar');
+
+        // 避免重复创建
+        if (!$percent.length) {
+            $percent = $('<div class="progress progress-striped active">' +
+            '<div class="progress-bar" role="progressbar" style="width: 0%">' +
+            '</div>' +
+            '</div>').appendTo($li).find('.progress-bar');
+        }
+
+        $li.find('p.state').text('上传中');
+
+        $percent.css('width', percentage * 100 + '%');
+    });
+    uploader.on('uploadSuccess', function (file) {
+        $('#' + file.id).find('p.state').text('上传完成，请等待管理员审核后就可以看到了！');
+    });
+
+    uploader.on('uploadError', function (file, type) {
+        $('#' + file.id).find('p.state').text('上传出错' + type);
+    });
+
+    uploader.on('uploadComplete', function (file) {
+        $('#' + file.id).find('.progress').fadeOut();
+    });
+
+
+    uploader.on('all', function (type) {
+        if (type === 'startUpload') {
+            state = 'uploading';
+        } else if (type === 'stopUpload') {
+            state = 'paused';
+        } else if (type === 'uploadFinished') {
+            state = 'done';
+        }
+
+        if (state === 'uploading') {
+            $('#ctlBtn').text('暂停上传');
+        } else {
+            $('#ctlBtn').text('开始上传');
+        }
+    });
+
+    $('#ctlBtn').on('click', function () {
+        if (state === 'uploading') {
+            uploader.stop(true);
+        } else {
+            uploader.upload();
+        }
+    });
+    //认为上传完成后触发，用于判断上传是否失败
+    uploader.on('uploadAccept', function (file, response) {
+        //var last=JSON.stringify(response);
+        if (typeof(response.error) != "undefined") {
+            //alert(response.error.code);
+            return false;
+        }
+        //if ( hasError ) {
+        // 通过return false来告诉组件，此文件上传有错。
+        //  return false;
+        //}
+    });
+
+    uploader.on('uploadStart', function (file) {
+        //file.timestamp = +new Date();
+        file.newname = randomString(4) + '-' + file.name;
+        $('#' + file.id).find('input.form-control').attr("disabled", true);
+    });
+
+    //每个分块上传前触发
+    uploader.on('uploadBeforeSend', function (chunk, data) {
+        //data.chunkMd5 = chunk.chunkMd5;
+        data.newname = chunk.file.newname;
+        data.editname = $('#' + chunk.file.id).find('input.form-control').attr('value');
+        //alert(chunk.file.lalala);
+    });
+</script>
 <include file="Public:footer" />
