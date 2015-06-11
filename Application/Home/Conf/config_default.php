@@ -20,6 +20,9 @@ return array(
 
 'ADMIN_ID'  => array(1), //管理员id
 'RESOURCEURL' => '', //资源下载服务器地址，结尾不要加"/",不需要请留空
+    'targetDir' => 'Uploads/movie_tmp',//文件上传临时存放地址
+    'uploadDir' => 'Uploads/movie',//文件上传地址
+    'allow_ext' => 'flv,mkv,avi,rm,rmvb,mpeg,mpg,mov,wmv,mp4,webm',
 'videotype'     =>    array('喜剧','动作','爱情','恐怖','科幻','战争','故事','资料','公开课'), //视频类型
 'college'       =>    array('保密','院系1','院系2','院系3'),  //院系
 'major'         =>    array('院系1' => array('保密','1','2','3'),//院系对应专业

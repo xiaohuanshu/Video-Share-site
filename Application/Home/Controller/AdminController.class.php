@@ -84,8 +84,7 @@ class AdminController extends GlobalAction
 			$this->error('失败');
 		}
 	}
-    public function comment($movieid='')
-    {
+    public function comment($movieid=''){
 		$videocomment=M('videocomment');
 		if(empty($movieid)){
 			$data=$videocomment->select();

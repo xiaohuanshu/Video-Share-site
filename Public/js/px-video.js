@@ -563,12 +563,12 @@ function InitPxVideo(options) {
 				setFullscreenData(false);
 			}
 			else {
-				//if (movie.requestFullscreen) movie.requestFullscreen();
-				//else if (movie.mozRequestFullScreen) movie.mozRequestFullScreen();
-				//else if (movie.webkitRequestFullScreen) {
+				if (video.requestFullscreen) video.requestFullscreen();
+				else if (video.mozRequestFullScreen) video.mozRequestFullScreen();
+				else if (video.webkitRequestFullScreen) {
 					video.webkitRequestFullScreen();
-					//}
-				//else if (movie.msRequestFullscreen) movie.msRequestFullscreen();
+					}
+				else if (video.msRequestFullscreen) video.msRequestFullscreen();
 				setFullscreenData(true);
 			}
 	  	}
