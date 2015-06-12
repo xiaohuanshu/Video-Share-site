@@ -161,6 +161,7 @@ class Ueditor{
 				'title'=>$info['savename'],
 				'original'=>$info['name'],
 				'type'=>'.' . $info['ext'],
+                'class'=>'carousel-inner img-responsive img-rounded',
 				'size'=>$info['size'],
 			);
 		}

@@ -11,6 +11,7 @@
 						
    					 <div class="doc-buttons">
    					   <a href="__MODULE__/admin/video" class="btn btn-s-md btn-default">影视列表</a>
+                       <a href="__MODULE__/admin/local" class="btn btn-s-md btn-default">资源列表</a>
    					   <a href="__MODULE__/admin/comment" class="btn btn-s-md btn-default">评论列表</a>
    					   <a href="{:C('UC_URL')}" class="btn btn-s-md btn-default">用户中心</a>
    					 </div>
@@ -18,7 +19,7 @@
                    <section class="panel panel-default">
                     <header class="panel-heading">
                       
-                      影视资源列表-{$localvideo.0.movieid|getmovienamebyid}
+                      影视资源列表-<empty name="movieid">全部<else />{$movieid|getmovienamebyid}</empty>
                     </header>
                     <table class="table table-striped m-b-none">
                       <thead>
@@ -33,7 +34,7 @@
                       <tbody>
 <volist name="localvideo" id="vl" key='vlk'>
 						<tr>                    
-                          <td>{$vl.title}</td>
+                          <td>{$vl.title}<empty name="movieid">(<a href="__MODULE__/admin/local/movieid/{$vl.movieid}">{$vl.movieid|getmovienamebyid}</a>)</empty></td>
 						  <td>{$vl.userid|getusernamebyid}</td>
                           <td>
 <if condition="$vl['verify'] == 0">

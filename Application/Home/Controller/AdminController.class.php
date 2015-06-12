@@ -102,10 +102,15 @@ class AdminController extends GlobalAction
 			$this->error('失败');
 		}
 	}
-    public function local($movieid)
+    public function local()
     {
 		$localvideo=M('localvideo');
-		$data=$localvideo->where('movieid=%d',$movieid)->select();
+        if(empty($_GET['movieid'])){
+            $data=$localvideo->select();
+        }else{
+            $data=$localvideo->where('movieid=%d',$_GET['movieid'])->select();
+            $this->assign('movieid', $_GET['movieid']);
+        }
 		$this->assign('localvideo', $data);
         $this->display();
     }
