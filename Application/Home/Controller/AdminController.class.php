@@ -128,7 +128,9 @@ class AdminController extends GlobalAction
 		list($uid, $username) = getuserinfo();
 		$localvideo=M('localvideo');
 		if($localvideo->where('id=%d',$localid)->setField('verify','1')){
-			changeuploadstatus($localvideo->where('id=%d',$localid)->field('movieid')->limit(1)->select()[0]['movieid']);
+            $movieid=$localvideo->where('id=%d',$localid)->field('movieid')->limit(1)->select()[0]['movieid'];
+			changeuploadstatus($movieid);
+            changemovieverify($movieid);
 			addtimeline($movieid, '审核通过', '影视资源通过审核', $username, 'fa fa-eye time-icon bg-info');
 			$this->success('已审核通过');
 		}else{

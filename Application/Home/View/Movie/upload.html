@@ -166,7 +166,7 @@
     uploader.on('uploadBeforeSend', function (chunk, data) {
         //data.chunkMd5 = chunk.chunkMd5;
         data.newname = chunk.file.newname;
-        data.editname = $('#' + chunk.file.id).find('input.form-control').attr('value');
+        data.editname = $('#' + chunk.file.id).find('input.form-control').val();
         //alert(chunk.file.lalala);
     });
 </script>

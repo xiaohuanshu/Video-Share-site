@@ -225,4 +225,10 @@ function changeuploadstatus($movieid){
 		$videolist->where('id=%d',$movieid)->setField('uploadstatus',1);
 	}
 }
+function changemovieverify($movieid){
+    $videolist  = M('videolist');
+    if($videolist->where('id=%d',$movieid)->field('verify')->limit(1)->select()[0]['verify']==0){
+        $videolist->where('id=%d',$movieid)->setField('verify',1);
+    }
+}
 ?>
