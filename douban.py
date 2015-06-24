@@ -33,13 +33,13 @@ if __name__ == '__main__':
     try:
         moviename=sys.argv[1].decode('utf-8')
         url="http://movie.douban.com/subject_search?search_text="+urllib.quote(moviename.encode("utf8"))
-        res = open(url).read().decode('utf8')
+        res = open(url).read()#.decode('utf8')
         d = pq(res)
         item = d(".item").eq(0)
         title = item(".nbg").attr('title')
         href=item(".nbg").attr('href')
         #print title
-        res = open(href).read().decode('utf8')
+        res = open(href).read()#.decode('utf8')
         d = pq(res)
         info = d('#info').html()
         #info = info.replace("<br/>","\n")
@@ -51,14 +51,20 @@ if __name__ == '__main__':
         intro=indent("span").eq(0).text()
         if u"... (展开全部)" in intro:
             intro=indent(".hidden").eq(0).text()
-        time = timedeal(re.findall(u"(?<=片长:).*?(?=分钟)",info,re.DOTALL)[0])
+        try:
+            time = timedeal(re.findall(u"(?<=片长:).*?(?=分钟)",info,re.DOTALL)[0])
+        except:
+            time = ''
         type = re.findall(u"(?<=类型:).*?(?=\n)",info,re.DOTALL)[0].split("/")
         #print intro
-        res = open(href+"/photos?type=R").read().decode('utf8')
+        res = open(href+"/photos?type=R").read()#.decode('utf8')
         d = pq(res)
         poster = d('.poster-col4')
         posterurl = poster('li').eq(0)('div')('a').attr('href')
-        posterurl = re.findall(r"(?<=photos/photo/).*?(?=/)",posterurl,re.DOTALL)[0]
+        try:
+            posterurl = re.findall(r"(?<=photos/photo/).*?(?=/)",posterurl,re.DOTALL)[0]
+        except:
+            posterurl = ''
         #posterurl = "http://img5.douban.com/view/photo/raw/public/"+posterurl+".jpg"
         #print posterurl
         ele={"title":title,"info":info,"intro":intro,"posterurl":posterurl,"time":time,"type":type}
