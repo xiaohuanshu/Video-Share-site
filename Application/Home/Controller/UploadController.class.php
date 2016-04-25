@@ -36,7 +36,7 @@ class UploadController extends GlobalAction
 			if(empty($_POST['posterurl'])){
 				$this->error('海报地址出错');
 			}
-			$url="http://img4.douban.com/view/photo/photo/public/p".I('post.posterurl').".jpg";
+			$url="http://img3.douban.com/view/photo/photo/public/p".I('post.posterurl').".jpg";
 			$data = file_get_contents($url);
 			if(!file_put_contents('./Uploads/poster/douban.'.I('post.posterurl').'.jpg',$data)){
 				$this->error('海报下载出错');
