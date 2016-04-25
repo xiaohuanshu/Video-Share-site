@@ -118,6 +118,7 @@
                         </div>
                         <div class="padder-v">
                           <a href="__MODULE__/movie/show?id={$mvlist.id}" class="text-ellipsis">{$mvlist.name}</a>
+<a class="text-xs text-muted">-</a>
 <volist name=":explode(',',$mvlist['type'])" id="mtype">
 <a href="__MODULE__/movie/mlist?type={$mtype}" class="text-xs text-muted">{$mtype} </a>
 </volist>
