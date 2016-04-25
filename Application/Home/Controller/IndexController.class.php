@@ -39,7 +39,7 @@ class IndexController extends GlobalAction
         }
 		//视频信息
         $movielist = M('videolist');
-        $data      = $movielist->where('verify=1 and uploadstatus=1')->order('uploadtime asc')->limit(18)->cache(true,30)->select();
+        $data      = $movielist->where('verify=1 and uploadstatus=1')->order('uploadtime desc')->limit(18)->cache(true,30)->select();
         $this->assign('movielist', $data);
 		
 		//公告相关
@@ -51,7 +51,7 @@ class IndexController extends GlobalAction
         $this->assign('noticelist', $data);
 		
 		//请愿信息
-        $data = $movielist->where('verify=1 and uploadstatus=0')->order('wishtime asc')->limit(8)->select();
+        $data = $movielist->where('verify=1 and uploadstatus=0')->order('wishtime desc')->limit(8)->select();
         $this->assign('wishlist', $data);
 		//分享者排名
         $sharelist = M('localvideo');

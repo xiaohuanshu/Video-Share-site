@@ -17,7 +17,7 @@ class AdminController extends GlobalAction
     public function video()
     {
 		$videolist=M('videolist');
-		$data=$videolist->order('uploadtime asc')->select();
+		$data=$videolist->order('time desc')->select();
 		$this->assign('videolist', $data);
         $this->display();
     }
@@ -106,7 +106,7 @@ class AdminController extends GlobalAction
     {
 		$localvideo=M('localvideo');
         if(empty($_GET['movieid'])){
-            $data=$localvideo->order('time asc')->select();
+            $data=$localvideo->order('time desc')->select();
         }else{
             $data=$localvideo->where('movieid=%d',$_GET['movieid'])->select();
             $this->assign('movieid', $_GET['movieid']);

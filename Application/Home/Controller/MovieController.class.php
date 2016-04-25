@@ -114,10 +114,10 @@ class MovieController extends GlobalAction
         $Page = new \Think\Page($count, 12); // 实例化分页类 传入总记录数和每页显示的记录数
         $show = $Page->show(); // 分页显示输出
         if (empty($_GET['userid'])) {
-            $data = $movielist->where($sql)->order('uploadtime asc')->limit($Page->firstRow . ',' . $Page->listRows)->select();
+            $data = $movielist->where($sql)->order('uploadtime desc')->limit($Page->firstRow . ',' . $Page->listRows)->select();
             //dump($data);
         } else {
-            $data = $movielist->join("join `think_localvideo` on  `think_videolist`.`id`=`think_localvideo`.`movieid` and `think_localvideo`.`userid` = " . intval($_GET['userid']))->group('`think_videolist`.`id`')->where($sql)->order('uploadtime asc')->limit($Page->firstRow . ',' . $Page->listRows)->field('`think_videolist`.*')->select();
+            $data = $movielist->join("join `think_localvideo` on  `think_videolist`.`id`=`think_localvideo`.`movieid` and `think_localvideo`.`userid` = " . intval($_GET['userid']))->group('`think_videolist`.`id`')->where($sql)->order('uploadtime desc')->limit($Page->firstRow . ',' . $Page->listRows)->field('`think_videolist`.*')->select();
             //echo $data;
             //die();
         }
