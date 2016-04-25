@@ -39,7 +39,7 @@ class IndexController extends GlobalAction
         }
 		//视频信息
         $movielist = M('videolist');
-        $data      = $movielist->where('verify=1 and uploadstatus=1')->order('uploadtime desc')->limit(12)->cache(true,30)->select();
+        $data      = $movielist->where('verify=1 and uploadstatus=1')->order('uploadtime desc')->limit(18)->cache(true,30)->select();
         $this->assign('movielist', $data);
 		
 		//公告相关
