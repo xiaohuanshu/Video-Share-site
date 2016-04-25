@@ -221,7 +221,7 @@ function getlocalvideostatus($movieid)
 }
 function changeuploadstatus($movieid){
 	$videolist  = M('videolist');
-	$videolist->where('id=%d',$movieid)->setField('uploadtime',date('Y-m-d H:i:s'););
+	$videolist->where('id=%d',$movieid)->setField('uploadtime',date('Y-m-d H:i:s'));
 	if($videolist->where('id=%d',$movieid)->field('uploadstatus')->limit(1)->select()[0]['uploadstatus']==0){
 		$videolist->where('id=%d',$movieid)->setField('uploadstatus',1);
 	}
