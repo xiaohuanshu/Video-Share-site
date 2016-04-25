@@ -221,6 +221,7 @@ class MovieController extends GlobalAction
             if ($_POST['iswish'] == 1) {
                 $c['name']     = I('post.mv_name');
                 $c['verify']  = 1;
+                $c['time'] = date('Y-m-d H:i:s');
                 $c['wishtime'] = date('Y-m-d H:i:s');
                 $movieid       = $movielist->add($c);
                 $wishlist      = M('wishlist');
@@ -234,6 +235,7 @@ class MovieController extends GlobalAction
                 $c['name']     = I('post.mv_name');
                 //$c['statue']  = 1;
                 $c['wishtime'] = date('Y-m-d H:i:s');
+                $c['time'] = date('Y-m-d H:i:s');
                 $movieid       = $movielist->add($c);
                 header("location:".U('Movie/upload?movieid='.$movieid));
             }
