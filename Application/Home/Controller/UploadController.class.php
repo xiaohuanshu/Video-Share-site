@@ -74,7 +74,7 @@ class UploadController extends GlobalAction
 		}
     }
 	public function showdoubanimg($url){
-		$url="http://img4.douban.com/view/photo/photo/public/p".$url.".jpg";
+		$url="http://img3.douban.com/view/photo/photo/public/p".$url.".jpg";
 		$data = file_get_contents($url);
 		header("Content-type: image/jpg");
 		echo  $data;
