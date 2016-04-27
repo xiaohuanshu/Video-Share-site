@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `think_notelist` (
 
 CREATE TABLE IF NOT EXISTS `think_notice` (
 `id` int(11) NOT NULL,
-  `tilte` varchar(65) NOT NULL,
+  `title` varchar(65) NOT NULL,
   `content` text NOT NULL,
   `time` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
