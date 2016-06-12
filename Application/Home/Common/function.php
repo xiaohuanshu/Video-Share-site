@@ -153,7 +153,7 @@ function videocheckshot($path)
     str_replace("|", '', $path);
 	str_replace("`", '', $path);
     $path1 = $path;
-    str_replace("/", '-', $path);
+    str_replace("/", '.', $path);
 	$timeshot=C('timeshot');
 	$re   = array();
 	if (!file_exists("Uploads/temp/" . $path . "/")){
