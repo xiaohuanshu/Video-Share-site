@@ -210,7 +210,7 @@ class UploadController extends GlobalAction
             $locallist = M('localvideo');
             $c['userid'] = $uid;
             $c['movieid'] = $movieid;
-            $c['url'] = $fileName;
+            $c['url'] = $uploadPath;
             if (!empty($_REQUEST['editname'])) {
                 $c['title'] = I('request.editname');
             } else {

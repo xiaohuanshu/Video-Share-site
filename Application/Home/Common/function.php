@@ -86,7 +86,6 @@ function videoinfo($path)
 {
     str_replace("|", '', $path);
 	str_replace("`", '', $path);
-    $path = "Uploads/movie/" . $path;
     $re   = array();
     exec("ffmpeg -i $path 2>&1", $re);
     $info = implode("\n", $re);
@@ -125,7 +124,8 @@ function videoshot($path)
 {
     str_replace("|", '', $path);
 	str_replace("`", '', $path);
-    $path1 = "Uploads/movie/" . $path;
+    $path1 = $path;
+    str_replace("/", '-', $path);
 	$path2 = "Uploads/shot/" . $path . ".jpg";
     $re   = array();
     exec("ffmpeg -ss 00:02:06  -i $path1 $path2  -r 1 -vframes 1 -an -f mjpeg", $re);
@@ -152,7 +152,8 @@ function videocheckshot($path)
 {
     str_replace("|", '', $path);
 	str_replace("`", '', $path);
-    $path1 = "Uploads/movie/" . $path;
+    $path1 = $path;
+    str_replace("/", '-', $path);
 	$timeshot=C('timeshot');
 	$re   = array();
 	if (!file_exists("Uploads/temp/" . $path . "/")){

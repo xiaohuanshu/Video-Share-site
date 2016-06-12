@@ -140,7 +140,7 @@ class AdminController extends GlobalAction
 	public function local_delete($localid){
 		$localvideo=M('localvideo');
 		$data=$localvideo->where('id=%d',$localid)->limit(1)->select();
-		$url="Uploads/movie/" . $data[0]['url'];
+		$url=$data[0]['url'];
 		if($localvideo->where('id=%d',$localid)->limit(1)->delete()){
 			if (file_exists($url)){
 				unlink($url);

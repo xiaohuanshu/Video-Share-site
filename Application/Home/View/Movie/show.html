@@ -24,7 +24,7 @@
         <video width="100%" poster="__ROOT__/Uploads/shot/{$playlist.0.url}.jpg" id="videos" controls>
 <volist name="playlist" id="pllist">
 <if condition="C('RESOURCEURL') == ''">
-      <source type="video/mp4" src="__ROOT__/Uploads/movie/{$pllist.url}" />
+      <source type="video/mp4" src="__ROOT__/{$pllist.url}" />
 <else />
       <source type="video/mp4" src="{:C('RESOURCEURL')}/{$pllist.url}" />
 </if>
@@ -130,7 +130,7 @@ new InitPxVideo({
                             </div>
 <div class="btn-group" style="float:right">
 <if condition="C('RESOURCEURL') == ''">
-	  <a href="__ROOT__/Uploads/movie/{$lolist.url}" download="{$lolist.title}.{$lolist.url|strrchr='.'|substr=1}" onclick="downloadinc({$movieinfo.id});">
+	  <a href="__ROOT__/{$lolist.url}" download="{$lolist.title}.{$lolist.url|strrchr='.'|substr=1}" onclick="downloadinc({$movieinfo.id});">
 <else />
 	  <a href="{:C('RESOURCEURL')}/{$lolist.url}" download="{$lolist.title}.{$lolist.url|strrchr='.'|substr=1}" onclick="downloadinc({$movieinfo.id});">
 </if>
