@@ -225,11 +225,11 @@ class UploadController extends GlobalAction
             }
             $c['time'] = date('Y-m-d H:i:s');
             //判断能否在线播放
-            list($video, $audio) = videoinfo($fileName);
+            list($video, $audio) = videoinfo($uploadPath);
             if (strpos($video, "h264")) { //&&strpos($audio,"aac")){
                 $c['online'] = 1;
                 //视频截图
-                videoshot($fileName);
+                videoshot($uploadPath);
             } else {
                 $c['online'] = 0;
             }
