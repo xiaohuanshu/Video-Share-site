@@ -101,6 +101,16 @@ new InitPxVideo({
 	                    </div>
  </notempty>
 </notempty>
+<if condition="$islogin == 0">
+<div class="col-sm-12">
+                      <div class="bg-primary wrapper-md r">
+                        <a href="#modal-login" data-toggle="modal">
+                          <span class="h4 m-b-xs block"><i class=" icon-user-follow i-lg"></i> 登录或者注册一个帐号后下载链接才会显示</span>
+                          <span class="text-muted">有了一个帐号，你就可以分享、下载、请愿各种影视资源</span>
+                        </a>
+                      </div>
+                    </div>
+<else \>
                   <section class="panel panel-default">
                     <header class="panel-heading">
                       
@@ -145,6 +155,7 @@ new InitPxVideo({
                     </table>
                           </div>
                   </section>
+</if>
                 </div>
                   <h4 class="m-t-lg m-b">{$mvcommentcount} 条评论</h4>
                   <section class="comment-list block">
