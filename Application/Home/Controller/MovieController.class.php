@@ -218,7 +218,7 @@ class MovieController extends GlobalAction
             if (!$movielist->autoCheckToken($_POST)) {
                 $this->error("令牌验证错误,请返回重试"); // 令牌验证错误
             }
-            $data = $movielist->where('name=%s', I('post.mv_name'))->limit(1)->select();
+            $data = $movielist->where("name='%s'", I('post.mv_name'))->limit(1)->select();
             if ($_POST['iswish'] == 1) {
                 if($data){
                     header("location:".U('Movie/show?id='.$data[0]['id']));
