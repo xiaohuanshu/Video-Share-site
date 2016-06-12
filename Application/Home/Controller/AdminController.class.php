@@ -156,7 +156,6 @@ class AdminController extends GlobalAction
 		$this->assign('localvideo', $data[0]);
 		
 		$localshot=videocheckshot($data[0][url]);
-		dump($localshot);
 		$this->assign('localshot', $localshot);
 		
         $this->display();

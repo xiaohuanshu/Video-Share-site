@@ -84,8 +84,8 @@ function mvshowusertype($userid, $movieid)
 }
 function videoinfo($path)
 {
-    str_replace("|", '', $path);
-	str_replace("`", '', $path);
+    $path=str_replace("|", '', $path);
+	$path=str_replace("`", '', $path);
     $re   = array();
     exec("ffmpeg -i $path 2>&1", $re);
     $info = implode("\n", $re);
@@ -122,10 +122,10 @@ function videoinfo($path)
 }
 function videoshot($path)
 {
-    str_replace("|", '', $path);
-	str_replace("`", '', $path);
+    $path=str_replace("|", '', $path);
+	$path=str_replace("`", '', $path);
     $path1 = $path;
-    str_replace("/", '-', $path);
+    $path=str_replace("/", '-', $path);
 	$path2 = "Uploads/shot/" . $path . ".jpg";
     $re   = array();
     exec("ffmpeg -ss 00:02:06  -i $path1 $path2  -r 1 -vframes 1 -an -f mjpeg", $re);
@@ -135,8 +135,8 @@ function douban($name)
 	if(S('douban'.$name)){
 		$re = S('douban'.$name);
 	}else{
-    	str_replace("|", '', $name);
-		str_replace("`", '', $name);
+    	$name=str_replace("|", '', $name);
+		$name=str_replace("`", '', $name);
     	$re   = array();
     	exec("python douban.py $name", $re);
 		S('douban'.$name,$re,300);
