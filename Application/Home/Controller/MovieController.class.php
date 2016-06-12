@@ -218,26 +218,35 @@ class MovieController extends GlobalAction
             if (!$movielist->autoCheckToken($_POST)) {
                 $this->error("令牌验证错误,请返回重试"); // 令牌验证错误
             }
+            $data = $movielist->where('name=%s', I('post.mv_name'))->limit(1)->select();
             if ($_POST['iswish'] == 1) {
-                $c['name']     = I('post.mv_name');
-                $c['verify']  = 1;
-                $c['time'] = date('Y-m-d H:i:s');
-                $c['wishtime'] = date('Y-m-d H:i:s');
-                $movieid       = $movielist->add($c);
-                $wishlist      = M('wishlist');
-				$wc['movieid']  = $movieid;
-				$wc['userid']   = $uid;
-                $wc['time'] = date('Y-m-d H:i:s');
-                $wishlist->add($wc);
-                addtimeline($movieid, '请愿发布', I('post.mv_name'), $username, 'fa fa-gift time-icon bg-primary');
-                header("location:".U('Movie/wishsuccess?movieid='.$movieid));
+                if($data){
+                    header("location:".U('Movie/show?id='.$data[0]['id']));
+                }else{
+                    $c['name']     = I('post.mv_name');
+                    $c['verify']  = 1;
+                    $c['time'] = date('Y-m-d H:i:s');
+                    $c['wishtime'] = date('Y-m-d H:i:s');
+                    $movieid       = $movielist->add($c);
+                    $wishlist      = M('wishlist');
+    				$wc['movieid']  = $movieid;
+    				$wc['userid']   = $uid;
+                    $wc['time'] = date('Y-m-d H:i:s');
+                    $wishlist->add($wc);
+                    addtimeline($movieid, '请愿发布', I('post.mv_name'), $username, 'fa fa-gift time-icon bg-primary');
+                    header("location:".U('Movie/wishsuccess?movieid='.$movieid));
+                }
             } else {
-                $c['name']     = I('post.mv_name');
-                //$c['statue']  = 1;
-                $c['wishtime'] = date('Y-m-d H:i:s');
-                $c['time'] = date('Y-m-d H:i:s');
-                $movieid       = $movielist->add($c);
-                header("location:".U('Movie/upload?movieid='.$movieid));
+                if($data){
+                    header("location:".U('Movie/upload?movieid='.$data[0]['id']));
+                }else{
+                    $c['name']     = I('post.mv_name');
+                    //$c['statue']  = 1;
+                    $c['wishtime'] = date('Y-m-d H:i:s');
+                    $c['time'] = date('Y-m-d H:i:s');
+                    $movieid       = $movielist->add($c);
+                    header("location:".U('Movie/upload?movieid='.$movieid));
+                }
             }
         }
     }
