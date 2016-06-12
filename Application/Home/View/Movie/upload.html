@@ -8,7 +8,7 @@
                   <div class="alert alert-warning alert-block">
                     <button type="button" class="close" data-dismiss="alert">×</button>
                     <h4><i class="fa fa-bell-alt"></i>注意!</h4>
-                    <p>只允许上传视频格式文件、限制大小为2GB，上传后需要等待人工审核后才会显示</p>
+                    <p>只允许上传视频格式文件、限制大小为4GB，上传后需要等待人工审核后才会显示</p>
                     <p>如果上传的视频编码为H.264/ACC（一般为mp4格式），用户将可以在线观看视频</p>
 
                       <p>支持上传的视频格式：{:C('allow_ext')}</p>
@@ -160,6 +160,7 @@
         //file.timestamp = +new Date();
         file.newname = randomString(4) + '-' + file.name;
         $('#' + file.id).find('input.form-control').attr("disabled", true);
+        
     });
 
     //每个分块上传前触发
@@ -169,5 +170,9 @@
         data.editname = $('#' + chunk.file.id).find('input.form-control').val();
         //alert(chunk.file.lalala);
     });
+
+    window.onbeforeunload = function(event) { 
+        return confirm("确定离开页面吗？如果有未完成的上传将导致上传失败~"); 
+    } 
 </script>
 <include file="Public:footer" />
