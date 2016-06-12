@@ -150,10 +150,10 @@ function douban($name)
 }
 function videocheckshot($path)
 {
-    str_replace("|", '', $path);
-	str_replace("`", '', $path);
+    $path=str_replace("|", '', $path);
+	$path=str_replace("`", '', $path);
     $path1 = $path;
-    str_replace('movie', '.', $path);
+    $path=str_replace('/', '-', $path);
 	$timeshot=C('timeshot');
 	$re   = array();
 	if (!file_exists("Uploads/temp/" . $path . "/")){
@@ -162,7 +162,6 @@ function videocheckshot($path)
 	}else{
 		$flag=1;
 	}
-    print($path);
 	$shotlist=array();
 	foreach($timeshot as $time){ 
 		$path2 = "Uploads/temp/" . $path . "/".str_replace(":", '.', $time).".jpg";
