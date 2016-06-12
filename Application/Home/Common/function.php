@@ -87,7 +87,7 @@ function videoinfo($path)
     $path=str_replace("|", '', $path);
 	$path=str_replace("`", '', $path);
     $re   = array();
-    exec("ffmpeg -i $path 2>&1", $re);
+    exec("ffmpeg -i '$path' 2>&1", $re);
     $info = implode("\n", $re);
     
     if (preg_match("/Invalid data/i", $info)) {
@@ -128,7 +128,7 @@ function videoshot($path)
     $path=str_replace("/", '-', $path);
 	$path2 = "Uploads/shot/" . $path . ".jpg";
     $re   = array();
-    exec("ffmpeg -ss 00:02:06  -i $path1 $path2  -r 1 -vframes 1 -an -f mjpeg", $re);
+    exec("ffmpeg -ss 00:02:06  -i '$path1' '$path2'  -r 1 -vframes 1 -an -f mjpeg", $re);
 }
 function douban($name)
 {
@@ -167,7 +167,7 @@ function videocheckshot($path)
 		$path2 = "Uploads/temp/" . $path . "/".str_replace(":", '.', $time).".jpg";
 		//echo "ffmpeg -ss $time  -i $path1 $path2  -r 1 -vframes 1 -an -f mjpeg"."<br>";
 		if($flag==0){
-			exec("ffmpeg -ss $time  -i $path1 $path2  -r 1 -vframes 1 -an -f mjpeg", $re);
+			exec("ffmpeg -ss $time  -i '$path1' '$path2'  -r 1 -vframes 1 -an -f mjpeg", $re);
 		}
 		if (file_exists($path2)){
 			$shotlist[]=array('time'=>$time,'url'=>__ROOT__.'/'.$path2);
