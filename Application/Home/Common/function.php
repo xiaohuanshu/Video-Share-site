@@ -162,6 +162,7 @@ function videocheckshot($path)
 	}else{
 		$flag=1;
 	}
+    print($path);
 	$shotlist=array();
 	foreach($timeshot as $time){ 
 		$path2 = "Uploads/temp/" . $path . "/".str_replace(":", '.', $time).".jpg";
